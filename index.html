@@ -1,42 +1,91 @@
 <!DOCTYPE html>
-<meta charset="UTF-8"> 
+
 <html>
-  <head>
-    <body>
-      <p><center>
-        <font face="Georgia">
-          <font size="8">S</font><font size="6">id </font>
-          <font size="8">S</font><font size="6">u</font>
-          <font size="8">❤︎</font><br>
-        </font>
-        <font face="Arial">
-          I do math and I code<br>
+<head>
+  <meta charset="UTF-8">
+  <title>Sid Su ❤︎</title>
+  <style>
+    @font-face {
+      font-family: 'LMRoman10';
+      font-style: normal;
+      font-weight: 400;
+      src: local('LMRoman10'), url('./lmroman10-regular.woff') format('woff');
+    }
+    .text_box {
+      width:65%;
+      margin: auto;
+      /*background:rgb(86, 235, 255);*/
+    }
+    .default_font {
+      font-family: LMRoman10, serif;
+      font-size: x-large;
+      text-align: justify;
+      margin: auto;
+      padding: 2%;
+      padding-top: 0px;
+      margin-top: 0;
+    }
+    .feet {
+      font-size: small;
+    }
+    .headshot {
+      float: left;
+      width: 17%;
+    }
+    .image-container {
+      padding: 2%;
+      padding-top: 0;
+    }
+
+    main {
+      max-width:65%;
+      margin-left:auto;
+      margin-right:auto;
+      padding-left: 2%;
+      padding-right: 2%
+    }
+  </style>
+</head>
+
+<body>
+  <p><center>
+    <font face="Georgia">
+    <font size="8">S</font><font size="6">id </font>
+    <font size="8">S</font><font size="6">u</font>
+    <font size="8">❤︎</font><br>
+    </font>
+        <font face="Latin Modern Roman">
+          i do math & code | light theme > dark theme<br>
           <a href="https://github.com/Brissot">GitHub: Brissot</a> | 
           <a href="https://www.instagram.com/sidsu_">Instagram: @sidsu_</a> |
-          <a href="https://www.linkedin.com/in/sid-su">LinkedIn: sid-su</a>
+          <a href="https://www.linkedin.com/in/sid-su">LinkedIn: sid-su</a> |
+          <a href="./Sid Su Resume.pdf">Resume (pdf)</font></a>
         </font>
-      </center></p>
-      <p><center>
-      <table width="65%">
-        <tr>
-          <td width="50%"><font size="5">
-            - <a href="./Sid Su Resume.pdf">Resume
-          </font></a></td>
-          <td width="50%"><font size="5">
-            - Resume II</td>
-        </tr>
-        <tr>
-          <td width="50%" valign="top"><font size="5">
-            - Papers</td>
-          <td width="50%" valign="top"><font size="5">- Projects</td>
-        </tr>
-        </table>
-      </center></p>
-      <p>
-        <font size="2">
-        last updated: October 9, 2023
-        </font>
-      </p>
-    </body>
-  </head>
+  </center></p>
+
+  <main>
+    <div>
+      <img src="headshot.jpeg" alt="goth girls" style="float: left; width: 19%; padding: 10pt">
+    </div>
+    <p class="default_font">
+      Hi! My name is Sid Su. I am a senior Statistics and Computer Science
+      double major at the University of Maryland. I have previously interned
+      at Octo, an IBM company, working on DevOps, and I intend to return in
+      May 2024 as a full-time DevOps engineer.
+      <br><br>
+      I am passionate about servers and deployment. I strongly believe that
+      Infrastructure as Code (IaC) is the best system for scalable, flexible
+      infrastructure.
+      <br><br>
+      Personally, I am play the flute 🪈
+      <br><br>
+    </p>
+  </div>  
+  </main>
+  <hr>
+  <footer class="feet">
+    last updated: December 25, 2023
+  </footer>
+
+</body>
 </html>
