@@ -51,6 +51,13 @@
       font-family: Georgia, serif;
       text-align: center;
     }
+
+    #heyy {
+      all: unset;
+      cursor: pointer;
+      color: #0043de;
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -85,8 +92,16 @@
   <br><br><br><br>
   <hr>
   <footer style="font-size: small;">
-    last updated: December 25, 2023
+    last updated: December 25, 2023 | <button id= "heyy" onclick="revealEmail()">Click Here to Contact Me!</button>
   </footer>
 
+  <script>
+  function revealEmail() {
+    const t = document.createElement("a"),
+      m = atob(Array.from("==QbvNmLslWYtdGQ3U3ckl2c").reduce(((e, t) => t + e), ""));
+    t.href = "mailto:" + m, t.textContent = m, document.getElementById("heyy")?.parentElement?.appendChild(t), document.getElementById("heyy")?.remove()
+    console.log(t.href)
+  }
+  </script>
 </body>
 </html>
