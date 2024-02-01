@@ -1,108 +1,64 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-zoom=1.0">
+  <meta name="viewport" content="width=device-width, initial-zoom=1.0">
 
-  <title>Sid Su ❤︎</title>
+  <title>Sid Su &#10084;</title>
   <style>
-    @font-face {
-      font-family: 'Times New Roman';
-      font-style: normal;
-      font-weight: 400;
-      src: local('LMRoman10'), url('./lmroman10-regular.woff') format('woff');
-      font-display: swap;
-    }
-
-    .default_font {
-      font-family: LMRoman10, serif;
-      font-size: 20pt;
-      text-align: left;
-      margin: auto;
-      padding: 2%;
-      padding-top: 0px;
-      margin-top: 0;
-    }
-
-    main {
-      max-width:65%;
-      margin-left:auto;
-      margin-right:auto;
-      padding-left: 2%;
-      padding-right: 2%
-    }
-
-    .headshot {
-      float: left;
-      width: 130px;
-      padding: 10pt;
-    }
-
-    .big {
-      font-size: 64pt;
-    }
-
-    .sidsu {
-      font-size: 48pt;
-      font-family: Georgia, serif;
-      text-align: center;
-    }
-    .mortal {
-      font-size: 10pt;
-      font-family: Georgia, serif;
-      text-align: center;
-    }
-
-    #heyy {
-      all: unset;
-      cursor: pointer;
-      color: #0043de;
-      text-decoration: underline;
-    }
+    @import url(./got-style.css);
   </style>
 </head>
 
 <body>
-  <div style="margin-left: auto; margin-right: auto; max-width: 100%">
-  <p class="mortal">
-    <span class="sidsu">
-    <span class="big">S</span>id
-    <span class="big">S</span>u
-    <span class="big">❤︎</span>
-    </span><br>
-    <span class="mortal">
-          light theme > dark theme<br>
-          <a href="https://github.com/Brissot">GitHub: Brissot</a> | 
-          <a href="https://www.instagram.com/sidsu_">Instagram: @sidsu_</a> |
-          <a href="https://www.linkedin.com/in/sid-su">LinkedIn: sid-su</a> |
-          <a href="./Sid Su Resume.pdf">Resume (pdf)</a>
+  <header>
+    <span class="sidsu_big">S</span><span class="sidsu">id </span>
+    <span class="sidsu_big">S</span><span class="sidsu">u</span>
+    <span class="sidsu_big">&#10084;</span><br>
+    <span class="sidsu_small">
+    light theme &gt; dark theme<br>
+      <a href="https://github.com/Brissot">GitHub: Brissot</a> | 
+      <a href="https://www.instagram.com/sidsu_">Instagram: @sidsu_</a> |
+      <a href="https://www.linkedin.com/in/sid-su">LinkedIn: sid-su</a> |
+      <a href="./Sid%20Su%20Resume.pdf">Resume (pdf)</a>
     </span>
-  </p></div>
+  </header>
 
   <main>
     <span>
-      <img src="headshot.jpeg" alt="me.png", class="headshot">
+      <img src="headshot.jpeg" alt="me.png" class="headshot">
     </span>
       <p class="default_font">
         Hi! My name is Sid Su. I am currently a senior Statistics and Computer
         Science double major at the University of Maryland.
       </p>
-    </div>  
   </main>
 
   <br><br><br><br>
   <hr>
-  <footer style="font-size: small;">
-    last updated: December 31, 2023 | <button id= "heyy" onclick="revealEmail()">Click Here to Contact Me!</button>
+  <footer>
+    last updated: February 1, 2024 |
+    <button id= "e-mail" onclick="revealEmail()">
+      Click Here to Contact Me!
+    </button>
   </footer>
 
   <script>
   function revealEmail() {
-    const t = document.createElement("a"),
-      m = atob(Array.from("==QbvNmLslWYtdGQ3U3ckl2c").reduce(((e, t) => t + e), ""));
-    t.href = "mailto:" + m, t.textContent = m, document.getElementById("heyy")?.parentElement?.appendChild(t), document.getElementById("heyy")?.remove()
-    console.log(t.href)
+    /* The e-mail is reversed and encoded in Base64. This function undoes this
+    operation. This is sufficient to avoid internet scrapers, because for
+    their own sakes, they do not generally run arbritrary JavaScript code */
+    
+    const c= "==QbvNmLslWYtdGQ3U3ckl2c" /* cyphertext */
+    const m= atob(Array.from(c).reduce(((e, t) => t + e), "")); /* plaintext */
+
+    const t= document.createElement("a")
+    t.href= "mailto:" + m /* construct url */
+    t.textContent= m
+
+    document.getElementById("e-mail")?.parentElement?.appendChild(t)
+    document.getElementById("e-mail")?.remove() /* switch-a-roo! */
   }
   </script>
 </body>

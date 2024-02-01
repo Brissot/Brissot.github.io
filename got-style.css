@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'Times New Roman';
+  font-style: normal;
+  font-weight: 400;
+  src: local('LMRoman10'), url('./lmroman10-regular.woff') format('woff');
+  font-display: swap;
+}
+
+header {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  font-family: Georgia, serif;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.sidsu_small {
+  font-size: 1rem;
+}
+
+.sidsu_big {
+  font-size: 7rem;
+}
+
+.sidsu {
+  font-size: 4rem;
+}
+
+body { /* This applies to everything */
+  font-family: 'LMRoman10';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20pt;
+  line-height: normal;
+}
+
+main { /* This applies to the "hi my name is sid su portion */
+  font-family: LMRoman10, serif;
+  font-size: 2.2rem;
+  text-align: left;
+  margin: auto;
+
+  padding: 2%;
+  padding-top: 0px;
+  margin-top: 0;
+  max-width:65%;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left: 2%;
+  padding-right: 2%;
+
+  border-color: purple;
+  border-radius: 2rem;
+}
+
+.headshot { /* for the picture */
+  float: left;
+  width: 130px;
+  padding: 0.2rem;
+}
+
+footer {
+  font-size: small;
+}
+
+#e-mail {
+  all: unset;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
