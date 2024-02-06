@@ -13,6 +13,7 @@ header {
   font-family: Georgia, serif;
   text-align: center;
   font-size: 1rem;
+  color: #6c71c4;
 }
 
 .sidsu_small {
@@ -33,11 +34,14 @@ body { /* This applies to everything */
   font-weight: 400;
   font-size: 20pt;
   line-height: normal;
+  background-image: url("skeleton_trumpet.gif");
+  margin: 0.5rem;
+  color: #586e75;
 }
 
 main { /* This applies to the "hi my name is sid su portion */
   font-family: LMRoman10, serif;
-  font-size: 2.2rem;
+  font-size: 2rem;
   text-align: left;
   margin: auto;
 
@@ -50,14 +54,17 @@ main { /* This applies to the "hi my name is sid su portion */
   padding-left: 2%;
   padding-right: 2%;
 
-  border-color: purple;
+  background-color: #fdf6e3; /* solarized light */
   border-radius: 2rem;
 }
 
 .headshot { /* for the picture */
   float: left;
-  width: 130px;
+  /* width: 130px; */
+  width: 8.6rem;
   padding: 0.2rem;
+  border-radius: 50%;
+  margin: 2rem;
 }
 
 footer {
