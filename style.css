@@ -6,6 +6,15 @@
   font-display: swap;
 }
 
+:root {
+  --background-color: white;
+  --foreground-color: #fdf6e3;
+}
+
+html {
+  background-color: var(--background-color);
+}
+
 header {
   margin-left: auto;
   margin-right: auto;
@@ -58,8 +67,9 @@ main { /* This applies to the "hi my name is sid su portion */
   padding-left: 2%;
   padding-right: 2%;
 
-  background-color: #fdf6e3; /* solarized light */
+  /* background-color: #fdf6e3; solarized light */
   border-radius: 2rem;
+  background-color: var(--foreground-color);
 }
 
 .headshot { /* for the picture */
@@ -80,4 +90,34 @@ footer {
   cursor: pointer;
   color: blue;
   text-decoration: underline;
+}
+
+table, td, th {
+  border: 1px solid gray
+}
+th {
+  position: sticky;
+}
+
+tr:nth-child(2n) {background-color: silver}
+
+label {
+  text-align: center;
+}
+input {
+  font-family: LMRoman10, serif;
+  font-size: 2rem;
+  text-align: left;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+button[type="button"] {
+  font-family: LMRoman10, serif;
+  font-size: 2rem;
+  text-align: left;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 1rem;
 }
