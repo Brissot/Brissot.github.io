@@ -9,10 +9,27 @@
 :root {
   --background-color: white;
   --foreground-color: #fdf6e3;
+
+  --solarized-base03:    #002b36;
+  --solarized-base02:    #073642;
+  --solarized-base01:    #586e75;
+  --solarized-base00:    #657b83;
+  --solarized-base0:     #839496;
+  --solarized-base1:     #93a1a1;
+  --solarized-base2:     #eee8d5;
+  --solarized-base3:     #fdf6e3;
+  --solarized-yellow:    #b58900;
+  --solarized-orange:    #cb4b16;
+  --solarized-red:       #dc322f;
+  --solarized-magenta:   #d33682;
+  --solarized-violet:    #6c71c4;
+  --solarized-blue:      #268bd2;
+  --solarized-cyan:      #2aa198;
+  --solarized-green:     #859900;
 }
 
 html {
-  background-color: var(--background-color);
+  background-color: white;
 }
 
 header {
@@ -22,7 +39,7 @@ header {
   font-family: Georgia, serif;
   text-align: center;
   font-size: 1rem;
-  color: #6c71c4;
+  color: var(--solarized-violet);
 }
 
 .sidsu_small {
@@ -43,7 +60,7 @@ body { /* This applies to everything */
   font-weight: 400;
   font-size: 20pt;
   line-height: normal;
-  background-image: url("skeleton_trumpet.gif");
+  background-image: url("./media/skeleton_trumpet.gif");
   margin: 0.5rem;
   color: #586e75;
 }
@@ -72,10 +89,39 @@ main { /* This applies to the "hi my name is sid su portion */
   background-color: var(--foreground-color);
 }
 
+a {
+  font-family: LMRoman10, serif;
+  color: var(--solarized-violet);
+}
+
+p {
+  font-family: LMRoman10, serif;
+  font-size: 2rem;
+  text-align: left;    
+}
+
+h1 {
+  font-family: LMRoman10, serif;
+  font-size: 4rem;
+  text-align: left;
+}
+
+h2 {
+    font-family: LMRoman10, serif;
+    font-size: 3rem;
+    text-align: left;
+}
+
+h3 {
+    font-family: LMRoman10, serif;
+    font-size: 2.5rem;
+    text-align: left;
+}
+
 .headshot { /* for the picture */
   float: left;
   /* width: 130px; */
-  width: 8.6rem;
+  width: 9rem;
   padding: 0.2rem;
   border-radius: 50%;
   margin: 2rem;
@@ -88,8 +134,9 @@ footer {
 #e-mail {
   all: unset;
   cursor: pointer;
-  color: blue;
   text-decoration: underline;
+  font-family: LMRoman10, serif;
+  color: var(--solarized-violet);
 }
 
 table, td, th {
@@ -120,4 +167,36 @@ button[type="button"] {
   margin: auto;
   padding: 1rem;
   border-radius: 1rem;
+}
+
+iframe {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    text-align: center;
+}
+
+/* for the mobile response */
+@media screen and (max-width: 600px) {
+  main {
+    max-width: 90%;
+  }
+
+  img {
+   	max-width: 100%;
+  }
+
+  .headshot {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .headshot_container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
 }
