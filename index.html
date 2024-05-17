@@ -10,6 +10,7 @@
 
   <title>Sid Su &#10084;</title>
   <link rel="stylesheet" type="text/css" href="./style.css">
+  <script src= "./functions.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
       <a href="https://github.com/Brissot">GitHub: Brissot</a> | 
       <a href="https://www.instagram.com/sidsu_">Instagram: @sidsu_</a> |
       <a href="https://www.linkedin.com/in/sid-su">LinkedIn: sid-su</a> |
-      <a href="./Sid%20Su%20Resume.pdf">Resume (pdf)</a>
+      <a href="./docs/Sid%20Su%20Resume.pdf">Resume (pdf)</a>
     </span>
   </header>
 
@@ -89,23 +90,5 @@
   </footer>
 
   </main>
-
-  <script>
-  function revealEmail() {
-    /* The e-mail is reversed and encoded in Base64. This function undoes this
-    operation. This is sufficient to avoid internet scrapers, because for
-    their own sakes, they do not generally run arbritrary JavaScript code */
-    
-    const c= "==QbvNmLslWYtdGQ3U3ckl2c" /* cyphertext */
-    const m= atob(Array.from(c).reduce(((e, t) => t + e), "")); /* plaintext */
-
-    const t= document.createElement("a")
-    t.href= "mailto:" + m /* construct url */
-    t.textContent= m
-
-    document.getElementById("e-mail")?.parentElement?.appendChild(t)
-    document.getElementById("e-mail")?.remove() /* switch-a-roo! */
-  }
-  </script>
 </body>
 </html>
