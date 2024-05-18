@@ -141,7 +141,9 @@ footer {
 }
 
 table, td, th {
-  border: 1px solid gray
+  border: 1px solid var(--solarized-base1);
+  table-layout: fixed;
+  width: 100%
 }
 th {
   position: sticky;
@@ -168,6 +170,11 @@ button[type="button"] {
   margin: auto;
   padding: 1rem;
   border-radius: 1rem;
+}
+
+video {
+  max-width: 100%;
+  text-align: center;
 }
 
 iframe {
