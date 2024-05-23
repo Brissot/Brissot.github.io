@@ -7,9 +7,9 @@ function revealEmail() {
     const m= atob(Array.from(c).reduce(((e, t) => t + e), "")); /* plaintext */
 
     const t= document.createElement("a")
-    t.href= "mailto:" + m /* construct url */
-    t.textContent= m
+    t.href= "mailto:" + m; /* construct url */
+    t.textContent= m;
 
-    document.getElementById("e-mail")?.parentElement?.appendChild(t)
-    document.getElementById("e-mail")?.remove() /* switch-a-roo! */
+    document.getElementById("e-mail")?.parentElement?.appendChild(t);
+    document.getElementById("e-mail")?.remove(); /* switch-a-roo! */
 }
