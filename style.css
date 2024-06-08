@@ -102,22 +102,24 @@ p {
   text-align: left;    
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+
 h1 {
-  font-family: LMRoman10, serif;
   font-size: 4rem;
-  text-align: left;
+  color: var(--solarized-violet);
 }
 
 h2 {
-    font-family: LMRoman10, serif;
-    font-size: 3rem;
-    text-align: left;
+  font-size: 3rem;
+  color: var(--solarized-orange);
 }
 
 h3 {
-    font-family: LMRoman10, serif;
-    font-size: 2.5rem;
-    text-align: left;
+  font-size: 2.5rem;
+  color: var(--solarized-green);
 }
 
 .headshot { /* for the picture */
