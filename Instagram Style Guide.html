@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>QR Generator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-zoom=1.0">
+  <meta name="description"
+        content="A small webpage to generate QR codes. It uses David Shim's
+                qrcodejs library, so I really didn't do much, but it was my
+                first forray into programming a page with JavaScript.">
+  <link rel="icon" type="image/x-icon" href="./media/favicon.ico">
+
+  <title>Instagram Style Guide</title>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script src= "./functions.js"></script>
+</head>
+
+<body onload="main()">
+  <main>
+  <header>
+    <p><a href= "/">&lt; Return Home</a></p>
+    <h1 id="instagram-style-guide">Instagram Style Guide</h1>
+    <h3>Sid Su</h3>
+    <h4> Written Jun. 15, 2024 | Last Edited Jun 15, 2024</h4>
+  </header>
+  <p>A lot of people really have no idea what they're doing when it comes
+  to making Instagram posts, especially with the carousel. Often, there
+  are small decisions that make or break posts. Hopefully, this guide will
+  serve to assist with making posts, so that people's profiles look better
+  overall.</p>
+  <h3 id="i.-photo-shoot">I. Photo Shoot</h3>
+  <p>Photography is beyond the scope of this tutorial, however there are
+  some important considerations if the intended medium is an Instagram
+  post.</p>
+  <p>Request whoever takes the photo to take both a landscape and a
+  portrait photo.</p>
+  <p>If it's a group photo, be mindful of how the layout will look. Try to
+  be symmetrical, and prefer more rows rather than more spread out. This
+  is important for cropping.</p>
+  <h3 id="ii.-aspect-ratios-and-cropping">II. Aspect Ratios and
+  Cropping</h3>
+  <p>Instagram supports 3 aspect ratios for posts:</p>
+  <ul>
+  <li><p>1:1 (square)</p></li>
+  <li><p>4:5 (portrait)</p></li>
+  <li><p>16:9 (landscape)</p></li>
+  </ul>
+  <p>Choose the aspect ratio based on the content being posted. Crop to
+  frame photos as well as possible, adhering to the usual rules of
+  photography. Don't post landscapes in portrait mode, and don't post
+  portraits in landscape mode.</p>
+  <p>Prefer portrait in cases where more than one aspect ratio can work.
+  Instagram is a mobile first platform, and portrait fills the screen the
+  most on a mobile device.</p>
+  <p>Advantages of portrait</p>
+  <ul>
+  <li><p>Takes up more of the screen</p></li>
+  <li><p>Often more “Dynamic” and closer to the subject</p></li>
+  </ul>
+  <p>Advantages of square</p>
+  <ul>
+  <li><p>Works better with more photos (landscape and portrait can both
+  usually be cropped down to square)</p></li>
+  <li><p>Better look in the profile overview. It's the post, but shrunk,
+  not cropped</p></li>
+  </ul>
+  <p>Advantages of landscape</p>
+  <ul>
+  <li>Flexibility in shooting. In practice, photo subjects tend to be
+  wider rather than taller. Think group pictures, buildings, bands,
+  sports, etc.</li>
+  </ul>
+  <h3 id="iii.-picture-choice-and-ordering">III. Picture Choice and
+  Ordering</h3>
+  <p>You want to tell a story. Usually how I have it:</p>
+  <ol type="1">
+  <li><p>Cover Photo: An Action shot of the most interesting part of the
+  event/theme/subject of the post. This should be the most interesting
+  photo that catches the viewer's eye.</p></li>
+  <li><p>Group/Summary Photo: A photo that shows who was there or what the
+  event is about as a whole. Less interesting than the cover
+  photo.</p></li>
+  <li><p>(photos 3 to n - 2) Body photos: Things that happened in the
+  event, photos with people you care about, etc.</p></li>
+  <li><p>Photo n-1: Something to get us back on track. Usually less
+  interesting, and might not include people. For instance feet in the
+  middle, or hands in the middle, something like that</p></li>
+  <li><p>Final photo: Something the most silly or most serious that
+  concludes the post.</p></li>
+  </ol>
+  <p>The point is to tell a story. A good rule of thumb is you should be
+  able to write a short paragraph based on the post photo by photo</p>
+  <h3 id="iv.-filtering-and-edits">IV. Filtering and Edits</h3>
+  <p>Filters are bad at making the subject look beautiful. Don't use
+  filters as a way of making yourself more beautiful. It's easy to tell
+  when someone is doing it for that reason. Instead, think of filters as a
+  means of color correction, or as a way to fix the lighting of a photo.
+  If the picture as a whole looks beautiful, then you will look better as
+  a result as well</p>
+  <p>In circumstances where edits must be made to the photo, bring it onto
+  the computer into Gimp, Photoshop or any other program. I prefer that it
+  is obvious the photo is edited in some way, but with the edits keeping
+  in the theme of the photo. Additionally, when saving, save as a PNG so
+  that nothing is lost on the saving process. Although lossless
+  compression usually results in huge photos, Instagram will always
+  re-encode the photos to their own small jpg format anyways, and with
+  recent technology lossless image compression isn't that bad anyhow.</p>
+  <h3 id="v.-descriptions">V. Descriptions</h3>
+  <p>Keep it simple, stupid. That's not to say you can't say something
+  heartfelt, but format it so that there's a short description at the top
+  no more than 1-2 sentences, then a longer description afterwards. No one
+  is reading the whole thing if it's long from the start, so give them a
+  summary of what you're going to say, then get sentimental.</p>
+
+  <br><br><br><br>
+  <footer>
+    <hr>
+    last updated: Jun 15, 2024 |
+    <button id= "e-mail" onclick="revealEmail()">
+      Click Here to Contact Me!
+    </button>
+  </footer>
+  <br>
+  </main>
+</body>
+</html>
