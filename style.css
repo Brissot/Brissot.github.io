@@ -2,12 +2,13 @@
   font-family: 'Times New Roman';
   font-style: normal;
   font-weight: 400;
-  src: local('LMRoman10'), url('./media/lmroman10-regular.woff')
+  src: local('LMRoman10'), url('/media/lmroman10-regular.woff')
        format('woff');
   font-display: swap;
 }
 
 :root {
+  /* define theme colors */
   --background-color: white;
   --foreground-color: #fdf6e3;
 
@@ -87,8 +88,12 @@ main { /* This applies to the "hi my name is sid su portion */
   padding-right: 2%;
 
   /* background-color: #fdf6e3; solarized light */
-  border-radius: 2rem;
   background-color: var(--foreground-color);
+}
+
+/* Standard border radius for elements */
+img, video, main {
+  border-radius: 2rem;
 }
 
 a {
@@ -124,11 +129,9 @@ h3 {
 
 .headshot { /* for the picture */
   float: left;
-  /* width: 130px; */
   width: 9rem;
   padding: 0.2rem;
-  border-radius: 50%;
-  margin: 2rem;
+  margin: 0.5rem;
 }
 
 footer {
@@ -182,9 +185,55 @@ video {
 
 iframe {
     max-width: 100%;
-    aspect-ratio: 16 / 9;
+
+    /* EMACS and VSCODE don't yet recognize this tag. Do better devs! */
+    aspect-ratio: 16 / 9; 
+    
     border: none;
     text-align: center;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.radiotab {
+  position: absolute;
+  opacity: 0; /* hides the selector */
+}
+
+.label {
+  cursor: pointer;
+}
+
+.label:hover {
+  background: var(--solarized-base1);
+}
+
+.radiotab:checked + .label {
+  background: var(--solarized-base2);
+}
+
+.panel {
+  display: none;
+  padding: 2rem;
+  width: 100%;
+  border-style: dotted
+}
+
+.radiotab:checked + .label + .panel {
+  display: block;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+
+  .label {
+    width: 33.33%;
+  }
 }
 
 /* for the mobile response */
