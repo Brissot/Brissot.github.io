@@ -63,7 +63,7 @@ body { /* This applies to everything */
   font-weight: 400;
   font-size: 20pt;
   line-height: normal;
-  background-image: url("./media/skeleton_trumpet.gif");
+  background-image: url("/media/skeleton_trumpet.gif");
   margin: 0.5rem;
   color: #586e75;
 }
@@ -129,9 +129,12 @@ h3 {
 
 .headshot { /* for the picture */
   float: left;
-  width: 9rem;
+  width: 10.70rem;
   padding: 0.2rem;
-  margin: 0.5rem;
+
+  /* To match the margin of the parent element*/
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 
 footer {
@@ -229,7 +232,8 @@ iframe {
   padding: 2rem;
   border-style: dotted;
   order: 99;
-  width: 100%
+  width: 100%;
+  max-width: inherit
 }
 
 .radiotab:checked + .label + .panel {
@@ -239,8 +243,11 @@ iframe {
 
 /* for the mobile response */
 @media screen and (max-width: 600px) {
+  body {
+    background-image: none;
+  }
   main {
-    max-width: 90%;
+    max-width: 95%;
   }
 
   img {
@@ -268,5 +275,9 @@ iframe {
 
   .label {
     width: 100%
+  }
+
+  .panel {
+    width: inherit;
   }
 }
