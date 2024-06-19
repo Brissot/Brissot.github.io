@@ -195,16 +195,25 @@ iframe {
 
 .tabs {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
 .radiotab {
   position: absolute;
   opacity: 0; /* hides the selector */
+  max-width: 100%;
 }
 
 .label {
   cursor: pointer;
+  width: 33.33%;
+
+  /* to get W3 verification */
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: 3rem;
+  color: var(--solarized-orange);
 }
 
 .label:hover {
@@ -218,22 +227,14 @@ iframe {
 .panel {
   display: none;
   padding: 2rem;
-  width: 100%;
-  border-style: dotted
+  border-style: dotted;
+  order: 99;
+  width: 100%
 }
 
 .radiotab:checked + .label + .panel {
   display: block;
-}
-
-@media (min-width: 600px) {
-  .panel {
-    order: 99;
-  }
-
-  .label {
-    width: 33.33%;
-  }
+  max-width: 100%;
 }
 
 /* for the mobile response */
@@ -258,5 +259,14 @@ iframe {
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
+  }
+
+  .tabs {
+    flex-direction: column;
+    max-width: 100%
+  }
+
+  .label {
+    width: 100%
   }
 }

@@ -57,18 +57,21 @@
     </p>
 
   <p>
-    A nice <a href="https://www.youtube.com/watch?v=DyofWTw0bqY">video</a>,
-    and a rendition of it I really like
+    A nice <a href="https://youtu.be/DyofWTw0bqY">video</a>, and a rendition of
+    it I really like
   </p>
   <video controls>
     <source src= "/media/maria.webm" type= "video/webm">
+    <track label="English" kind="subtitles"
+           srclang="en" src="/media/maria.vtt" default>
   </video> 
   
   <h1>Some Fun Projects</h1>
   <div class= "tabs">
+
     <input class= "radiotab" name="tabs" id="tabone"
-           tabindex="1" type="radio" checked="checked">
-    <label class="label" for="tabone"><h2>Papers</h2></label>
+           tabindex="0" type="radio" checked="checked">
+    <label class="label" for="tabone">Papers</label>
 
     <div class="panel" tabindex="1">  
       <p><a href= "/docs/Who%20Are%20the%20Fastest%20Typists.pdf">
@@ -89,8 +92,8 @@
     </div>
 
     <input class= "radiotab" name="tabs" id="tabtwo"
-           tabindex="1" type="radio">
-    <label class="label" for="tabtwo"><h2>Projects</h2></label>
+           tabindex="0" type="radio">
+    <label class="label" for="tabtwo">Projects</label>
 
     <div class="panel" tabindex="1">
       <p><a href= "https://finalproject-sbdz.onrender.com/">
@@ -101,8 +104,8 @@
     </div>
 
     <input class= "radiotab" name="tabs" id="tabthree"
-    tabindex="1" type="radio">
-    <label class="label" for="tabthree"><h2>Blog</h2></label>
+    tabindex="0" type="radio">
+    <label class="label" for="tabthree">Blog</label>
     
     <div class="panel" tabindex="1">
       <p><a href= "/docs/Instagram%20Style%20Guide">
