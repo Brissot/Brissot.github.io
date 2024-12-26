@@ -74,21 +74,16 @@ main { /* This applies to the "hi my name is sid su portion */
   text-align: left;
   margin: auto;
 
-  /* margin-left: auto;
-  margin-right: auto;
-  width: 600px; */
-
-  padding: 2%;
+  padding: 5%;
   padding-top: 0px;
   margin-top: 0;
-  max-width:65%;
+  max-width:80%;
   margin-left:auto;
   margin-right:auto;
-  padding-left: 2%;
-  padding-right: 2%;
 
   /* background-color: #fdf6e3; solarized light */
   background-color: var(--foreground-color);
+  opacity: 0.97;
 }
 
 /* Standard border radius for elements */
@@ -129,12 +124,10 @@ h3 {
 
 .headshot { /* for the picture */
   float: left;
-  width: 10.70rem;
-  padding: 0.2rem;
+  width: 11rem;
 
-  /* To match the margin of the parent element*/
-  margin-top: 2rem;
-  margin-bottom: 0;
+  margin: 2.5rem;
+  border: solid;
 }
 
 footer {
@@ -184,6 +177,7 @@ button[type="button"] {
 video {
   max-width: 100%;
   text-align: center;
+  border: solid;
 }
 
 iframe {
@@ -233,7 +227,7 @@ iframe {
   border-style: dotted;
   order: 99;
   width: 100%;
-  max-width: inherit
+  max-width: inherit;
 }
 
 .radiotab:checked + .label + .panel {
@@ -256,6 +250,7 @@ iframe {
 
   .headshot {
     max-width: 100%;
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -279,5 +274,10 @@ iframe {
 
   .panel {
     width: inherit;
+    margin: 3%;
+  }
+
+  .tabs {
+    margin: 5%;
   }
 }
