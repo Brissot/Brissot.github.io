@@ -1,283 +1,342 @@
+/* using the LaTeX font, but if not available fallback to Times (available
+   everywhere) */
 @font-face {
-  font-family: 'Times New Roman';
-  font-style: normal;
-  font-weight: 400;
-  src: local('LMRoman10'), url('/media/lmroman10-regular.woff')
-       format('woff');
-  font-display: swap;
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 400;
+    src: local('LMRoman10'), url('/media/lmroman10-regular.woff')
+    format('woff');
+    font-display: swap;
 }
 
+/* define theme colors, these follow solarized-light
+   https://en.wikipedia.org/wiki/Solarized */
 :root {
-  /* define theme colors */
-  --background-color: white;
-  --foreground-color: #fdf6e3;
+    --background-color: white;
+    --foreground-color: #fdf6e3;
 
-  --solarized-base03:    #002b36;
-  --solarized-base02:    #073642;
-  --solarized-base01:    #586e75;
-  --solarized-base00:    #657b83;
-  --solarized-base0:     #839496;
-  --solarized-base1:     #93a1a1;
-  --solarized-base2:     #eee8d5;
-  --solarized-base3:     #fdf6e3;
-  --solarized-yellow:    #b58900;
-  --solarized-orange:    #cb4b16;
-  --solarized-red:       #dc322f;
-  --solarized-magenta:   #d33682;
-  --solarized-violet:    #6c71c4;
-  --solarized-blue:      #268bd2;
-  --solarized-cyan:      #2aa198;
-  --solarized-green:     #859900;
+    --solarized-base03:    #002b36;
+    --solarized-base02:    #073642;
+    --solarized-base01:    #586e75;
+    --solarized-base00:    #657b83;
+    --solarized-base0:     #839496;
+    --solarized-base1:     #93a1a1;
+    --solarized-base2:     #eee8d5;
+    --solarized-base3:     #fdf6e3;
+    --solarized-yellow:    #b58900;
+    --solarized-orange:    #cb4b16;
+    --solarized-red:       #dc322f;
+    --solarized-magenta:   #d33682;
+    --solarized-violet:    #6c71c4;
+    --solarized-blue:      #268bd2;
+    --solarized-cyan:      #2aa198;
+    --solarized-green:     #859900;
 }
 
+/* global font size set to 12, what all other fonts are based on (rem) */
 html {
-  background-color: white;
-  font-size: 12px;
+    background-color: white;
+    font-size: 12px;
 }
 
 header {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  font-family: Georgia, serif;
-  text-align: center;
-  font-size: 1rem;
-  color: var(--solarized-violet);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    font-family: Georgia, serif;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--solarized-violet);
 }
 
+/* The part with Title, Author and Date */
+.title-page {
+    text-align: center;
+
+    h1, h3, h4, h5 {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* For the fancy name at the top. Inspired by:
+   https://www.berkshirehathaway.com */
 .sidsu_small {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .sidsu_big {
-  font-size: 7rem;
+    font-size: 7rem;
 }
 
 .sidsu {
-  font-size: 4rem;
+    font-size: 4rem;
 }
+
 
 body { /* This applies to everything */
-  font-family: 'LMRoman10';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20pt;
-  line-height: normal;
-  background-image: url("/media/skeleton_trumpet.gif");
-  margin: 0.5rem;
-  color: #586e75;
+    font-family: 'LMRoman10';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20pt;
+    line-height: normal;
+    background-image: url("/media/skeleton_trumpet.gif");
+    margin: 0.5rem;
+    color: #586e75;
 }
-  
+
 main { /* This applies to the "hi my name is sid su portion */
-  font-family: LMRoman10, serif;
-  font-size: 2rem;
-  text-align: left;
-  margin: auto;
+    font-family: LMRoman10, serif;
+    font-size: 2rem;
+    text-align: left;
+    margin: auto;
 
-  padding: 5%;
-  padding-top: 0px;
-  margin-top: 0;
-  max-width:80%;
-  margin-left:auto;
-  margin-right:auto;
+    padding: 5%;
+    padding-top: 0px;
+    margin-top: 0;
+    max-width:80%;
+    margin-left:auto;
+    margin-right:auto;
 
-  /* background-color: #fdf6e3; solarized light */
-  background-color: var(--foreground-color);
-  opacity: 0.97;
+    /* background-color: #fdf6e3; solarized light */
+    background-color: var(--foreground-color);
+    opacity: 0.97;
 }
 
 /* Standard border radius for elements */
 img, video, main {
-  border-radius: 2rem;
+    border-radius: 2rem;
+    opacity: 100%;
 }
 
 a {
-  font-family: LMRoman10, serif;
-  color: var(--solarized-violet);
+    color: var(--solarized-violet);
 }
 
 p {
-  font-family: LMRoman10, serif;
-  font-size: 2rem;
-  text-align: left;    
+    font-family: LMRoman10, serif;
+    text-align: justify;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, serif;
-  font-weight: normal;
+    font-family: Georgia, serif;
+    font-weight: normal;
 }
 
 h1 {
-  font-size: 4rem;
-  color: var(--solarized-violet);
+    font-size: 4rem;
+    color: var(--solarized-violet);
 }
 
 h2 {
-  font-size: 3rem;
-  color: var(--solarized-orange);
+    font-size: 3rem;
+    color: var(--solarized-orange);
 }
 
 h3 {
-  font-size: 2.5rem;
-  color: var(--solarized-green);
+    font-size: 2.5rem;
+    color: var(--solarized-green);
+}
+
+/* Snippet right after Title, Name, Date */
+.introduction {
+    column-count: 2;
+    column-rule: 0.15rem dashed var(--solarized-base1);
+}
+
+.introduction p {
+    line-height: 1.15;
+    text-align: justify;
+    text-indent: 4rem;
+    margin: 0;
+}
+
+figure {
+    padding: 0.25rem;
+    margin: 0;
+}
+
+figcaption {
+    font-size: 1rem;
+    text-align: center;
 }
 
 .headshot { /* for the picture */
-  float: left;
-  width: 11rem;
+    float: left;
+    width: 11rem;
 
-  margin: 2.5rem;
-  border: solid;
+    margin: 2rem;
+    border: solid;
 }
 
 footer {
-  font-size: small;
+    font-size: small;
 }
 
 #e-mail {
-  all: unset;
-  cursor: pointer;
-  text-decoration: underline;
-  font-family: LMRoman10, serif;
-  color: var(--solarized-violet);
+    all: unset;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: LMRoman10, serif;
+    color: var(--solarized-violet);
 }
 
+/* how should a table look? */
 table, td, th {
-  border: 1px solid var(--solarized-base1);
-  table-layout: fixed;
-  width: 100%
+    border: 1px solid var(--solarized-base1);
+    table-layout: fixed;
+    width: 100%
 }
 th {
-  position: sticky;
+    position: sticky;
 }
 
 tr:nth-child(2n) {background-color: silver}
 
 label {
-  text-align: center;
+    text-align: center;
 }
 input {
-  font-family: LMRoman10, serif;
-  font-size: 2rem;
-  text-align: left;
-  margin: auto;
-  padding: 1rem;
-  border-radius: 1rem;
+    font-family: LMRoman10, serif;
+    font-size: 2rem;
+    text-align: left;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 button[type="button"] {
-  font-family: LMRoman10, serif;
-  font-size: 2rem;
-  text-align: left;
-  margin: auto;
-  padding: 1rem;
-  border-radius: 1rem;
+    font-family: LMRoman10, serif;
+    font-size: 2rem;
+    text-align: left;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 video {
-  max-width: 100%;
-  text-align: center;
-  border: solid;
-}
-
-iframe {
     max-width: 100%;
-
-    /* EMACS and VSCODE don't yet recognize this tag. Do better devs! */
-    aspect-ratio: 16 / 9; 
-    
-    border: none;
     text-align: center;
+    border: solid;
 }
 
-.tabs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+/* <details> formatting */
+details {
+    margin-top: 2rem;
 }
 
-.radiotab {
-  position: absolute;
-  opacity: 0; /* hides the selector */
-  max-width: 100%;
+summary h3 {
+    display: inline-block;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
-.label {
-  cursor: pointer;
-  width: 33.33%;
-
-  /* to get W3 verification */
-  font-family: Georgia, serif;
-  font-weight: normal;
-  font-size: 3rem;
-  color: var(--solarized-orange);
+/* inside of summary, time is a block element */
+summary time {
+    display: block;
+    margin-bottom: 0.25rem;
+    padding-top: 0;
+    margin-top: 0;
 }
 
-.label:hover {
-  background: var(--solarized-base1);
+/* how should things look in articles */
+.article-body {
+    column-count: 2;
+    p {
+        text-indent: 4rem;
+    }
 }
 
-.radiotab:checked + .label {
-  background: var(--solarized-base2);
+.concert {
+    display: flex;
+    flex-direction: row;
+
+    section {
+        padding: 0.5rem;
+    }
+
+    section p {
+        margin: 0;
+        line-height: 1;
+        text-indent: 4rem;
+    }
 }
 
-.panel {
-  display: none;
-  padding: 2rem;
-  border-style: dotted;
-  order: 99;
-  width: 100%;
-  max-width: inherit;
+.content {
+    max-width: 35%;
 }
 
-.radiotab:checked + .label + .panel {
-  display: block;
-  max-width: 100%;
+/* a nice image gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0.25rem;
+    max-width: 65%;
+
+    .gallery-col {
+        flex: 30%;
+        max-width: 100%;
+        padding: 0 4px
+    }
+
+    /* these are usually within .gallery-col */
+    img, video {
+        margin-top: 0.25rem;
+        vertical-align: middle;
+        width: 100%;
+        border-style: solid;
+        border-width: medium;
+    }
+
 }
 
 /* for the mobile response */
 @media screen and (max-width: 600px) {
-  body {
-    background-image: none;
-  }
-  main {
-    max-width: 95%;
-  }
+    body {
+        background-image: none;
+    }
 
-  img {
-   	max-width: 100%;
-  }
+    main {
+        max-width: 95%;
+    }
 
-  .headshot {
-    max-width: 100%;
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    img {
+   	    max-width: 100%;
+    }
 
-  .headshot_container {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-  }
+    .concert {
+        flex-direction: column;
+        max-width:100%;
+    }
 
-  .tabs {
-    flex-direction: column;
-    max-width: 100%
-  }
+    .content {
+        max-width: 100%;
+    }
 
-  .label {
-    width: 100%
-  }
+    .gallery {
+        max-width: 100%;
+    }
 
-  .panel {
-    width: inherit;
-    margin: 3%;
-  }
+    .headshot {
+        max-width: 100%;
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-  .tabs {
-    margin: 5%;
-  }
+    .headshot_container {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+
+    .introduction {
+        column-count: 1;
+    }
+
+    .article-body {
+        column-count: 1;
+    }
 }
