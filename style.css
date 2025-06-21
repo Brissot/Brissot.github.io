@@ -80,13 +80,12 @@ body { /* This applies to everything */
     font-weight: 400;
     font-size: 20pt;
     line-height: normal;
-    background-image: url("/media/skeleton_trumpet.gif");
+    //background-image: url("/media/skeleton_trumpet.gif");
     margin: 0.5rem;
     color: #586e75;
 }
 
 main { /* This applies to the "hi my name is sid su portion */
-    font-family: LMRoman10, serif;
     font-size: 2rem;
     text-align: left;
     margin: auto;
@@ -111,6 +110,7 @@ img, video, main {
 
 a {
     color: var(--solarized-violet);
+    text-align: left;
 }
 
 p {
@@ -136,37 +136,6 @@ h2 {
 h3 {
     font-size: 2.5rem;
     color: var(--solarized-green);
-}
-
-/* Snippet right after Title, Name, Date */
-.introduction {
-    column-count: 2;
-    column-rule: 0.15rem dashed var(--solarized-base1);
-}
-
-.introduction p {
-    line-height: 1.15;
-    text-align: justify;
-    text-indent: 4rem;
-    margin: 0;
-}
-
-figure {
-    padding: 0.25rem;
-    margin: 0;
-}
-
-figcaption {
-    font-size: 1rem;
-    text-align: center;
-}
-
-.headshot { /* for the picture */
-    float: left;
-    width: 11rem;
-
-    margin: 2rem;
-    border: solid;
 }
 
 footer {
@@ -196,6 +165,7 @@ tr:nth-child(2n) {background-color: silver}
 label {
     text-align: center;
 }
+
 input {
     font-family: LMRoman10, serif;
     font-size: 2rem;
@@ -220,30 +190,83 @@ video {
     border: solid;
 }
 
+/* for the mobile response */
+@media screen and (max-width: 600px) {
+    body {
+        background-image: none;
+    }
+
+    main {
+        max-width: 95%;
+    }
+
+    img {
+   	    max-width: 100%;
+    }
+
+    .article-body {
+        column-count: 1;
+    }
+}
+
+/* Snippet right after Title, Name, Date */
+.introduction {
+    column-count: 1;
+
+    p {
+        line-height: 1.5;
+        text-align: justify;
+        margin: 2rem;
+    }
+
+    .headshot { /* for the picture */
+        float: left;
+        width: 11rem;
+
+        margin: 2rem;
+        border: solid;
+    }
+
+    @media screen and (max-width: 600px) {
+        column-count: 1;
+
+        .headshot {
+            max-width: 100%;
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .headshot_container {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+        }
+    }
+}
+
+/**
+   Live Music specific CSS
+ */
+
 /* <details> formatting */
 details {
-    margin-top: 2rem;
-}
+    margin-top: 0.25rem;
 
-summary h3 {
-    display: inline-block;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
+    summary h3 {
+        display: inline-block;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
 
-/* inside of summary, time is a block element */
-summary time {
-    display: block;
-    margin-bottom: 0.25rem;
-    padding-top: 0;
-    margin-top: 0;
-}
-
-/* how should things look in articles */
-.article-body {
-    column-count: 2;
-    p {
-        text-indent: 4rem;
+    /* inside of summary, time is a block element */
+    summary time {
+        display: block;
+        margin-bottom: 0.25rem;
+        padding-top: 0;
+        margin-top: 0;
     }
 }
 
@@ -260,10 +283,28 @@ summary time {
         line-height: 1;
         text-indent: 4rem;
     }
-}
 
-.content {
-    max-width: 35%;
+    .content {
+        max-width: 35%;
+    }
+
+    /* how should things look in articles */
+    .article-body {
+        column-count: 2;
+        p {
+            text-indent: 4rem;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        max-width: 100%;
+
+        .content {
+            max-width: 100%;
+        }
+
+    }
 }
 
 /* a nice image gallery */
@@ -288,55 +329,17 @@ summary time {
         border-width: medium;
     }
 
-}
-
-/* for the mobile response */
-@media screen and (max-width: 600px) {
-    body {
-        background-image: none;
+    figure {
+        padding: 0.25rem;
+        margin: 0;
     }
 
-    main {
-        max-width: 95%;
+    figcaption {
+        font-size: 1rem;
+        text-align: center;
     }
 
-    img {
-   	    max-width: 100%;
-    }
-
-    .concert {
-        flex-direction: column;
-        max-width:100%;
-    }
-
-    .content {
+    @media screen and (max-width: 600px) {
         max-width: 100%;
-    }
-
-    .gallery {
-        max-width: 100%;
-    }
-
-    .headshot {
-        max-width: 100%;
-        width: 100%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .headshot_container {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 100%;
-    }
-
-    .introduction {
-        column-count: 1;
-    }
-
-    .article-body {
-        column-count: 1;
     }
 }
