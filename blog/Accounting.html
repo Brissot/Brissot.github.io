@@ -15,20 +15,16 @@
  code, pre {font-size: 0.75rem}
  img {max-width: 100%}
  figure {margin: auto; text-align: center}
- pre {max-width: 300px; text-align: left}
- table {margin: auto; border: 1px solid}
- td, th {text-align: left}
- .num {text-align: right}
+ pre {text-align: left}
  .bib {padding-left: 2rem; text-indent: -2rem}
 </style>
 </head>
 
-<body><main>
-<article>
+<body><main><article>
 <header>
 <nav><h3><a href="/">Home</a> &gt; <a href="/blog">Blog</a></h3></nav>
 <h1>My Accounting Setup</h1>
-<address>Sid Su | <time datetime="2025-09-09">Sept. 9, 2025</time></address>
+<address>Sid Su | <time datetime="2025-09-17">Sept. 17, 2025</time></address>
 
 <nav>
 <ol>
@@ -46,9 +42,9 @@
 <section id="introduction">
 <h2>Introduction</h2>
 
-<p>To start off my <a href="/blog/Monthly%20Resolutions">monthly resolutions
-plan</a>, my August resolution was to have a clearer understanding of my
-finances. More specifically, I outlined a S.M.A.R.T goal:
+<p>Starting off my <a href="/blog/Monthly%20Resolutions">monthly
+resolutions</a>, my August resolution was to have a clearer understanding of my
+finances. More specifically, I outlined the S.M.A.R.T goal:
 
 <blockquote>
 <em>Specific</em>&mdash;I will figure out a method&mdash;paper or
@@ -66,26 +62,23 @@ own records, I will have <q>clearer understanding of my finances.</q><br>
 everything done by <time datetime="2025-09-01">September 1st</time>. (Su)
 </blockquote>
 
-<p>I think that I have been successful in this goal. I have looked at several
-personal finance applications, and determined that GNUCash is right for me. I
-now have an accurate account of my net worth, as well as the assets and
-liabilities that go into my net worth. I can audit my expenses, because I have
-my receipts saved into a folder <code>Receipts</code>, which are linked to the
-appropriate transactions in GNUCash. As of
+<p>I believe I was successful in my goal. I looked at several personal finance
+applications, and determined that GNUCash is right for me. I now know my assets
+and liabilities&mdash;allowing me to calculate my net worth. My expenses are
+auditable through receipt files attached to transactions in GNUCash. As of
 <time datetime="2025-09-05">September 5th</time> (my statement date), all of my
-transactions are accurate down to the cent.</p>
+transactions are accurate to the cent.</p>
 </section>
 
 <section id="requirements">
 <h2>Requirements</h2>
 
-<p>My main requirement going into this project is that I want the solution to
-be actually used and practical day-to-day. The meme in Fig. 1 resonates with
-me; it says that simple solutions are often adequate, and mastering the simple
-solution can often be the right tool for the task (Maddox). In personal
-finance, I think the ends of the bell curves would be Excel, but finding a
-personal finance software that is close to the versatility and simplicity of
-Excel should be the goal.</p>
+<p>My main, obvious, requirement is that I want a practical solution that can
+be used day-to-day. The meme in Fig. 1 resonates with me&mdash;mastering simple
+tool is better than bringing complex, often cumbersome tools (Maddox). I think
+the ends of the bell curve in Fig. 1 should be Excel, but finding a personal
+finance software close in versatility and simplicity without the effort should
+be the goal.</p>
 
 <figure>
 <figcaption>Fig. 1. <abbr title="Person Knowledge Management">PKM</abbr>
@@ -96,282 +89,323 @@ Mastery Curve Meme</figcaption>
 <footer>(Maddox)</footer>
 </figure>
 
-<p>Defining specific requirements:</p>
+<h3>Defining specific requirements:</h3>
 
 <dl>
 <dt>More Than a Spreadsheet</dt>
-<dd>The solution needs to have a better workflow, and enough flexibility to do
-what I could do in a spreadsheet. If the solution doesn&rsquo;t provide more
-than a spreadsheet, then there is no reason to use it.</dd>
+<dd>If the solution does less than what a typical budget spreadsheet does, then
+there is no reason to use it.</dd>
 
 <dt>Double-Entry Bookkeeping</dt>
-<dd>In a similar vein, the solution must use double-entry bookkeeping, which
-improves auditability. Double-entry bookkeeping will be expanded upon later.
-</dd>
+<dd>The solution must use double-entry bookkeeping, which improves
+auditability. This is not strictly necessary for personal finance, but I want
+to learn double-entry bookkeeping, so it is a requirements.<sup>1</sup></dd>
 
 <dt>Ownership of Data</dt>
-<dd>The solution must let me own my own data. This  means having my ledger
-stored as an easily downloadable file, or directly using the file as the ledger
-on my devices. Even if my data is only locked behind a free tier, there have
-been many cases&mdash;notably with Quizlet&mdash;where a subscription gets
-added, locking userdata behind a paywall (Freedman).<sup>1</sup></dd>
+<dd>I must own my own data, meaning my ledger is viewable and editable from a
+file on my computer. Even if my data is locked behind a free SaaS, there have
+been cases where previously freely stored user data gets locked behind a
+subscription (Freedman).<sup>2</sup></dd>
 
 <dt>Data Portability/Archivability</dt>
-<dd>The solution bust be accessible even if the original application ceases to
-exist. In practice this means that the data should be stored in a standard
-format. For this, a good place to start is the Library of Congress
+<dd>My ledger must be accessible, even if the original solution ceases to
+exist. In practice this looks like data stored in a standard
+format.<sup>3</sup>
+
+<dt>Efficient Workflow</dt>
+<dd>Entering a transaction should not take longer than it takes to put the same
+transaction into a spreadsheet.</dd>
+
+<dt>Fast as a Program</dt>
+<dd>The solution should be light on system resources. Specifically, I am
+targetting no more than 200MiB of RAM, and 10% CPU load.<sup>4</sup></dd>
+
+<dt>Auditability</dt>
+<dd>I want to keep receipts organized and digitized, so that I can consult the
+original documents to find and correct errors.</dd>
+
+<dt>BONUS: Asset Value Tracking</dt>
+<dd>If there is a way to track the value of
+<abbr title="Financial instrumuents such as bonds, stocks, mutual funds">
+securities</abbr> and currencies, and use them to track the value of an
+account, that is a welcome bonus.</dd>
+</dl>
+
+<aside>
+<p><sup>1</sup>Double-entry bookkeeping is a bookkeeping strategy that requires
+every transaction to have an account that money is being taken from, and an
+account that money is being moved to. In this case, an account can be bank
+accounts, expense accounts&mdash;in practice more like expense
+categories&mdash;equity accounts and liability accounts&mdash;debt.
+Double-entry bookkeeping helps with auditing, because every cent must be
+accounted for for the numbers to make sense on both sides or <q>accounts</q> of
+the transaction.</p>
+</aside>
+
+<aside>
+<p><sup>2</sup>Quizlet notoriously locked previously free features and
+user-made flashcards and behind a paywall. In the past, the free-tier included
+<dfn title="The Spaced Repetition learning mode">Learn</dfn> and
+<dfn title="The fill-in-the-blank mode">Write</dfn>, but in
+<time datetime="2022-08">August 2022</time> Quizlet heavily limited the free
+tier of these modes to 5 uses a day. To regain the previously unlimited access,
+a $7.99/month subscription is now required. The option to export flashcards as
+a CSV, even as the creator was also removed (Freedman).
+</aside>
+
+<aside>
+<p><sup>3</sup>A good place to start is the the Library of Congress
 <a href="https://www.loc.gov/preservation/resources/rfs/data.html">Recommended
 Formats Statement</a>. It recommends line-oriented
 (<abbr title="Tab-Separated Values">TSV</abbr> or
 <abbr title="Comma-Separated Values">CSV</abbr>) or open formats such as an
-SQLite3 database (<q>Recommended Formats Statement: Datasets</q>).</dd>
-
-<dt>Efficient Workflow</dt>
-<dd>Entering a transaction shouldn&rsquo;t take longer than it would take to
-put the same transaction into a spreadsheet.</dd>
-
-<dt>Fast as a Program</dt>
-<dd>As accounting software has been around now for 40 years, the solution
-should be light on system resources (CPU, RAM, Storage). Quantitatively, it
-should take &lt;200MiB of RAM, &lt;10% CPU load.<sup>2</sup></dd>
-
-<dt>Auditability</dt>
-<dd>The solution must be able to keep receipts organized and digitized, so that
-original documents can be consulted to discover and correct errors.</dd>
-
-<dt>BONUS: Asset Value Tracking</dt>
-<dd>The solution gains bonus points if there is a way to track the value
-of <abbr title="Financial instrumuents such as bonds, stocks, mutual funds">
-securities</abbr> and currencies.</dd>
-</dl>
-
-<aside>
-<p><sup>1</sup>Quizlet notoriously locked up data made by users and previously
-free features behind a paywall. After years of the free tier including
-<dfn title="The Spaced Repetition learning mode">Learn</dfn> and
-<dfn title="The fill-in-the-blank mode">Write</dfn>, in
-<time datetime="2022-08">August 2022</time> Quizlet Inc. heavily
-limited the free tier of Learn and Write, restricting them to 5 free uses a
-day. In order to use it as you could before, a $7.99/month subscription is
-required. Additionally, they removed the option to export your own flashcards
-as a CSV (Freedman).
+SQLite3 database (<q>Recommended Formats Statement: Datasets</q>).</p>
 </aside>
 
 <aside>
-<p><sup>2</sup>Quake&mdash;the real-time 3D graphics game&mdash; was able to
-target 8MiB of ram and 80MiB of storage (<q>Quake Isn't Earth-Shaking</q>).
-There is no reason why an accounting app should take more than 200MiB of RAM
-and 10% CPU load. Desktop software written in fast compiled languages such as
-C++, Go, Rust and Haskell can accomplish this easily.</p>
+<p><sup>4</sup>The accounting software industry is at least 70 years old, so
+there is no excuse for programs to be heavy on system resources (Kircher).
+Quake&mdash;the real-time 3D graphics game&mdash;targetted 8MiB of RAM and
+80MiB of storage (<q>Quake Isn&rsquo;t Earth-Shaking</q>). Desktop software
+written in fast compiled languages such as C, C++, Go, Rust and Haskell can
+reach my target of &lt;200MiB RAM and &lt;10% CPU load easily.</p>
 </aside>
 </section>
 
 <section id="software-suck">
 <h2>Most Accounting Software Sucks&hellip;</h2>
 
-<p>For a software application category that is 40 years old, and is just a
-glorified spreadsheet, it&rsquo;s honestly impressive how bad most accounting
-applications are. How is it possible that so many applications mess up UI/UX,
-when all they need to do is follow the layout and bindings of every spreadsheet
-software ever made? And how is it that a spreadsheet software can take more
-system resources than many video games?</p>
+<p>For a software application category that is 70 years old and a glorified
+spreadsheet, it is impressive how bad most accounting applications are. Either
+it has a UI/UX design that is feature-complete, but not usable by
+humans&mdash;or it takes more system resources than many Xbox 360 games.</p>
 
-<p>To illustrate this, here is a list of the commonly used accounting software
-that I have tried or looked into, and the downsides that led me to not choose
-them.</p>
+<p>To illustrate these issues, these are the unchosen accounting applications I
+researched, and the downsides that led me to not choose them:</p>
 
-<h3>Quicken Simplify and <abbr title="You Need A Budget">YNAB</abbr></h3>
-<p><a href="https://www.quicken.com/products/simplifi/">Quicken Simplify</a>
-and <a href="https://www.ynab.com/">YNAB</a> are fully featured, and have all
-the features I would want:</p>
+<dl>
+<dt>Quicken Simplifi and <abbr title="You Need A Budget">YNAB</abbr></dt>
+<dd>These are the most fully-featured solutions, and have amazing features:
+
 <ul>
 <li>Online banking support</li>
 <li>Asset price management</li>
 <li>Cross-platform support</li>
 <li>Beautiful reports</li>
 </ul>
-<p>However, both are also SaaS products that keep all data on the cloud, so
-I do not own my data, and they are disqualified.</p>
 
-<p>Also, both rely on web interfaces, so while they can run on anything with
-a web browser, a web browser is also needed to access your own ledger. A web
-browser can take 1GiB of RAM, with a far slower startup than an optimized
-native app. It&rsquo;s unfortunate that Intuit discontinued their stable yearly
-desktop releases of Quicken, because it looks like that solution would
-perfectly suit my needs.</p>
+However, both are also <abbr title="Software as a Service">SaaS</abbr> products
+that keep all data on the cloud, meaning I do not own my own data. They rely on
+web interfaces, meaning they take at minimum 500MiB of RAM, and 5% CPU load;
+they also have slow start-up times because of the 30MiB of CDN images and
+JavaScript libraries that must be downloaded. It is unfortunate that Intuit
+discontinued the native version of Quicken, because it would have suited my
+needs perfectly.</dd>
 
-<h3>Plain-text Accounting</h3>
-<p>Plain-text accounting or <abbr>PTA</abbr> has gained popularity in the last
-few years with, <a href="https://ledger-cli.org">ledger</a> and
-<a href="https://hledger.org">hledger</a>. As the name suggests, the idea is
-that the whole ledger is stored as human-readable plain-text files, meaning
-your ledger is suited for version control, with minimal line changes.</p>
-
-<p>However, from my&mdash;admittedly brief&mdash; investigation, it appears
-that plain-text accounting has some serious downsides:</p>
+<dt>Ledger and HLedger</dt>
+<dd>These are plain-text accounting or <abbr>PTA</abbr> solutions that have
+gained popularity in the last decade. As the name suggests, PTA solutions store
+the ledger as a series of human-readable plain-text markup files. Proponents of
+PTA say that the format is better suited for version control, allowing for
+easier auditing using minimal line-changes. However, from my&mdash;admittedly
+brief&mdash;investigation I think PTA has some serious downsides:
 
 <ol>
-<li>The claim that plaintext is a better format than popular structured formats
-is dubious. You lose speed, potential compression of the data, and a lot of
-tooling that you would normally get for free with something more structured
-with software that are based on SQLite, XML or JSON.</li>
-<li>You get nothing to start, just a couple of command line tools, making it
-hard to generate reports. What ends up happening is that people create their
-own tooling, where you would normally get it for free&mdash;with an
-SQLite-based application reports come naturally out of <code>SELECT</code>
-statements.</li>
+<li>Plain-text formats lose speed, potential data compression and a significant
+amount of tooling compared to structured formats.</li>
+<li>Plain-text accounting gives few tools to start, just a command-line
+program, making it hard to generate meaningful reports.</li>
+<li>Plain-text advocates seem to create their own scripts and tooling, which
+they say gives them better control, however tooling and scripting languages are
+readily available and powerful for structured formats. SQLite, CSV, XML and
+JSON are standard formats that have well documented and open libraries.</li>
 <li>Both ledger and hledger do not have a way to attach receipts, reducing
 auditability.</li>
-<li>If a doomsday situation does occur, and we lose the ability to read SQLite,
-that&rsquo;s, plaintext does not solve this issue. If we lose access to SQLite,
-it&rsquo;s more likely that we also lose access to the <code>ext4</code>
-filesystem, and logic behind the SATA connector.</li>
+<li>If a doomsday event occurs, and we lose the ability to read SQLite, it
+is just as likely that we also lose the <code>ext4</code> filesystem,
+SATA-compatible connectors and computing as a whole.</li>
 </ol>
+</dd>
 
-<h3>Homebank</h3>
-<p><a href="https://www.gethomebank.org">Homebank</a> is a pretty, functional
-accounting application that does double-entry bookkeeping very well. However,
-for me it doesn't have a way to attach receipts, which is one of the features
-that I really wanted.</p>
+<dt>Homebank</dt>
+<dd>A pretty, fast,x functional accounting application that does almost
+everything I want it to&mdash;but it does not have a way to attach receipts,
+which is one of my core requirements.</dd>
 
-<h3>Skrooge</h3>
-<p><a href="https://skrooge.org">Skrooge</a> from what I gather is similar to
-HomeBank, but I did not check it out because it tries to increase its search
-ranking with keywords. For instance, if you search for HomeBank, GNUCash or
-KMyMoney, Skrooge will also pop up. I think this is poor etiquette, so I did
-not even bother to download or check it out.</p>
+<dt>Skrooge</dt>
+<dd>Similar to HomeBank, but I did give it the time of day because it tries to
+increase its search ranking with keywords. If you search for HomeBank, GNUCash
+or KMyMoney in package managers, Skrooge will also pop up. This is poor
+etiquette, and the Skrooge developers should stop doing this.</dd>
 
-<h3>KMyMoney</h3>
-<p><a href="https://kmymoney.org">KMyMoney</a> is really good and feature
-complete, and might be a bit better than the solution I chose. It has support
-for an SQLite backend, which increases the portability of data, as well as
-attaching multiple documents to transactions, double-entry bookkeeping and
-everything else which is expected. If I wasn&rsquo;t primarily on GTK, I would
-absolutely choose KMyMoney</p>
+<dt>Firefly III</dt>
+<dd>A feature-complete solution that comes with amazing reports and an API
+exposing all functionality. It also has the worst UI for anything in this
+roundup and for any piece of software that I have ever used. Doing anything
+requires a lot of clicking: from making reports, to adding transactions, to
+modifying accounts. If someone UI/UX minded came along to create an app using
+the API, it would be the best solution, but such an app does not exist.</dd>
 
-<h3>Firefly III</h3>
-<p><a href="https://www.firefly-iii.org">Firefly III</a> is flat-out the most
-feature-complete software on this list. It comes with amazing reports, a
-complete API, all types of accounts and many attributes you can put into each
-and every transaction&hellip; it&rsquo;s just a shame that its UI also by far
-the worst out of anything on this roundup.</p>
+<dt>Actual</dt>
+<dd>A pretty, easy to use accounting app. It works well&mdash;but is a
+single-entry accounting solution.</dd>
 
-<p>There&rsquo;s just so much clicking to make anything happen, from reports
-to adding transactions, to modifying accounts. It makes me think that someone
-will come along and focus on the UI/UX to make a companion app that's actually
-really good, but until then it&rsquo;s not what I will use.</p>
+<dt>KMyMoney&mdash;The Runner Up</dt>
+<dd>A feature complete, powerful and fast accounting tool. It is likely a
+little bit better than the solution I chose, as it checks all the boxes just a
+little bit better&mdash;but I am primarily on GTK, so in order to keep the
+environment looking native, I chose a GTK application.</dd>
+</dl>
 
-<h3>Actual</h3>
-<p><a href="https://www.actualbudget.com">Actual</a> is a very pretty, very
-easy to use accounting app. However, the big downside is that it doesn&rsquo;t
-offer much more than using a spreadsheet. For one thing, it's a single-entry
-accounting system, which means that it's much harder to audit expenses. If I
-lose auditability, I might as well just use a spreadsheet, and that's why I did
-not choose Actual.
+<h3>No Bad Options</h3>
+<p>Despite my criticisms, I understand if use a solutions I chose to skip over.
+<q cite="https://pubmed.ncbi.nlm.nih.gov/28891126/">Drugs don&rsquo;t work in
+patients who don&rsquo;t take them</q> (Lindenfield). If using plain-text
+accounting enables you to manage your finances better, then use it. If like
+most people you do not care about having to open a web browser to view your
+ledger, then do it. It is better that you do something than nothing, and all
+the applications listed are capable of doing 95% of what the others can. Avoid
+Skrooge though, they have bad etiquette.</p>
 
-<h3>They&rsquo;re Not Bad Options Though</h3>
-<p>Despite all that I have said, I understand if you want to use the
-applications that I chose to skip over. Afterall,
-<q cite="https://pubmed.ncbi.nlm.nih.gov/28891126/">Drugs don't work in
-patients who don't take them</q> (Lindenfield). If using plain-text accounting
-lets you manage your finances better, leading to a better situation, then so be
-it. If you don't care about having to open a web browser to view your
-aggregated financial data, then by all means go ahead. It's better to use a
-solution than no solution, and all of the applications are capable of doing 90%
-of what the others can.</p>
 </section>
 
 <section id="gnucash">
 <h2>GNUCash Does Everything&hellip; Unglamorously</h2>
 <p>The accounting solution I ended up choosing is boring and unglamorous.
-<a href="https://www.gnucash.org">GNUCash</a> is an old piece of software, with
-its first stable release in <time datetime="1998">1998</time>. In the age of
-1GiB electron applications, GNUCash&rsquo;s age is a benefit, not a downside.
-I get ~100MiB of RAM usage, and less than 3% CPU usage. Additionally, there
-have been close to 30 years for bugs to be fixed, for people to explore the
-edges of what&rsquo;s possible, for developers to expand what&rsquo;s possible
-and for an ecosystem of tools to emerge around GNUCash.</p>
+Having released in <time datetime="1998">1998</time>,
+<a href="https://www.gnucash.org">GNUCash</a> is an old piece of software.
+However, I see this as an advantage, not a disadvantage. Here are the main
+reasons for GNUCash:
 
-<p>Getting started with GNUCash is admittedly a little bit unintuitive, but
-this is more because it&rsquo;s also an introduction to double-entry
-bookkeeping.</p>
+<dl>
+<dt>Ergonomics</dt>
+<dd>GNUCash has had 27 years to become easy to use, with keybinds and layouts
+that have been refined over many iterations.</dd>
 
-<h3>Double-Entry Bookkeeping</h3>
-<p>Double-entry bookkeeping is a bookkeeping strategy that requires every
-transaction to have an account that money is being taken from, and an account
-that money is being moved to. In this case, an account can be bank accounts,
-expense accounts (really more like expense categories), equity accounts and
-liability accounts (debt). Double-entry bookkeeping helps with auditing,
-because every cent must be accounted for for the numbers to make sense on both
-sides or <q>accounts</q> of the transaction.</p>
+<dt>Resource Usage</dt>
+<dd>GNUCash only uses ~100MiB of RAM, and ~2% CPU, which is within my
+requirements.<sup>1</sup></dd>
 
-<h3>Speed</h3>
-<p>GNUCash is written in C and Perl, which makes it suited as a fast desktop
-application.</p>
+<dt>Stable, Bug-Free</dt>
+<dd>GNUCash has been around so long that I can expect that most breaking
+changes were done 10&ndash;20 years ago. It is a stable experience that will
+keep working for years to come.</dd>
 
-<h3>Archivability</h3>
-<p>One really useful part about GNUCash is that I can save my ledger as either
-a plain-text XML, or as an SQLite database. Weirdly, the XML is a lot smaller
-than the SQLite database, but I&rsquo;ll chalk that up to the XML being
-compressed, and the SQLite currently only saving uncompressed.</p>
+<dt>Ecosystem</dt>
+<dd>Tooling has grown up around GNUCash over the years to do things that are
+not available in the basic program. Mainly, this comes in the form of
+extensions written in PERL.</dd>
 
-<p>The upside of this is that if GNUCash ceases to exist and I want to get all
-my transactions, it's a matter of writing some SQL. For instance, all
-transactions can be gotten with:</p>
+<dt>Double-Entry Bookkeeping</dt>
+<dd>GNUCash does double-entry bookkeeping, which was one of my basic
+requirements.</dd>
 
-<code>
-SELECT * FROM transactions<br>
-ORDER BY post_date;
-</code>
+<dt>Archivability</dt>
+<dd>GNUCash has the option to save ledgers as either compressed XML, SQLite or
+connecting to an external SQL server. Weirdly, the XML is a lot smaller than
+SQLite. This is likely due to the XML being compressed, and the SQLite not
+being compressed.</dd>
+</dl>
 
-<p>There is a little caveat that some of the information is hidden away in
-different tables, so if GNUCash really did become abandonware, there would be
-some effort required to fully reconstruct the ledger, but knowing that
-it&rsquo;s very doable with all the information in a single file is comforting
-to me.</p>
+<p><sup>1</sup>GNUCash was designed in a different era, when both RAM and
+storage was expensive. It is written in C with extensions written in Perl,
+making it fast and efficient.</p>
 </section>
 
 <section id="using-gnucash">
 <h2>Using GNUCash</h2>
-<p>It&rsquo;s one thing to talk about the downsides of different software,
-it&rsquo;s another thing to actually learn and use the supposedly <q>best</q>
-solution. There are some quirks to learn, and it can be a bit confusing at
-first. I will try to clarify the parts that confused me, but if there are parts
-that are still confusing, feel free to reach out.</p>
+<p>It can be easy to get caught in the details of which software is best;
+actually using the software is a whole different task. GNUCash has some quirks
+to learn, and it can be a bit confusing at first, but I will try to clarify the
+parts that confused me. If there are parts that are still confusing, feel
+free to reach out to me, and I will add it to this page.</p>
 
-<h3> Setting Up Your File</h3>
+<h3>Creating a New File</h3>
 <p>To start with GNUCash, create a new file by going to
-<code>File&rarr;New File</code>. Most of this is self-explanatory. When
-choosing which accounts to create, don&rsquo;t worry too much about getting all
-the accounts right. You can refine them to what you care about after-the-fact.
-Finally, when saving, choose either XML or SQLite. I recommend SQLite, because
-it&rsquo;s a lot more portable.<sup>1</sup>
+<code>File&rarr;New File</code>.</p>
 
-<p><sup>1</sup>SQLite is really nice, because you can use standard SQLite tools
-such as <abbr title="DB Browser for SQLite">DB4S</abbr> or DBeaver to view your
-data. For instance, transactions can be accessed from the
-<code>transactions</code> table. I have noticed that the size of SQLite
-databases are significantly larger than with XML&mdash;for my ledger including
-just August data&mdash;XML took 30kiB, and SQLite took 500kiB. This seems like
-a lot until you extrapolate it to a time period. Assuming you use GNUCash for
-40 years, you would use: 500KiB months<sup>-1</sup> &middot; 12 months &middot;
-40 years = 240MiB which I think is an acceptible amount of space for a lifetime
-of finances. Of course, with the XML the same calculation gives 14.4MiB, which
-is even better. The discrepency in size is because the XML is compressed, and
-the SQLite is not (GNUCash Development Team). In the far future, GNUCash may
-add compression for SQLite databases, but it does&rsquo;t appear to be on any
-developer&rsquo;s radar right now.</p>
+<figure>
+<figcaption>Fig. 2. Making a New File in GNUCash</figcaption>
+<img loading="lazy"
+     src="/media/gnucash-new-file.avif"
+     alt="Making a new file in GNUCash">
+</figure>
 
-<p>To use SQLite on Linux, you may need to install another package. For
-instance, on Debian you need to install the <code>libdbd-sqlite3</code>.
+<p>When choosing which accounts to create, do not worry too much about getting
+all the accounts right. You can refine them after-the-fact.</p>
+
+<figure>
+<figcaption>Fig. 3. Choosing Accounts in GNUCash</figcaption>
+<img loading="lazy"
+     src="/media/gnucash-accounts.avif"
+     alt="Creating GNUCash Accounts">
+</figure>
+
+<p>Also set opening balances. Again here, do not worry about getting all the
+amounts right, because you can and likely will update them later.</p>
+
+<figure>
+<figcaption>Fig. 4. Setting Opening Balances in GNUCash</figcaption>
+<img loading="lazy"
+     src="/media/gnucash-opening-balances.avif"
+     alt="Setting Opening Balances">
+</figure>
+
+<p>Finally, when saving, choose either XML or SQLite. Either is good, and you
+can convert between them in the future. I recommend SQLite, because it is
+faster to startup, at the cost of a larger file size due to a lack of
+compression.<sup>1</sup></p>
+
+<figure>
+<figcaption>Fig. 5. Choosing File Type for GNUCash</figcaption>
+<img loading="lazy"
+     src="/media/gnucash-file-type.avif"
+     alt="Choosing File Type for GNUCash">
+</figure>
+
+<aside>
+<p><sup>1</sup>SQLite benefits from standard tooling outside of GNUCash as
+well. SQLite viewers such as <abbr title="DB Browser for SQLite">DB4S</abbr> or
+DBeaver can view a GNUCash ledger directly with the <code>transactions</code>
+table. SQLite ledgers are significantly larger than with XML&mdash;my ledger
+with just August data took 30KiB in XML, and 500KiB in SQLite. This is
+significantly bigger, until it is extrapolated it to a time period. Assuming 40
+years of GNUCash at around the same usage rate, it would use: 500KiB
+months<sup>-1</sup> &middot; 12 months &middot; 40 years = 240MiB which to most
+is acceptable for a lifetime of finances. Of course, with XML the same
+calculation gives 14.4MiB, which is much better. The discrepency in size is due
+to gzip compression, which is used by default on XML (GNUCash Development
+Team). In the far future, GNUCash may add compression for SQLite databases, but
+it does not appear to be on any developer&rsquo;s radar right now.</p>
+
+<p>To use SQLite on Linux, extra packages may be necessary. On Debian the
+<code>libdbd-sqlite3</code> package enables SQLite saving.</p>
+</aside>
+
+<!-- HERE IS WHERE MY EDITING IS RIGHT NOW. PICK UP LATER -->
 <h3>My Accounts</h3>
-<p>I set up accounts for all my assets, equity, expenses, income and
-liabilities.</p>
+<p>The main goals of personal finance:</p>
+<ol>
+<li>Track the money you have.</li>
+<li>Track where money is going.</li>
+</ol>
+<p>There are other goals too, like budgeting, tracking the value of assets and
+allocating savings for big purchases, but all of these really emerge from
+doing (1) and (2) well. In GNUCash, setting up meaningful accounts is the most
+important is the most important part of solving (1) and (2).</p>
+
+<p>I set up relatively standard accounts for assets, equity, expenses, income
+and liabilities, but there are a few things that I did differently.</p>
 
 <dl>
 <dt>Assets</dt>
-<dd>For assets, I have pretty standard accounts, as well as my Venmo account.
-I don&rsquo;t think Venmo fits very well into standard accounts, so I just put
+<dd>Mostly standard, except:
+<ol>
+<li>I split my accounts into <code>Assets</code> and
+<code>Assets (Non-Liquid)</code>.</li>
+<li>I put my Venmo as a bank asset&mdash;usually I have more money in Venmo
+than I take out, so it is acting as a pseudo-bank.</li>
+</ol>
 it as a Bank account, because usually I will have more money in Venmo than I
 take out. Additionally, I have assets split into liquid and non-liquid, which
 to me just means accounts that get used vs accounts that sit around to accrue
@@ -401,7 +435,7 @@ hence it&rsquo;s a liability.</dd>
 <p>Here is how my accounts look overall:</p>
 
 <figure>
-<figcaption>Fig. 1. My GNUCash Accounts</figcaption>
+<figcaption>Fig. 6. My GNUCash Accounts</figcaption>
 <pre>
 Accounts
 &boxvr;&boxh;&boxh; Assets
@@ -468,9 +502,9 @@ Accounts
 </figure>
 
 <p>What&rsquo;s good about GNUCash is that creating new accounts does not take
-a long time, there's a dedicated button for it (unlike Firefly III&rsquo;s
-disaster of a UI). Also, if an account has no transactions, you can delete it
-from the keyboard with <code>del</code>.</p>
+a long time, there&rsquo;s a dedicated button for it (unlike Firefly
+III&rsquo;s disaster of a UI). Also, if an account has no transactions, you can
+delete it from the keyboard with <kbd>del</kbd>.</p>
 
 <p>Remember that no one&rsquo;s accounts will be exactly the same. You might
 have different needs a different set of expenses that matter to you. Try some
@@ -478,37 +512,75 @@ categories, and some categories never get used, delete them. If a category is
 too general, and would be better served broken up, break it up.</p>
 
 <h3>Adding Transactions</h3>
-<p>So now that I have all of my accounts set up, it&rsquo;s a matter of using
-the software. For this, GNUCash excels. In order to add a transaction,
-it&rsquo;s a matter of adding a transaction to the bottom of the journal. I
-check my transactions with my statements each month, and make sure the numbers
-match. Note that because this is a double-entry bookkeeping application, each
-transaction you put in will appear in two accounts, deducting from one and
-giving to another.<sup>1</sup></p>
+<p>Now that my accounts are set up, I want to track my assets, expenses and
+liabilities. To add a transaction in GNUCash, simply add it to the bottom of
+an account ledger. Note that because this is a double-entry bookkeeping
+application, each transaction you put in will appear in two accounts, deducting
+from one and giving to the other.<sup>1</sup>
 
-<p><sup>1</sup>I was confused about how money comes in and out. Here's some
-things that confused me:</p>
+<p>That&rsquo;s literally just about it. You just do this for every
+transaction, and add as much or as little detail as you want. For me, I like to
+have receipts, because it makes it easier to make the numbers work at
+reconciliation time.</p>
+
+<p>I <dfn title="verify entries in a ledger">reconcile</dfn> my transactions
+with my bank statements each month, and make sure the numbers make
+sense.</p>
+
+<p>Although the process is pretty simple, here are a few things that still
+confused me when starting out:</p>
+
+<p>One part that confused me is that  </p>
+
+<p><sup>1</sup>I was confused about how money comes in and out. Here&rsquo;s
+some things that confused me:</p>
 <dl>
+<dt>If you are transferring from one account to another, how can you gain or
+spend money elsewhere? Or how does money get created and spent in the
+double-entry system?</dt>
+<dd>To gain money, you are crediting the income account&mdash;like
+salary&mdash;and debiting the asset account&mdash;like checking. This is
+confusing, because colloquially, we use credit to mean getting money, and debit
+is the opposite, so it must mean losing money.
+<abbr title="Dividend, Expense, Asset, Liability, Equity, Revenue">DEALER
+</abbr> is an acronym that can help. DEA&mdash;dividend, expense and asset are
+debit balances, or a high debit means more money. LER&mdash;liability, equity,
+revenue are credit balances, or a high credit means more money. GNUCash
+abstracts this by using less formal names such as Deposit and Withdrawl, making
+it easier, but it is still helpful to know what the formal names are.</dd>
+
+<dt>Do you need to have an account for every place you spend money?</dt>
+<dd>You do not need an account for every place you spend money, unless you are
+a business that deals with a few big suppliers or customers. However, regular
+people spend money in many different stores and places, so it is usually a lot
+more useful to make accounts as meaningful spending categories than individual
+stores.</dd>
+
 <dt>How do I record my assets before installing GNUCash?</dt>
 <dd>Everything goes into <code>Equity::Opening Balances</code>, which is just
-like a slush fund for money before the system, unless you have a record of
-every transaction and dollar to your name.</dd>
+like a slush fund for money before you started to use the accounting software.
+Unless you have a record of every transaction you have ever made since your
+first dollar, then this category is necessary.</dd>
 
 <dt>Where does income come from?</dt>
-<dd>Income comes from the income category, and gets transferred to one of your
-asset accounts.</dd>
+<dd>Income comes from the income category. It is typically credited to the
+income category, and debited to the asset category.</dd>
 
 <dt>How to deal with stocks going up or dividends?</dt>
 <dd>Transfer the income from the Capital Gains account into the account where
-the dividend is going into.</dd>
+the dividend is going into. For stocks going up, you can use the security
+editor located in <code>Tools&rarr;Security Editor</code></dd>
 
 <dt>How do I deal with assets like a car or house?</dt>
-<dd>Make a transaction for an asset with the amount you paid for the asset.
-This doesn&rsquo;t make sense to me because the value of the asset will go up
-or down, but for personal accounting this is the standard. If doing business
-accounting, it can make sense to do depreciations or amortorizations, but I
-guess this complexity is overkill for personal finance.</dd>
+<dd>Make a transaction for an asset with the amount you paid for the asset as a
+debit in its own <code>Car</code> asset account, and a credit to the car loan
+liability account. In personal finance, you do not typically track the value of
+a fixed-asset.<sup>1</sup></dd>
 </dl>
+
+<p><sup>1</sup>I personally do not agree with this, because I think it is
+important to know net-worth, but it is a bit less work, and is the standard for
+personal finance, so I follow this recommendation at least for now.</p>
 
 <h3>The Day Book</h3>
 <p>The biggest disadvantage is the lack of a good mobile app for GNUCash. Not
@@ -528,6 +600,13 @@ up. I really like that it has a pocket not only for receipts, but also for
 small bits of paper that I always seem to accrue like doctor&rsquo;s
 appointment schedules.</p>
 
+<figure>
+<figcaption>Fig. 7. My Daybook&mdash;A Leuchttrum1917 A6 Notebook</figcaption>
+<img loading="lazy"
+     src="/media/accounting-daybook.avif"
+     alt="An A6-sized notebook with an Apple watch and HHKB for scale">
+</figure>
+
 <p>Also, I have a OneDrive folder with receipts for transactions that need to
 be added.</p>
 
@@ -542,7 +621,7 @@ social expenses as I did rent and living expenses:</p>
 
 <figure>
 <figcaption>
-Fig. 2. <time datetime="2025-08">Aug. 2025 Expenses Pie Chart</time>
+Fig. 8. <time datetime="2025-08">Aug. 2025 Expenses Pie Chart</time>
 </figcaption>
 <img src="/media/Redacted%20Expenses%20Pie%20Chart.avif"
      alt="Expenses Pie Chart"
@@ -554,7 +633,7 @@ social expenses for the month of August. It doesn&rsquo;t look as bad when
 it&rsquo;s broken up like this.</p>
 <figure>
 <figcaption>
-Fig. 3. <time datetime="2025-08">Aug. 2025 Social Expenses Pie Chart</time>
+Fig. 9. <time datetime="2025-08">Aug. 2025 Social Expenses Pie Chart</time>
 </figcaption>
 <img src="/media/Redacted%20Social%20Pie%20Chart.avif"
      alt="Expenses Pie Chart"
@@ -562,11 +641,21 @@ Fig. 3. <time datetime="2025-08">Aug. 2025 Social Expenses Pie Chart</time>
 </figure>
 
 <h3>Budgeting</h3>
-<p>The biggest upside touted by commercial solutions is that they are really
-good at making budgets, and ultimately saving you money. YNAB prefers
+<p>The biggest feature promoted by proprietary solutions like YNAB and Simplifi
+is that they excel at making tight budgets which save you money. YNAB prefers
 zero-based budgeting, which just means that every cent needs to be accounted
-for each month. Similarly, you can do the same thing in GNUCash, but the
-workflow is exactly the same as the rest of the app, making for a more
+for each month. Simplifi is unopinionated, but gives you the tools to do
+zero-based budgeting or 50/30/20 budgeting&mdash;allocating after-tax income to
+50% on needs, 30% on wants and 20% into savings. GNUCash is also capable of
+zero-based budgeting or 50/30/20 budgeting, but it&rsquo;s all business, and
+doesn&rsquo;t babysit you when making your budget.</p>
+
+<figure>
+<figcaption>Fig 9. GNUCash Sample Budget</figcaption>
+<img loading="lazy" src="/media/gnucash-budget.png" alt="GNUCash Sample Budget">
+</figure>
+
+<p>Budgeting in GNUCash is done through its own interface, making for a more
 congruent workflow. It doesn&rsquo;t force you to do zero-based budgeting, but
 by giving you that choice, it really helps. Furthermore, it makes it easy to
 see how you did each month with a table view and barcharts in budgeting
@@ -577,7 +666,8 @@ I&rsquo;ll get back to you on that.</p>
 <section id="conclusion">
 <h2>Conclusion</h2>
 
-<p>Going back to my initial goals, I think I have succeeded on all fronts:</p>
+<p>Going back to my initial goals, I think I have succeeded, at least for the
+month of <time datetime="2025-08">August</time>:</p>
 <blockquote>
 <em>Specific</em>&mdash;I will figure out a method&mdash;paper or
 software&mdash;that can help me record my expenses, and view my assets across
@@ -593,6 +683,17 @@ own records, I will have <q>clearer understanding of my finances.</q><br>
 <em>Time-bound</em>&mdash;I am looking at the month of August, and must have
 everything done by <time datetime="2025-09-01">September 1st</time>. (Su)
 </blockquote>
+
+<p>However, there is a lot more to a resolution than just the one month, and we
+will see if I keep with the ledger, or find it too cumbersome and let it go.
+It is really hard to create a new habit. Afterall, dentists spend their entire
+career telling people to floss (a 45 second task), yet patients more than often
+do not.</p>
+
+<p>Whatever happens in the future, my <time datetime="2025-09">September</time>
+resolution is the infamous <q>get fit.</q> I want to focus on cardio, because I
+played baseball at my friend&rsquo;s party, and I was huffing and puffing. See
+you next month :).
 </section>
 
 <section class="bib" id="bibliography">
@@ -607,6 +708,11 @@ machronicle.com/whats-up-with-quizlet-plus-an-exclusive-interview-with-the-ceo.
 <i>GNUCash Tutorial and Concepts Guide.</i> 29 Jun. 2025.
 gnucash.org/docs/v5/C/gnucash-guide</p>
 
+<p>Kircher, Paul. <q>The need for integration of accounting systems and the
+design of electronic data-processing systems.</q> <i>Proceedings of the March
+1&ndash;3, western joint computer conference.</i> 1 Mar. 1955,
+dl.acm.org/doi/10.1145/1455292.1455297</p>
+
 <p>Maddox. <q>This Meme Perfectly Illustrates the Road to Mastery.</q>
 <i>Medium</i>, 30 Oct. 2022, madmaddox.medium.com/c97314ff6ad2. </p>
 
@@ -618,13 +724,15 @@ www.loc.gov/preservation/resources/rfs/data.html. Accessed 2 Sept. 2025.</p>
 
 <p>Su, Sid. <q>Why Not Monthly Resolutions?</q> <i>sidsu.com</i>, 28 Aug. 2025,
 www.sidsu.com/blog/Monthly Resolutions.</p>
-</section>
 
+<p>Whiteside, Eric. <q>The 50/30/20 Budgeting Rule Explained With Examples.</q>
+<i>Investopedia.</i> 22 Aug. 2024.
+www.investopedia.com/ask/answers/022916/what-502030-budget-rule.asp</p>
+</section>
 </article>
+
 <footer><hr>Copyright &copy;
 <time datetime="2023">2023</time>&ndash;<time datetime="2025">2025</time>
 <strong>Sid Su</strong></footer>
 
-</main>
-</body>
-</html>
+</main></body></html>
