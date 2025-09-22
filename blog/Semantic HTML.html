@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/media/favicon-small.ico">
+<meta name="description"
+      content="An argument to use Semantic HTML">
+<title>Semantic HTML</title>
+<style>
+ html {font-size: 24px; background-color: #fdf6e3; word-wrap:break-word;}
+ main {max-width: 800px; margin: auto; color: #002b36}
+ h1 {font-size: 2rem}
+ a {color: #d33682}
+ .bib {padding-left: 2rem; text-indent: -2rem}
+</style>
+</head>
+
+<body><main><article>
+<header>
+<nav><h3><a href="/">Home</a> &gt; <a href="/blog">Blog</a></h3></nav>
+<h1>Semantic HTML</h1>
+<address>Sid Su | <time datetime="2025-09-22">Sept. 22, 2025</time></address>
+
+<nav>
+<ol>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#semantic-html">What Is Semantic HTML?</a></li>
+<li><a href="#semantic-html-advantages">Advantages of Semantic HTML</a></li>
+<li><a href="#semantic-html-disadvantages">Caveats</a></li>
+<li><a href="#semantic-html-style">Semantic HTML Style</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#bibliography">Works Cited</a></li>
+</ol>
+
+</nav>
+</header>
+
+<section id="introduction">
+<h2>Introduction</h2>
+
+<p>Most of the HTML on the modern web is unreadable garbage with more
+<code>&lt;script&gt;</code> tags than actual HTML. Furthermore, the content of
+the page&mdash;the actual text, images, videos, games, etc.&mdash;are often
+inserted by a JavaScript library into a single line, making it hard to parse
+what is actually happening on the page. If you don&rsquo;t believe me, go to
+almost any major website, right click and select <code>View Page Source</code>.
+What you will likely see is a jumbled mess of automatically generated HTML
+inserted between, <code>&lt;script&gt;</code> tags and
+<code>&lt;link&gt;</code> tags.</p>
+
+<p>This is not just a code aesthetic problem. Almost every major website does
+not pass W3 validation (Googlebot). Website weight&mdash;a measure of how much
+data is transferred to load a given web page has gone up every year since we
+started tracking it (HTTP Archive: Page Weight). Finally, a lack of semantic
+tags&mdash;using <code>&lt;div&gt;</code> for everything&mdash;has made the web
+less accessible than ever before (accessiBe).</p>
+
+<p>People will often argue <q>yes, modern HTML is unreadable, but it is a
+necessary byproduct of making web development ergonomic and feasible</q>. I
+argue that this itself is an outdated assessment, especially since the majority
+of websites are still not very dynamic, nor do they need to be. They consist of
+static text, images and links. Rather than complex frameworks, we ought to be
+making more websites with Semantic HTML, which is ergonomic and fun to write
+directly.</p>
+</section>
+
+<section id="semantic-html">
+<h2>What Is Semantic HTML?</h2>
+
+<p>Semantic HTML is just using tags such as <code>&lt;article&gt;</code>,
+<code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>,
+<code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> instead of
+<code>&lt;div&gt;</code>&mdash;and using tags such as <code>&lt;dfn&gt;</code>,
+<code>&lt;address&gt;</code>, <code>&lt;strong&gt;</code>,
+<code>&lt;em&gt;</code>, <code>&lt;code&gt;</code> and <code>&lt;kbd&gt;</code>
+instead of <code>&lt;span&gt;</code>. These tags have the advantage of
+conveying meaning in themselves throughout the document. Whereas before meaning
+would be communicated through classes and ids.<sup>1</sup></p>
+
+<aside>
+<p><sup>1</sup>That&rsquo;s not to say classes and ids don&rsquo;t have a place
+anymore, rather they can take on more specialized roles because the tags are
+themselves doing what the classes were doing, and can by styled in the CSS
+as top level tags instead of 50 different classes or ids. For instance, I have
+a <code>bib</code> class, which styles the works cited section to have a
+hanging indent.</p>
+</aside>
+</section>
+
+<section id="semantic-html-advantages">
+<h2>Advantages of Semantic HTML</h2>
+
+<dl>
+<dt>More Readable Structure</dt>
+<dd>An article should <em>always</em> be the start of a self-contained portion
+of the webpage, a code segment is <em>always</em> some monospaced-text portion,
+a section is <em>always</em> a cohesive part of the content. When this idea is
+placed throughout the whole document, it&rsquo;s easy for someone familiar with
+Semantic HTML to know what&rsquo;s happening anywhere in the document.</dd>
+
+<dt>Performant</dt>
+<dd>The webpage will be about as performant as possible, because we are working
+with just plain HTML.<sup>1</sup></dd>
+
+<dt>Accessible</dt>
+<dd>Semantic tags have Aria tags<sup>2</sup> built-in, so it is just a matter
+of using the tags correctly, and the website is accessible by screenreaders.
+</dd>
+
+<dt>Potential SEO Gains</dt>
+<dd>This is changing all the time, but it does seem like better formed pages
+seem to get better treatment by search engines.</dd>
+</dl>
+
+<aside>
+<p><sup>1</sup>It is possible to squeeze a little bit of performance through
+minifying&mdash;removing unnecessary whitespace, newlines, replacing with the
+smallest tags&mdash;but I do not think that is worth it. It will already be
+smaller than 99% of the web.</p>
+
+<p><sup>2</sup>Aria tags specify special meaning for accessibility programs
+such as screen readers.</p>
+</section>
+
+<section id="semantic-html-disadvantages">
+<h2>Caveats</h2>
+
+<p>While there significant advantages, it is important to also note the
+caveats:</p>
+
+<dl>
+<dt>MUCH More Typing</dt>
+<dd>There is a LOT more typing when writing raw HTML because you need to worry
+about which tags to use, and a lot of tags that won&rsquo;t even be seen by the
+final user. For instance, every date in this document has been using the
+<code>&lt;time&gt;</code> tag, but you don&rsquo;t see that. However, it does
+help both robots and people assisted by robots understand that the string of
+characters is a date, and the computer will present it as a date as opposed to
+the number 2025.</dd>
+
+<dt>Steeper Learning Curve</dt>
+<dd>Learning the tags does take some time, and if you do pick up Semantic HTML,
+you will inevitably go back to old documents to make them up to standards with
+all of the semantic tags. I have done so many times. However, once you pick up
+the tags, your speed at writing semantic HTML goes up, because you aren&rsquo;t
+thinking about which tags to use as much.</dd>
+
+<dt>Bad Tooling</dt>
+<dd>Currently all tooling for writing straight HTML is not very good. Simple
+things like a spellchecker, or a linter to make sure that the HTML is using all
+semantic HTML standards just do not exist right now. The closest thing is the
+W3 validator, but that is not checking for a lack of semantic tags, rather it
+is just checking that the tags that exist in the document are used correctly.
+</dd>
+</dl>
+
+<p>I did not find these downsides to be fatal. Once you get the tags down, and
+have a few HTML documents you can copy the boilerplate from, productivity with
+Semantic HTML will go up. For many, any learning curve is too much, we expect
+tools to be intuitive, with a skill floor deep underground. I don&rsquo;t think
+that mindset is necessarily right, but that is a philosophical discussion for
+another post.</p>
+</section>
+
+<section id="semantic-html-style">
+<h2>Semantic HTML Style</h2>
+<p>Here are style choices that work for me, and some justification behind each
+one.</p>
+
+<dl>
+<dt>80 Columns</dt>
+<dd>I want to write HTML directly, so it must look good in the editor. 80
+columns is standard everywhere else, so why not for HTML?</dd>
+
+<dt>Only Ascii</dt>
+<dd>This one is a bit controversial, because UTF-8 is widely supported in
+browsers. However, <a href="https://github.com/troglobit/mg">mg</a>, one of the
+editors I use still does not support UTF-8, so I still only use ascii
+characters while editing.</dd>
+
+<dt>Prefer Named HTML Entities</dt>
+<dd>Follows directly from the previous style recommendation. For instance,
+I could use <code>&amp;#146;</code> to represent &rsquo;, it&rsquo;s more clear
+in the code to type <code>&amp;rsquo;</code>.</dd>
+
+<dt>No Indentation</dt>
+<dd>Most people online swear by HTML indentation, and it does make sense if the
+<strong>layout</strong> is what is emphasized in the HTML document. However, if
+we are focusing on <strong>content</strong>, then no indentation makes more
+sense. Markdown is also focused on content and does not typically indent, so
+neither should HTML.</dd>
+
+<dt>Prefer HTML Figures</dt>
+<dd>Prefer creating tables, and text diagrams over immediately reaching for
+<code>&lt;img&gt;</code>. This is just something in general I have been
+thinking about related to the overuse of images in papers. Even then, it saves
+a lot of bandwidth, and may potentially look nicer to just put a table or
+formatted text instead of a full fat image.</dd>
+
+<dt>Prefer Web Components For Dynamic Elements</dt>
+<dd>In order to not clutter the HTML document, prefer using Web Components for
+complex things.</dd>
+</dl>
+</section>
+
+<section id="conclusion">
+<h2>Conclusion</h2>
+
+<p>Whether or not you choose to use semantic HTML, I hope that you at least
+keep some of the principles in mind when creating your next website. I
+understand that sometimes websites can be very complex, and it may not be
+viable to make anything but a mess of JavaScript libraries. However, you should
+ask yourself if what you are doing really needs to be done with JavaScript and
+15 different frameworks, or can HTML or CSS accomplish the same thing for a
+much smaller payload and a much more clear codebase. Can it be done reasonably
+well as a static website with dynamic components? Or does it really
+<em>need</em> to be fully dynamic?</p>
+
+<p>I am genuinely surprised that there&rsquo;s not that much talk about using
+Semantic HTML, and that there is next to no tooling around it. It is such a
+useful paradigm to build websites around, yet it has been mostly ignored by web
+developers as a whole.</p>
+
+<p>As a side note, I was inspired by <a href="motherfuckingwebsite.com">The
+Motherfucking Website</a>, <a href="bettermotherfuckingwebsite.com">The Better
+Motherfucking Website</a> and <a href="thebestmotherfucking.website">The Best
+Motherfucking Website</a>.<sup>1</sup>
+
+<aside>
+<p><sup>1</sup>I think that <q>The Best Motherfucking Website</q> is actually
+the worst of the three. It misses the point that plain HTML is adequate a lot
+of the time and despite being a static page brings in a JavaScript framework
+for some reason.</p>
+</aside>
+</section>
+
+<section class="bib" id="bibliography">
+<h2>Works Cited</h2>
+<p>accessiBe. <q>How Many Websites Are Actually Accessible And
+ADA-Compliant?</q>. <i>accessiBe</i>, 30 June 2025.</p>
+
+<p>Googlebot. <q>Why do major websites not pass W3C validation properly?</q>
+Forum post. Stack Overflow, 9 Apr. 2012, https://stackoverflow.com/q/9870780.
+</p>
+
+<p>HTTP Archive: Page Weight. https://httparchive.org/reports/page-weight.
+Accessed 21 Sept. 2025.</p>
+</section>
+</article>
+<footer><hr>Copyright &copy;
+<time datetime="2023">2023</time>&ndash;<time datetime="2025">2025</time>
+<strong>Sid Su</strong></footer>
+</main>
+</body>
+</html>
