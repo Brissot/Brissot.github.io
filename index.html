@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="ltr" lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description"
       content="Hi! Welcome to my personal website. I love Math, DevOps and
@@ -9,121 +9,125 @@
             to ski!">
 <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
 <title>Sid Su</title>
-<link rel="stylesheet" type="text/css" href="/style.css">
-<script src= "/functions.js"></script>
+<style>
+ html {font-size: 24px}
+ header {text-align: center}
+ main {max-width: 800px; margin: auto; background-color: #fdf6e3;
+     padding: 0 5% 5% 5%}
+ body {color: #586e75; padding-top: 0px}
+ p {line-height: 1.5}
+ img, video {max-width: 100%}
+ video:fullscreen {border: 0; border-radius: 0}
+ main, img, video {border-radius: 2rem}
+ a {color: #6c71c4; text-decoration: none}
+ h1 {color: #6c71c4; margin-top: 0}
+ h2 {margin: 0; color: #dc322f}
+ h3 {margin: 0; color: #cb4b16}
+ details p {line-height: 1}
+ summary h3 {display: inline-block}
+ .sidsu {font-size: 4rem; margin-bottom: 0}
+ .sidsu-big {font-size: 7rem}
+ .headshot {float: left; width: 11rem; margin: 2rem; aspect-ratio: 1/1}
+ @media screen and (max-width: 600px) {
+     .headshot {margin: auto; width: 100%; margin-top: 0.5rem;
+         margin-bottom: 0.5rem}
+     .sidsu {font-size: 2rem}
+     .sidsu-big {font-size: 3.5rem}
+ }
+</style>
 </head>
 
 <body>
-  <main>
-  <header>
-  <span class="sidsu_big">S</span><span class="sidsu">id </span>
-  <span class="sidsu_big">S</span><span class="sidsu">u</span>
-  <span class="sidsu_big">&#10084;</span><br>
-  <span class="sidsu_small">
-  light theme &gt; dark theme<br>
-  <a href="https://github.com/Brissot">GitHub: Brissot</a> |
-  <a href="https://www.instagram.com/sidsu_">Instagram: @sidsu_</a> |
-  <a href="https://www.linkedin.com/in/sid-su">LinkedIn: sid-su</a> |
-  <a href="./docs/Sid%20Su%20Resume%20mk6%20rev2.pdf">Resume (pdf)</a>
-  </span>
-  </header>
+<main>
+<article>
+<header>
+<h1 class="sidsu"><span class="sidsu-big">S</span>id
+<span class="sidsu-big">S</span>u<span class="sidsu-big">&#10084;</span></h1>
 
-  <section class="introduction">
-    <span class= "headshot_container">
-      <img src="./media/headshot%20mk2.jpeg" alt="me.png" class="headshot">
-    </span>
+light theme &gt; dark theme<br>
+<address><a href="https://github.com/Brissot">GitHub: Brissot</a> |
+<a href="https://www.instagram.com/sidsu_">Instagram: @sidsu_</a> |
+<a href="https://www.linkedin.com/in/sid-su">LinkedIn: sid-su</a> |
+<a href="./docs/Sid%20Su%20Resume%20mk6%20rev2.pdf">Resume (pdf)</a></address>
+</header>
 
-    <p>Hi! My name is Sid Su. I work for IBM. I was previously a Mathematics
-    and Computer Science double major at the University of Maryland. I'm now
-    an alum &#10133;&#10134;&#10006;&#65039;&#10135;.</p>
+<img srcset="/media/headshot%20mk2.avif"
+     src="/media/headshot%20mk2.jpeg" alt="me.png" class="headshot">
 
-    <p>My main interests are in Numeric Analysis, Functional Analysis and
-    Cryptography. I also have a passion for DevOps: Docker, Kubernetes,
-    Jenkins, Ansible, a bit of OpenShift and a lot of Debian &#127845;.</p>
+<p>Hi! My name is Sid Su. I work for IBM. I was previously a Mathematics and
+Computer Science double major at the University of Maryland. I&rsquo;m now an
+alum &#10133;&#10134;&#10006;&#65039;&#10135;.</p>
 
-    <p>When I'm not doing math and coding, I like to ski, and I play the flute
-    in the Mighty Sound of Maryland (marching band). Go Terps!
-    &#9975;&#129672;&#128034;</p>
+<p>My main interests are in Numeric Analysis, Functional Analysis and
+Cryptography. I also have a passion for DevOps: Docker, Kubernetes, Jenkins,
+Ansible, a bit of OpenShift and a lot of Debian &#127845;.</p>
 
-    <p>I also love studying ancient history, specifically the late Roman Empire
-    (late antiquity). It's a really interesting period characterized by the
-    devolution of power, new politics and a uniquely complex military
-    structure. It's tropey, but the Roman Empire is literally my Roman
-    Empire &#127963;.</p>
-  </section>
+<p>When I&rsquo;m not doing math and coding, I like to ski, and I play the
+flute in the Mighty Sound of Maryland (marching band). Go Terps!
+&#9975;&#129672;&#128034;</p>
 
-  <p>
-  A nice <a href="https://youtu.be/DyofWTw0bqY">video</a>, and a rendition of
-  it I really like
-  </p>
-  <video controls>
-  <source src= "/media/maria.webm" type= "video/webm">
-  <track label="English" kind="subtitles"
-         srclang="en" src="/media/maria.vtt" default>
-  </video>
+<p>I also love studying ancient history, specifically the late Roman Empire
+(late antiquity). It&rsquo;s a really interesting period characterized by the
+devolution of power, new politics and a uniquely complex military structure.
+It&rsquo;s tropey, but the Roman Empire is literally my Roman Empire &#127963;.
+</p>
 
-  <h1>Some Fun Projects</h1>
-  <details open id="papers">
-  <summary>
-  <h3>Papers</h3>
-  </summary>
-  <p><a href= "/docs/Who%20Are%20the%20Fastest%20Typists.pdf">
-  Who Are the Fastest Typists? (2024)
-  </a></p>
-  <p><a href= "/docs/Movie%20Trends%20Over%20Time">
-  Movie Trends Over Time (2023)
-  </a>
-  <p><a href= "/docs/The%20Problem%20of%20Pronouns.pdf">
-  The Problem of Pronouns (2022)
-  </a></p>
-  <p><a href= "/docs/The%20Correlation%20Between%20Parent%20Education%20and%20Child%20Academics.pdf">
-  The Correlation Between Parent Education and Child Academics (2021)
-  </a></p>
-  <p><a href= "/docs/Causation%20in%20Counterfactuals.pdf">
-  Causation in Counterfactuals (2021)
-  </a></p>
-  <p><a href= "/docs/The%20Theory%20of%20Conditionals.pdf">
-  The Theory of Conditionals (2021)
-  </a></p>
-  </details>
+<p>A nice <a href="https://youtu.be/DyofWTw0bqY">video</a>, and a rendition of
+it I really like</p>
 
-  <details open id="projects">
-  <summary>
-  <h3>Projects</h3>
-  </summary>
-  <p><a href= "https://finalproject-sbdz.onrender.com/">
-  A Historical College Football Stats Website</a>
-  (<a href= "https://youtu.be/02ToO_s5M6M">Video</a>)
-  </p>
-  <p><a href= "/docs/qr">A QR code generator</a></p>
-  </details>
+<video controls>
+<source src= "/media/maria.webm" type= "video/webm">
+<track label="English" kind="subtitles"
+       srclang="en" src="/media/maria.vtt" default>
+</video>
 
-  <details open id="blog">
-  <summary>
-  <h3>Blog</h3>
-  </summary>
-  <p><a href= "/blog/Semantic%20HTML">HTML Style (2025)</a></p>
-  <p><a href= "/blog/Personal%20Finance">Personal Finance (2025)</a></p>
-  <p><a href= "/blog/Monthly%20Resolutions">Monthly Resolution (2025)</a></p>
-  <p><a href= "/blog/Live%20Music">Live Music (2025)</a></p>
-  <p><a href= "/blog/Instagram%20Style%20Guide">
-  Instagram Style Guide (2024) (WIP)
-  </a></p>
-  <p><a href= "/blog/Report%20on%20the%20Netherlands">
-  Report on the Netherlands (2024)
-  </a></p>
-  </details>
+<h2>Some Fun Projects</h2>
+<details open id="papers">
+<summary><h3>Papers</h3></summary>
+<p><a href="/docs/Who%20Are%20the%20Fastest%20Typists.pdf">
+Who Are the Fastest Typists? (2024)</a></p>
 
-  <br><br><br><br>
-  <footer>
-  <hr>
-  last updated: Jun. 20. 2025 |
-  <button id= "e-mail" onclick="revealEmail()">
-  Click Here to Contact Me!
-  </button>
-  </footer>
-  <br>
+<p><a href="/docs/Movie%20Trends%20Over%20Time">
+Movie Trends Over Time (2023)</a></p>
 
-  </main>
+<p><a href="/docs/The%20Problem%20of%20Pronouns.pdf">
+The Problem of Pronouns (2022)</a></p>
+
+<p><a href="/docs/The%20Correlation%20Between%20Parent%20Education%20and%20Child%20Academics.pdf">
+The Correlation Between Parent Education and Child Academics (2021)</a></p>
+
+<p><a href="/docs/Causation%20in%20Counterfactuals.pdf">
+Causation in Counterfactuals (2021)</a></p>
+
+<p><a href="/docs/The%20Theory%20of%20Conditionals.pdf">
+The Theory of Conditionals (2021)</a></p>
+</details>
+
+<details open id="projects">
+<summary><h3>Projects</h3></summary>
+<p><a href= "https://finalproject-sbdz.onrender.com/">
+A Historical College Football Stats Website</a>
+(<a href="https://youtu.be/02ToO_s5M6M">Video</a>)</p>
+
+<p><a href="/docs/qr">A QR code generator</a></p>
+</details>
+
+<details open id="blog">
+<summary><h3>Blog</h3></summary>
+<p><a href= "/blog/Semantic%20HTML">Semantic HTML (2025)</a></p>
+<p><a href= "/blog/Personal%20Finance">Personal Finance (2025)</a></p>
+<p><a href= "/blog/Monthly%20Resolutions">Monthly Resolution (2025)</a></p>
+<p><a href= "/blog/Live%20Music">Live Music (2025)</a></p>
+<p><a href= "/blog/Instagram%20Style%20Guide">Instagram Style Guide
+(2024)</a></p>
+<p><a href= "/blog/Report%20on%20the%20Netherlands">Report on the Netherlands
+(2024)</a></p>
+</details>
+</article>
+
+<footer><hr>Copyright &copy;
+<time datetime="2023">2023</time>&ndash;<time datetime="2025">2025</time>
+<strong>Sid Su</strong></footer>
+</main>
 </body>
 </html>
