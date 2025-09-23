@@ -7,32 +7,31 @@
       content="Hi! Welcome to my personal website. I love Math, DevOps and
             Programming. I play the flute in the marching band, and I love
             to ski!">
-<link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/media/favicon-small.ico">
 <title>Sid Su</title>
 <style>
  html {font-size: 24px}
- header {text-align: center}
- main {max-width: 800px; margin: auto; background-color: #fdf6e3;
-     padding: 0 5% 5% 5%}
  body {color: #586e75; padding-top: 0px}
+ main {max-width: 800px; margin: auto; background-color: #fdf6e3;
+     padding: 0% 5% 5% 5%}
+ header {text-align: center}
+ address a {text-decoration: none}
  p {line-height: 1.5}
- img, video {max-width: 100%}
+ video {max-width: 100%}
  video:fullscreen {border: 0; border-radius: 0}
  main, img, video {border-radius: 2rem}
- a {color: #6c71c4; text-decoration: none}
- h1 {color: #6c71c4; margin-top: 0}
+ a {color: #6c71c4}
+ h1 {color: #6c71c4; margin-top: 0; font-size: 4rem; margin-bottom: 0}
  h2 {margin: 0; color: #dc322f}
  h3 {margin: 0; color: #cb4b16}
  details p {line-height: 1}
  summary h3 {display: inline-block}
- .sidsu {font-size: 4rem; margin-bottom: 0}
- .sidsu-big {font-size: 7rem}
+ .big-s {font-size: 7rem}
  .headshot {float: left; width: 11rem; margin: 2rem; aspect-ratio: 1/1}
  @media screen and (max-width: 600px) {
-     .headshot {margin: auto; width: 100%; margin-top: 0.5rem;
-         margin-bottom: 0.5rem}
-     .sidsu {font-size: 2rem}
-     .sidsu-big {font-size: 3.5rem}
+     h1 {font-size: 2rem}
+     .big-s {font-size: 3.5rem}
+     .headshot {width: 100%; margin: 0.5rem 0}
  }
 </style>
 </head>
@@ -41,8 +40,8 @@
 <main>
 <article>
 <header>
-<h1 class="sidsu"><span class="sidsu-big">S</span>id
-<span class="sidsu-big">S</span>u<span class="sidsu-big">&#10084;</span></h1>
+<h1><span class="big-s">S</span>id
+<span class="big-s">S</span>u<span class="big-s">&#10084;</span></h1>
 
 light theme &gt; dark theme<br>
 <address><a href="https://github.com/Brissot">GitHub: Brissot</a> |
@@ -51,8 +50,8 @@ light theme &gt; dark theme<br>
 <a href="./docs/Sid%20Su%20Resume%20mk6%20rev2.pdf">Resume (pdf)</a></address>
 </header>
 
-<img srcset="/media/headshot%20mk2.avif"
-     src="/media/headshot%20mk2.jpeg" alt="me.png" class="headshot">
+<img srcset="/media/headshot%20mk2.avif" src="/media/headshot%20mk2.jpeg"
+     alt="me.png" class="headshot" fetchpriority="high">
 
 <p>Hi! My name is Sid Su. I work for IBM. I was previously a Mathematics and
 Computer Science double major at the University of Maryland. I&rsquo;m now an
@@ -72,12 +71,12 @@ devolution of power, new politics and a uniquely complex military structure.
 It&rsquo;s tropey, but the Roman Empire is literally my Roman Empire &#127963;.
 </p>
 
-<p>A nice <a href="https://youtu.be/DyofWTw0bqY">video</a>, and a rendition of
-it I really like</p>
+<p>A nice video, and a rendition of it I really like
+(<a href="https://youtu.be/DyofWTw0bqY">source</a>):</p>
 
 <video controls>
-<source src= "/media/maria.webm" type= "video/webm">
-<track label="English" kind="subtitles"
+<source src="/media/maria.webm" type="video/webm">
+<track label="English" kind="captions"
        srclang="en" src="/media/maria.vtt" default>
 </video>
 
