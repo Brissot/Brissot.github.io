@@ -16,26 +16,12 @@
  main {max-width: 800px; margin: auto; color: #002b36}
  h1 {font-size: 2rem; margin: 0}
  h2, h3 {margin: 0}
- a {color: #d33682}
- figure {margin: auto; text-align: center}
- figcaption {font-size: 0.75rem}
  summary h3 {display: inline-block}
-
- /* a nice image gallery */
- /*.gallery {display: flex; flex-wrap: wrap; padding: 0 0.25rem; max-width: 65%}*/
- .gallery {display: flex; overflow: auto; flex: 1}
- img, video {height: 11rem;
-     display: flex;
-     min-width: min-content; /* needs vendor prefixes */}
- .gallery-col {flex: 30%; max-width: 100%; padding: 0 4px }
- img, video {vertical-align: middle; width: 100%}
- figure {padding: 0.25rem; margin: 0}
- .concert {display: flex; flex-direction: row}
-
- @media screen and (max-width: 600px) {
-     .gallery {max-width: 100%}
-     img, video {}
- }
+ a {color: #d33682}
+ .gallery {display: flex; flex-direction: row; overflow: scroll}
+ figure {padding: 0.1rem; margin: 0}
+ figcaption {font-size: 0.75rem; text-align: center}
+ img, video {display: block; height: 11rem; width: auto}
 </style>
 </head>
 
@@ -96,41 +82,42 @@ gonna take me a while to populate this page, so check back from time to time
 <h3>Photo Gallery</h3>
 <div class="gallery">
 <figure>
-<img loading="lazy" src="/media/razor-apple-selfie.jpg"
+<img srcset="/media/razor-apple-selfie.avif"
+     src="/media/razor-apple-selfie.jpg"
      alt="Me taking a selfie with the Garage's decor">
 <figcaption>A selfie with the Garage's decor</figcaption>
 </figure>
 
 <figure>
-<img loading="lazy" src="/media/razor-apple-couch.png"
-     alt="Me, Savannah, the objector Nazim and David on a
-              couch">
+<img srcset="/media/razor-apple-couch.avif" src="/media/razor-apple-couch.png"
+     alt="Me, Savannah, the objector Nazim and David on a couch">
 <figcaption>Me, Savannah, the objector Nazim and David at the welcome party
 </figcaption>
 </figure>
 
 <figure>
-<img loading="lazy" src="/media/razor-apple-altar.jpg"
+<img srcset="/media/razor-apple-altar.avif" src="/media/razor-apple-altar.jpg"
      alt="Audrey and Victoria on the altar">
 <figcaption>Audrey and Victoria on the altar</figcaption>
 </figure>
 
 <figure>
-<img loading="lazy" src="/media/razor-apple-flyer.png"
+<img srcset="/media/razor-apple-flyer.avif" src="/media/razor-apple-flyer.png"
      alt="Razor Apple hardcore music festival flyer">
 <figcaption>Razor Apple hardcore music festival flyer</figcaption>
 </figure>
 
 <figure>
-<img loading="lazy" src="/media/razor-apple-mosh.jpg"
+<img srcset="/media/razor-apple-mosh.avif" src="/media/razor-apple-mosh.jpg"
      alt="Me, Savannah and Audrey looking at the mosh pit">
 <figcaption>Me, Savannah and Audrey looking at the mosh pit</figcaption>
 </figure>
 
 <figure>
 <video loop playsinline muted autoplay>
-<source src="/media/razor-apple-fan.mov">Me, Audrey and Brennan in front of a
-fan</video>
+<source src="/media/razor-apple-fan.webm" type="video/webm">
+<source src="/media/razor-apple-fan.mov" type="video/mov">
+Me, Audrey and Brennan in front of a fan</video>
 <figcaption>Me, Audrey and Brennan cooling off in front of a fan</figcaption>
 </figure>
 </div>
