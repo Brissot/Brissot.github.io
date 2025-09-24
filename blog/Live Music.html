@@ -1,54 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Live Music &#x1F918;</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-zoom=1.0">
-    <meta name="description"
-          content="I love going to concerts, and especially the DIY music scene
-                here in the DMV. It's so cool to see local bands, and the
-                characteristic &quot;DC&quot; sound. Hardcore is my favorite;
-                no other genre has the same physicality, and moshing is an
-                experience like no other. Raves are also cool.">
-    <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="/style.css" />
-    <script src= "/functions.js"></script>
-  </head>
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+      content="I love going to concerts, and especially the DIY music scene
+            here in the DMV. It's so cool to see local bands, and the
+            characteristic &quot;DC&quot; sound. Hardcore is my favorite;
+            no other genre has the same physicality, and moshing is an
+            experience like no other. Raves are also cool.">
+<link rel="icon" type="image/x-icon" href="/media/favicon-small.ico">
+<title>Live Music &#x1F918;</title>
+<style>
+ html {font-size: 24px; background-color: #fdf6e3; word-wrap:break-word;}
+ main {max-width: 800px; margin: auto; color: #002b36}
+ h1 {font-size: 2rem; margin: 0}
+ h2, h3 {margin: 0}
+ a {color: #d33682}
+ figure {margin: auto; text-align: center}
+ figcaption {font-size: 0.75rem}
+ summary h3 {display: inline-block}
 
-  <body>
-    <main>
-      <header>
-        <h3 style="text-align: left">
-          <a href= "/">&lt; Return Home</a>
-        </h3>
-      </header>
-      <section class="title-page">
-        <h1>
-          <span class="sidsu_big">&#x1F918;</span>
-          <span class="sidsu_big">L</span><span class= "sidsu">ive</span>
-          <span class="sidsu_big">M</span><span class= "sidsu">usic</span>
-          <span class="sidsu_big">&#x1F918;</span>
-        </h1>
-      </section>
-      <section class="introduction" style="padding: 0.25rem">
-        <p>
-          I love going to concerts, and the DIY music scene here in the DMV is
-          awesome! It's so cool to see local bands, and the characteristic "DC"
-          sound. Hardcore is my favorite; no other genre has the same
-          physicality, and moshing is an experience like no other. Raves are
-          also cool.
-        </p>
-        <p>
-          While not listening to live music, I like alternative rock and indie
-          rock: The Strokes, Dire Straits, Phoebe Bridgers, Boy Genius, Billie
-          Eilish, Taylor Swift and Zach Bryan.
-        </p>
-        <p>
-          Here are some live events I've been to, with many more to come (it's
-          also gonna take me a while to populate this page, so check back from
-          time to time :))
-        </p>
-      </section>
+ /* a nice image gallery */
+ /*.gallery {display: flex; flex-wrap: wrap; padding: 0 0.25rem; max-width: 65%}*/
+ .gallery {display: flex; overflow: auto; flex: 1}
+ img, video {height: 11rem;
+     display: flex;
+     min-width: min-content; /* needs vendor prefixes */}
+ .gallery-col {flex: 30%; max-width: 100%; padding: 0 4px }
+ img, video {vertical-align: middle; width: 100%}
+ figure {padding: 0.25rem; margin: 0}
+ .concert {display: flex; flex-direction: row}
+
+ @media screen and (max-width: 600px) {
+     .gallery {max-width: 100%}
+     img, video {}
+ }
+</style>
+</head>
+
+<body><main><article>
+<header>
+<nav><h3><a href="/">Home</a> &gt; <a href="/blog">Blog</a></h3></nav>
+<h1>Live Music &#x1F918;</h1>
+<address>Sid Su | <time datetime="2025-09-24">Sept. 24, 2025</time></address>
+
+<nav><ol>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#audrey-wedding">Razor&rsquo;s Apple Noisefest II</a></li>
+</ol></nav>
+</header>
+
+<section>
+<h2>Introduction</h2>
+<p>I love going to concerts, and the DIY music scene here in the DMV is
+awesome! It's so cool to see local bands, and the characteristic "DC" sound.
+Hardcore is my favorite; no other genre has the same physicality, and moshing
+is an experience like no other. Raves are also cool.</p>
+
+<p>While not listening to live music, I like alternative rock and indie rock:
+The Strokes, Dire Straits, Phoebe Bridgers, Boy Genius, Billie Eilish, Taylor
+Swift and Zach Bryan.</p>
+
+<p>Here are some live events I've been to, with many more to come (it's also
+gonna take me a while to populate this page, so check back from time to time
+:))</p>
+</section>
 
       <!-- TODO
       <details open id= "world-pride">
@@ -66,141 +83,117 @@
             </p>
           </section>
         </article>
-      </details>
-      -->
-      <details open id= "razor-apple">
-        <summary>
-          <h3>
-            Audrey and Victoria's Wedding; Razor Apple Noisefest II
-            &#x1f470;&#x1f470;&#x1f3b8;
-          </h3>
-          <time datetime="2024-06-22">Jun. 22, 2024</time>
-        </summary>
+      </details>-->
 
-        <article class="concert">
-          <section class="content" style="order: 2;">
-            <p>
-              BOYDS, Maryland&mdash;A day of matrimony and festivities! Audrey
-              and Victoria were today (legally) married at the Garage. Visiters
-              filed in to witness the start of a lifelong (6 month) marriage
-              for two lovers who have described their relationship as "love at
-              first sight". However&mdash;nothing gold can stay&mdash;and the
-              lifelong lovers are to be (legally) divorced after 6 months. They
-              will only leave each other with what could have been, had they
-              not previously decided to get (legally) divorced (in order to
-              call each other ex-wives; honestly, really really funny if done
-              casually and non-challantly). But that is a story for 6 months
-              from now. Today we celebrated a wedding of lovers 👰👰💒.
-            </p>
-            <p>
-              The festivities started early, with a welcome party and reception
-              allowing visitors to trickle in. Everyone was in good spirits,
-              with amazing outfits. Roles were assigned. I was the flower boy
-              :). After some karaoke and drinks, the ceremony commenced. It
-              went mostly smoothly, but upon objections, Nazim objected due to
-              it being a gay wedding. He was shouted down by the crowd. To
-              cristen the marriage, Audrey and Victoria threw red jello at
-              their thrifted wedding dresses&mdash;yes&mdash;this wedding was
-              also environmentally conscious.
-            </p>
-            <p>
-              Afterwards, the hardcore festival started, and oh, my gosh. It
-              was such a hype event. Literally 10 hours of hardcore sets,
-              moshing, headbanging and black makeup. The mosh pit must've been
-              120 degrees or more. It feels like everyone came out to the Razor
-              Apple festival.
-            </p>
-            <p>
-              Me and Savannah had initially planned on leaving at 5pm, and she
-              did, but my car would not start&mdash;it turned out it was an
-              issue with the neutral safety switch, and when my dad came the
-              next day he just started it from neutral instead of park. It
-              ended up being an excuse to stay until the very end.
-            </p>
-            <p>
-              I enjoyed more music, spoke with more cool folks about the
-              (legal) wedding from the morning; no one believed me. &quot;
-              I didn't know they did weddings here at Butcher's Orchard&quot;,
-              or alternatively, &quot;You gotta be joshing me&quot;. In all
-              cases, no one believed that I had been there since 10AM, making
-              it a 14 hour day total.
-            </p>
-            <p>
-              To end the night, the Garage got out the shopping cart, and my
-              friend Ryan did the classic Garage shopping cart spin (where you
-              spin someone around in the shopping cart as fast as possible).
-              Additionally, he gorilla press slammed the shopping cart onto the
-              floor. It was awesome!
-            </p>
-            <p>
-              At the end of the night, my friend Emily drove me back to the
-              Trumpet House to end a very long, eventful day.
-            </p>
-          </section>
+<article id="audrey-wedding">
+<header>
+<h2>Audrey and Victoria's Wedding; Razor Apple Noisefest II
+&#x1f470;&#x1f470;&#x1f3b8;</h2>
+<time datetime="2024-06-22">Jun. 22, 2024</time>
+</header>
 
-          <section class="gallery" style="order: 1;">
-            <div class="gallery-col">
-              <figure>
-                <img loading="lazy" src="/media/razor-apple-selfie.jpg"
-                     alt="Me taking a selfie with the Garage's decor">
-                <figcaption>
-                  A selfie with the Garage's decor
-                </figcaption>
-              </figure>
-              <figure>
-                <img loading="lazy" src="/media/razor-apple-couch.png"
-                     alt="Me, Savannah, the objector Nazim and David on a
-                              couch">
-                <figcaption>
-                  Me, Savannah, the objector Nazim and David at the welcome
-                  party
-                </figcaption>
-              </figure>
-              <figure>
-                <img loading="lazy" src="/media/razor-apple-altar.jpg"
-                     alt="Audrey and Victoria on the altar">
-                <figcaption>Audrey and Victoria on the altar</figcaption>
-              </figure>
-            </div>
-            <div class="gallery-col">
-              <figure>
-                <img loading="lazy" src="/media/razor-apple-flyer.png"
-                     alt="Razor Apple hardcore music festival flyer">
-                <figcaption>
-                  Razor Apple hardcore music festival flyer
-                </figcaption>
-              </figure>
-              <figure>
-                <img loading="lazy" src="/media/razor-apple-mosh.jpg"
-                     alt="Me, Savannah and Audrey looking at the mosh pit">
-                <figcaption>
-                  Me, Savannah and Audrey looking at the mosh pit
-                </figcaption>
-              </figure>
-              <figure>
-                <video loop playsinline muted autoplay>
-                       <source src="/media/razor-apple-fan.mov">
-                       Me, Audrey and Brennan in front of a fan
-                </video>
-                <figcaption>
-                  Me, Audrey and Brennan cooling off in front of a fan
-                </figcaption>
-              </figure>
-            </div>
-          </section>
-        </article>
-      </details>
+<section>
+<h3>Photo Gallery</h3>
+<div class="gallery">
+<figure>
+<img loading="lazy" src="/media/razor-apple-selfie.jpg"
+     alt="Me taking a selfie with the Garage's decor">
+<figcaption>A selfie with the Garage's decor</figcaption>
+</figure>
 
+<figure>
+<img loading="lazy" src="/media/razor-apple-couch.png"
+     alt="Me, Savannah, the objector Nazim and David on a
+              couch">
+<figcaption>Me, Savannah, the objector Nazim and David at the welcome party
+</figcaption>
+</figure>
 
-      <br><br><br><br>
-      <footer>
-        <hr>
-        last updated: Jun. 20, 2025 |
-        <button id= "e-mail" onclick="revealEmail()">
-          Click Here to Contact Me!
-        </button>
-      </footer>
-      <br>
-    </main>
-  </body>
-</html>
+<figure>
+<img loading="lazy" src="/media/razor-apple-altar.jpg"
+     alt="Audrey and Victoria on the altar">
+<figcaption>Audrey and Victoria on the altar</figcaption>
+</figure>
+
+<figure>
+<img loading="lazy" src="/media/razor-apple-flyer.png"
+     alt="Razor Apple hardcore music festival flyer">
+<figcaption>Razor Apple hardcore music festival flyer</figcaption>
+</figure>
+
+<figure>
+<img loading="lazy" src="/media/razor-apple-mosh.jpg"
+     alt="Me, Savannah and Audrey looking at the mosh pit">
+<figcaption>Me, Savannah and Audrey looking at the mosh pit</figcaption>
+</figure>
+
+<figure>
+<video loop playsinline muted autoplay>
+<source src="/media/razor-apple-fan.mov">Me, Audrey and Brennan in front of a
+fan</video>
+<figcaption>Me, Audrey and Brennan cooling off in front of a fan</figcaption>
+</figure>
+</div>
+</section>
+
+<section>
+<h3>Sweet Matrimony</h3>
+<p>BOYDS, Maryland&mdash;A day of matrimony and festivities! Audrey
+and Victoria were today (legally) married at the Garage. Visiters
+filed in to witness the start of a lifelong (6 month) marriage
+for two lovers who have described their relationship as "love at
+first sight". However&mdash;nothing gold can stay&mdash;and the
+lifelong lovers are to be (legally) divorced after 6 months. They
+will only leave each other with what could have been, had they
+not previously decided to get (legally) divorced (in order to
+call each other ex-wives; honestly, really really funny if done
+casually and non-challantly). But that is a story for 6 months
+from now. Today we celebrated a wedding of lovers 👰👰💒.</p>
+
+<p>The festivities started early, with a welcome party and reception
+allowing visitors to trickle in. Everyone was in good spirits,
+with amazing outfits. Roles were assigned. I was the flower boy
+:). After some karaoke and drinks, the ceremony commenced. It
+went mostly smoothly, but upon objections, Nazim objected due to
+it being a gay wedding. He was shouted down by the crowd. To
+cristen the marriage, Audrey and Victoria threw red jello at
+their thrifted wedding dresses&mdash;yes&mdash;this wedding was
+also environmentally conscious.</p>
+</section>
+
+<section>
+<h3>Razor Apple Noisefest II</h3>
+<p>After the wedding there was a hardcore music festival, and oh, my gosh. It
+was such a hype event. Literally 10 hours of hardcore sets, moshing,
+headbanging and black makeup. The mosh pit must've been 120 degrees or more. It
+feels like everyone came out to the Razor Apple festival.</p>
+
+<p>Me and Savannah had initially planned on leaving at 5pm, and she
+did, but my car would not start&mdash;it turned out it was an
+issue with the neutral safety switch, and when my dad came the
+next day he just started it from neutral instead of park. It
+ended up being an excuse to stay until the very end.</p>
+
+<p>I enjoyed more music, spoke with more cool folks about the
+(legal) wedding from the morning; no one believed me. &quot;
+I didn't know they did weddings here at Butcher's Orchard&quot;,
+or alternatively, &quot;You gotta be joshing me&quot;. In all
+cases, no one believed that I had been there since 10AM, making
+it a 14 hour day total.</p>
+
+<p>To end the night, the Garage got out the shopping cart, and my
+friend Ryan did the classic Garage shopping cart spin (where you
+spin someone around in the shopping cart as fast as possible).
+Additionally, he gorilla press slammed the shopping cart onto the
+floor. It was awesome!</p>
+
+<p>At the end of the night, my friend Emily drove me back to the
+Trumpet House to end a very long, eventful day.</p>
+</section>
+</article>
+</article>
+
+<footer><hr>Copyright &copy;
+<time datetime="2023">2023</time>&ndash;<time datetime="2025">2025</time>
+<strong>Sid Su</strong></footer>
+</main></body></html>
