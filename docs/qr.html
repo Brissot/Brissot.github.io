@@ -1,70 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="ltr" lang="en">
 <head>
-  <title>QR Generator</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-zoom=1.0">
-  <meta name="description"
-        content="A small webpage to generate QR codes. It uses David Shim's
-                qrcodejs library, so I really didn't do much, but it was my
-                first forray into programming a page with JavaScript.">
-  <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
-
-  <title>QR Generator &#x1F50D;</title>
-  <link rel="stylesheet" type="text/css" href="/style.css" />
-  <script
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-zoom=1.0">
+<link rel="icon" type="image/x-icon" href="/media/favicon-small.ico">
+<meta name="description"
+      content="A small webpage to generate QR codes. It uses David Shim's
+            qrcodejs library, so I really didn't do much, but it was my
+            first forray into programming a page with JavaScript.">
+<title>QR Generator</title>
+<script
     src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
-  </script>
-  <script src= "/functions.js"></script>
+</script>
+<script src= "/functions.js"></script>
+<style>
+ html {font-size: 24px}
+ body {color: #586e75; padding-top: 0px}
+ main {max-width: 800px; margin: auto; background-color: #fdf6e3;
+     padding: 0% 5% 5% 5%}
+ header {text-align: center}
+ address a {text-decoration: none}
+ p {line-height: 1.5}
+ main, img, video {border-radius: 2rem}
+ a {color: #6c71c4}
+ h1 {color: #6c71c4; margin-top: 0; font-size: 3rem; margin-bottom: 0}
+ h2 {margin: 0; color: #dc322f}
+ h3 {margin: 0; color: #cb4b16}
+ @media screen and (max-width: 600px) {
+     h1 {font-size: 2rem}
+ }
+</style>
 </head>
 
-<body onload="main()">
-  <main>
-    <header>
-      <h3 class="p-unpad" style="text-align: left">
-        <a href= "/">&lt; Return Home</a>
-      </h3>
-      <h1>
-        <span class="sidsu_big">QR G</span><span class= "sidsu">enerator</span>
-      </h1>
-    </header>
+<body onload="main()"><main><article>
+<header>
+<nav><h3><a href="/">Home</a></h3></nav>
+<h1>QR Generator</h1>
+<address><time datetime="2024-05-22">May 22, 2024</time></address>
+</header>
 
-    <label for="url">Enter a URL:
-      <input type= "text" id= "url" name= "url" placeholder= "sidsu.com">
-    </label>
-    <button type= "button" onclick= "encodeQR()">Create QR!</button>
-    <br><br>
+<label for="url">Enter a URL:
+<input type= "text" id= "url" name= "url" placeholder= "sidsu.com">
+</label>
 
-    <div id= "qrcode">
+<button type= "button" onclick= "encodeQR()">Create QR!</button>
+<br><br>
 
-    </div>
+<div id= "qrcode"></div>
+</article>
 
-    <br><br><br><br>
-    <footer>
-      <hr>
-      last updated: May 22, 2024 |
-      <button id= "e-mail" onclick="revealEmail()">
-        Click Here to Contact Me!
-      </button>
-    </footer>
-    <br>
-  </main>
+<footer><hr>Copyright &copy;
+<time datetime="2023">2023</time>&ndash;<time datetime="2025">2025</time>
+<strong>Sid Su</strong></footer>
+</main>
 
-  <script>
-   let qr;
+<script>
+ let qr;
 
-   function main() {
-       let params= {
-           text: "https://www.sidsu.com",
-           width: 400,
-           height: 400
-       };
-       qr= new QRCode(document.getElementById("qrcode"), params);
-   }
+ function main() {
+     let params= {
+         text: "https://www.sidsu.com",
+         width: 400,
+         height: 400
+     };
+     qr= new QRCode(document.getElementById("qrcode"), params);
+ }
 
-   function encodeQR() {
-       qr.makeCode(document.getElementById("url").value);
-   }
-  </script>
+ function encodeQR() {
+     qr.makeCode(document.getElementById("url").value);
+ }
+</script>
 </body>
 </html>
