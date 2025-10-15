@@ -12,10 +12,9 @@
 <link rel="icon" type="image/x-icon" href="/media/favicon-small.ico">
 <title>Live Music &#x1F918;</title>
 <style>
- html {font-size: 24px; background-color: #fdf6e3; word-wrap:break-word;}
- main {max-width: 800px; margin: auto; color: #002b36}
+ html {font: 24px serif; background: #fdf6e3; word-wrap: break-word}
+ body {max-width: 800px; margin: auto; color: #002b36}
  h1 {font-size: 2rem; margin: 0}
- h2, h3 {margin: 0}
  summary h3 {display: inline-block}
  a {color: #d33682}
  .gallery {display: flex; flex-direction: row; overflow: scroll}
@@ -27,7 +26,7 @@
 
 <body><main><article>
 <header>
-<nav><h3><a href="/">Home</a> &gt; <a href="/blog">Blog</a></h3></nav>
+<nav><h3><a href="/">Home</a> &gt; <a href="/#blog">Blog</a></h3></nav>
 <h1>Live Music &#x1F918;</h1>
 <address>Sid Su | <time datetime="2025-09-24">Sept. 24, 2025</time></address>
 
@@ -115,8 +114,10 @@ gonna take me a while to populate this page, so check back from time to time
 
 <figure>
 <video loop playsinline muted autoplay>
-<source src="/media/razor-apple-fan.webm" type="video/webm">
-<source src="/media/razor-apple-fan.mov" type="video/mov">
+<source src="/media/razor-apple-fan.webm" type='video/webm;
+             codecs="av01.0.05M.08"'>
+<source src="/media/razor-apple-fan.mp4" type='video/mp4;
+             codecs="avc1.64002A"'>
 Me, Audrey and Brennan in front of a fan</video>
 <figcaption>Me, Audrey and Brennan cooling off in front of a fan</figcaption>
 </figure>
