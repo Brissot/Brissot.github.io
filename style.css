@@ -35,6 +35,16 @@ td, th {text-align: left}
 .num {text-align: right}
 .bib {padding-left: 2rem; text-indent: -2rem}
 
+/* math style */
+math {display: block; margin: 1rem auto; width: fit-content;
+    font-family: cmr10; text-align: center; overflow-x: clip}
+mspace {width: 0.3rem}
+.imath, .imath * {display: inline; font-family: cmr10;
+    text-transform: math-auto}
+.mcases {display: flex; flex-direction: row; justify-content: center}
+.mcase {display: block; padding: 0 2rem;}
+.mcase + .mcase {border-left: solid 1px}
+
 /* solarized light colors */
 :root {
     --background-color: white;
