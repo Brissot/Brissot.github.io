@@ -23,7 +23,8 @@
  mspace {width: 0.3rem}
  .imath, .imath * {display: inline; font-family: cmr10;
      text-transform: math-auto}
- .mcases {display: flex; flex-direction: row; justify-content: center}
+ .mcases {display: flex; flex-direction: row; justify-content: center;
+     overflow-x: scroll}
  .mcase {display: block; padding: 0 2rem;}
  .mcase + .mcase {border-left: solid 1px}
 </style>
@@ -33,7 +34,7 @@
 <header>
 <nav><h3><a href="/">Home</a> &gt; <a href="/#notes">Notes</a></h3></nav>
 <h1>Complex Operations</h1>
-<address>Sid Su | <time datetime="2025-10-15">Oct. 15, 2025</time></address>
+<address>Sid Su | <time datetime="2025-10-25">Oct. 25, 2025</time></address>
 
 <nav><ol>
 <li><a href="#introduction">Introduction</a></li>
@@ -48,7 +49,7 @@
 <h2>Introduction</h2>
 
 <p>Notes from chapter 1.1, 1.2 of Ahlfors. Better structured notes can be found
-in my <a href="/docs/Complex Operations.pdf">handwritten notes</a>. This is
+in my <a href="/docs/Complex%20Operations.pdf">handwritten notes</a>. This is
 more meant as a quick reference for important theorems and equations, as well
 as a place for practice problems.</p>
 </section>
@@ -146,7 +147,7 @@ $$
 <mfrac><mrow><mi>&beta;</mi><mo>&InvisibleTimes;</mo><mi>&gamma;</mi>
 <mo>&minus;</mo><mi>&alpha;</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi>
 </mrow><mrow><msup><mi>&gamma;</mi><mn>2</mn></msup><mo>+</mo><msup>
-<mi>&delta;</mi><mn>2</mn></msup></mfrac></mrow>
+<mi>&delta;</mi><mn>2</mn></msup></mrow></mfrac></mrow>
 <annotation encoding="application/x-tex">
 $$
 \frac{\alpha + i \beta}{\gamma + i \delta} =
@@ -204,7 +205,7 @@ $$
 $$
 </annotation></semantics></math>
 
-<math><semantics><mrow><mi>&alpha;</mi><mo>+</mo><mi>i</mi>
+<math><semantics><mrow><mo>&xrArr;</mo><mi>&alpha;</mi><mo>+</mo><mi>i</mi>
 <mo>&InvisibleTimes;</mo><mi>&beta;</mi><mo>=</mo><mo>(</mo><mi>&gamma;</mi>
 <mo>&InvisibleTimes;</mo><mi>x</mi><mo>-</mo><mi>&delta;</mi><mi>y</mi>
 <mo>)</mo><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo><mo>(</mo>
@@ -243,7 +244,6 @@ $$
 <math><semantics><mrow><mo>&xrArr;</mo><mi>y</mi><mo>=</mo><mfrac><mrow>
 <mi>&gamma;</mi><mo>&InvisibleTimes;</mo><mi>x</mi><mo>&minus;</mo>
 <mi>&alpha;</mi></mrow><mi>&delta;</mi></mfrac></mrow>
-</mrow>
 <annotation encoding="application/x-tex">
 $$
 \implies y = \frac{\gamma x - \alpha}{\delta}
@@ -330,7 +330,6 @@ $$
 <math><semantics><mrow><mo>&xrArr;</mo><mi>x</mi><mo>=</mo><mfrac><mrow>
 <mi>&alpha;</mi><mo>+</mo><mi>&delta;</mi><mo>&InvisibleTimes;</mo><mi>y</mi>
 </mrow><mi>&gamma;</mi></mfrac></mrow>
-</mrow>
 <annotation encoding="application/x-tex">
 $$
 \implies x = \frac{\alpha + \delta y}{\gamma}
@@ -574,7 +573,7 @@ $$\implies y^2 = \frac{1}{2}\left(-\alpha + \sqrt{\alpha^2 + \beta^2}\right)$$
 <mo>&plusmn;</mo><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>(</mo>
 <mi>&alpha;</mi><mo>+</mo><msqrt><mrow><msup><mi>&alpha;</mi><mn>2</mn></msup>
 <mo>+</mo><msup><mi>&beta;</mi><mn>2</mn></msup></mrow></msqrt><mo>)</mo>
-</mrow></msqrt><mo>&plusmn</mo><mi>i</mi><msqrt><mrow><mfrac><mn>1</mn>
+</mrow></msqrt><mo>&plusmn;</mo><mi>i</mi><msqrt><mrow><mfrac><mn>1</mn>
 <mn>2</mn></mfrac><mo>(</mo><mo>&minus;</mo><mi>&alpha;</mi><mo>+</mo><msqrt>
 <msup><mi>&alpha;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&beta;</mi>
 <mn>2</mn></msup></msqrt><mo>)</mo></mrow></msqrt></mrow>
