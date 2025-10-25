@@ -18,7 +18,7 @@
      font-family: cmr10;
      src: url("/media/latinmodern-math.otf") format("opentype")
  }
- math {display: block; margin: 1rem auto; width: fit-content;
+ math {display: block; math-style: normal; margin: 1rem auto; width: fit-content;
      font-family: cmr10; text-align: center; overflow-x: clip}
  mspace {width: 0.3rem}
  .imath, .imath * {display: inline; font-family: cmr10;
@@ -62,87 +62,270 @@ the imaginary numbers.</p>
 <h3>Definition of <span class="imath">&#119894;</span></h3>
 
 <p>Any solution to the equation</p>
-<math><mrow><msup><mi>i</mi><mn>2</mn></msup><mo>=</mo><mo>&minus;</mo>
-<mn>1</mn></mrow></math>
+<math><semantics><mrow><msup><mi>i</mi><mn>2</mn></msup><mo>=</mo>
+<mo>&minus;</mo><mn>1</mn></mrow>
+<annotation encoding="application/x-tex">
+$$
+i^2 = -1
+$$
+</annotation></semantics></math>
 
-<math><mrow><mo>&xrArr;</mo><mi>i</mi><mo>=</mo><mo>+</mo><msqrt>
+<math><semantics><mrow><mo>&xrArr;</mo><mi>i</mi><mo>=</mo><mo>+</mo><msqrt>
 <mo>&minus;</mo><mn>1</mn></msqrt><mo>&or;</mo><mi>i</mi><mo>=</mo>
-<mo>&minus;</mo><msqrt><mo>&minus;</mo><mn>1</mn></msqrt></mrow></math>
-
-
+<mo>&minus;</mo><msqrt><mo>&minus;</mo><mn>1</mn></msqrt></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies i = +\sqrt{-1} \lor i = -\sqrt{-1}
+$$
+</annotation></semantics></math>
 
 <p>As a result, exponentiating <span class="imath">&#119894;</span> creates
 the cycle</p>
 
-<math><mrow>
-<msup><mi>i</mi><mn>1</mn></msup><mo>=</mo><mi>i</mi><mo>,</mo>
-<msup><mi>i</mi><mn>2</mn></msup><mo>=</mo><mo>&minus;</mo><mn>1</mn><mo>,</mo>
-<msup><mi>i</mi><mn>3</mn></msup><mo>=</mo><mo>&minus;</mo><mi>i</mi><mo>,</mo>
-<msup><mi>i</mi><mn>4</mn></msup><mo>=</mo><mn>1</mn>
-</mrow></math>
-<math><mrow>
-<mo>&xrArr;</mo>
-<msup><mi>i</mi><mi>n</mi></msup><mo>=</mo>
-<msup><mi>i</mi><mrow><mi>n</mi><mo>mod</mo><mn>4</mn></mrow></msup>
-</mrow></math>
+<math><semantics><mrow><msup><mi>i</mi><mn>1</mn></msup><mo>=</mo><mi>i</mi>
+<mo>,</mo><msup><mi>i</mi><mn>2</mn></msup><mo>=</mo><mo>&minus;</mo><mn>1</mn>
+<mo>,</mo><msup><mi>i</mi><mn>3</mn></msup><mo>=</mo><mo>&minus;</mo><mi>i</mi>
+<mo>,</mo><msup><mi>i</mi><mn>4</mn></msup><mo>=</mo><mn>1</mn></mrow>
+<annotation encoding="application/x-tex">
+$$
+i ^1 = i, i^2 = -1, i^3 = -i, i^4 = 1
+$$
+</annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><msup><mi>i</mi><mi>n</mi></msup>
+<mo>=</mo><msup><mi>i</mi><mrow><mi>n</mi><mo>mod</mo><mn>4</mn></mrow></msup>
+</mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies i^n = i^{n \bmod{4}}
+$$
+</annotation></semantics></math>
 
 <h3>Complex Addition</h3>
-<math><mrow><mo>(</mo><mi>&alpha;</mi><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo>
-<mi>&beta;</mi><mo>)</mo><mo>+</mo><mo>(</mo><mi>&gamma;</mi><mo>+</mo>
-<mi>i</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi><mo>)</mo><mo>=</mo>
-<mo>(</mo><mi>&alpha;</mi><mo>+</mo><mi>&gamma;</mi><mo>)</mo><mo>+</mo>
-<mi>i</mi><mo>(</mo><mi>&beta;</mi><mo>+</mo><mi>&delta;</mi><mo>)</mo></mrow>
-</math>
+<math><semantics><mrow><mo>(</mo><mi>&alpha;</mi><mo>+</mo><mi>i</mi>
+<mo>&InvisibleTimes;</mo><mi>&beta;</mi><mo>)</mo><mo>+</mo><mo>(</mo>
+<mi>&gamma;</mi><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi>
+<mo>)</mo><mo>=</mo><mo>(</mo><mi>&alpha;</mi><mo>+</mo><mi>&gamma;</mi>
+<mo>)</mo><mo>+</mo><mi>i</mi><mo>(</mo><mi>&beta;</mi><mo>+</mo>
+<mi>&delta;</mi><mo>)</mo></mrow>
+<annotation encoding="application/xtex">
+$$
+\left( \alpha + i \beta \right) + \left( \gamma + i \delta \right)
+= \left( \alpha + \gamma \right) + i \left( \beta + \delta \right)
+$$
+</annotation></semantics></math>
 
 <h3>Complex Multiplication</h3>
-<math><mrow><mo>(</mo><mi>&alpha;</mi><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo>
-<mi>&beta;</mi><mo>)</mo><mo>&times;</mo><mo>(</mo><mi>&gamma;</mi><mo>+</mo>
-<mi>i</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi><mo>)</mo><mo>=</mo>
-<mo>(</mo><mi>&alpha;</mi><mo>&InvisibleTimes;</mo><mi>&gamma;</mi>
-<mo>&minus;</mo><mi>&beta;</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi>
-<mo>)</mo>
-<mo>+</mo><mi>i</mi><mo>(</mo><mi>&beta;</mi><mo>&InvisibleTimes;</mo>
-<mi>&gamma;</mi><mo>+</mo><mi>&alpha;</mi><mo>&InvisibleTimes;</mo>
-<mi>&delta;</mi><mo>)</mo></mrow></math>
+<math><semantics><mrow><mo>(</mo><mi>&alpha;</mi><mo>+</mo><mi>i</mi>
+<mo>&InvisibleTimes;</mo><mi>&beta;</mi><mo>)</mo><mo>&times;</mo><mo>(</mo>
+<mi>&gamma;</mi><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi>
+<mo>)</mo><mo>=</mo><mo>(</mo><mi>&alpha;</mi><mo>&InvisibleTimes;</mo>
+<mi>&gamma;</mi><mo>&minus;</mo><mi>&beta;</mi><mo>&InvisibleTimes;</mo>
+<mi>&delta;</mi><mo>)</mo><mo>+</mo><mi>i</mi><mo>(</mo><mi>&beta;</mi>
+<mo>&InvisibleTimes;</mo><mi>&gamma;</mi><mo>+</mo><mi>&alpha;</mi>
+<mo>&InvisibleTimes;</mo><mi>&delta;</mi><mo>)</mo></mrow>
+<annotation encoding="application/x-tex">
+$$
+\left( \alpha + i \beta \right) \times \left( \gamma + i \delta \right) =
+\left( \alpha \gamma - \beta \delta \right) +
+i \left( \alpha \delta + \beta \gamma \right)
+$$
+</annotation></semantics></math>
 
 <h3>Complex Division</h3>
-<math><mrow><mfrac><mrow>
-<mi>&alpha;</mi><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo><mi>&beta;</mi>
-</mrow><mrow><mi>&gamma;</mi><mo>+</mo><mi>i</mi>
-<mo>&InvisibleTimes;</mo><mi>&delta;</mi></mrow></mfrac><mo>=</mo><mo>(</mo>
-<mi>&alpha;</mi><mo>&InvisibleTimes;</mo><mi>&gamma;</mi><mo>+</mo>
-<mi>&beta;</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi><mo>)</mo><mo>+</mo>
-<mi>i</mi><mo>&InvisibleTimes;</mo><mo>(</mo><mi>&beta;</mi>
-<mo>&InvisibleTimes;</mo><mi>&gamma;</mi><mo>&minus;</mo><mi>&alpha;</mi>
-<mo>&InvisibleTimes;</mo><mi>&delta;</mi><mo>)</mo></mrow></math>
+<math><semantics><mrow><mfrac><mrow><mi>&alpha;</mi><mo>+</mo><mi>i</mi>
+<mo>&InvisibleTimes;</mo><mi>&beta;</mi></mrow><mrow><mi>&gamma;</mi><mo>+</mo>
+<mi>i</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi></mrow></mfrac><mo>=</mo>
+<mfrac><mrow><mi>&alpha;</mi><mo>&InvisibleTimes;</mo><mi>&gamma;</mi>
+<mo>+</mo><mi>&beta;</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi></mrow><mrow>
+<msup><mi>&gamma;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&delta;</mi>
+<mn>2</mn></msup></mrow></mfrac><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo>
+<mfrac><mrow><mi>&beta;</mi><mo>&InvisibleTimes;</mo><mi>&gamma;</mi>
+<mo>&minus;</mo><mi>&alpha;</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi>
+</mrow><mrow><msup><mi>&gamma;</mi><mn>2</mn></msup><mo>+</mo><msup>
+<mi>&delta;</mi><mn>2</mn></msup></mfrac></mrow>
+<annotation encoding="application/x-tex">
+$$
+\frac{\alpha + i \beta}{\gamma + i \delta} =
+\frac{\alpha \gamma + \beta \delta}{\gamma^2 + \delta^2} +
+i \frac{\beta \gamma - \alpha \delta}{\gamma^2 + \delta^2}
+$$
+</annotation></semantics></math>
 
 <h3>Complex Square Root</h3>
-<math><mrow><msqrt><mi>&alpha;</mi><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo>
-<mi>&beta;</mi></msqrt>
-<mo>=</mo>
-<mo>&plusmn;</mo><mo>(</mo><msqrt><mfrac><mrow><mi>&alpha;</mi><mo>+</mo>
-<msqrt><msup><mi>&alpha;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&beta;</mi>
-<mn>2</mn></msup></msqrt></mrow><mn>2</mn></mfrac></msqrt><mo>+</mo><mi>i</mi>
+<math><semantics><mrow><msqrt><mi>&alpha;</mi><mo>+</mo><mi>i</mi>
+<mo>&InvisibleTimes;</mo><mi>&beta;</mi></msqrt><mo>=</mo><mo>&plusmn;</mo>
+<mo>(</mo><msqrt><mfrac><mrow><mi>&alpha;</mi><mo>+</mo><msqrt><msup>
+<mi>&alpha;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&beta;</mi><mn>2</mn>
+</msup></msqrt></mrow><mn>2</mn></mfrac></msqrt><mo>+</mo><mi>i</mi>
 <mo>&InvisibleTimes;</mo><mfrac><mi>&beta;</mi><mrow><mo>|</mo><mi>&beta;</mi>
 <mo>|</mo></mrow></mfrac><mo>&InvisibleTimes;</mo><msqrt><mfrac><mrow>
 <mo>&minus;</mo><mi>&alpha;</mi><mo>+</mo><msqrt><msup><mi>&alpha;</mi>
 <mn>2</mn></msup><mo>+</mo><msup><mi>&beta;</mi><mn>2</mn></msup></msqrt>
-</mrow><mn>2</mn></mfrac></msqrt><mo>)</mo>
-</mrow></math>
+</mrow><mn>2</mn></mfrac></msqrt><mo>)</mo></mrow>
+<annotation encoding="application/x-tex">
+$$
+\sqrt{\alpha + i \beta} =
+\pm \left(\sqrt{\frac{\alpha + \sqrt{\alpha^2 +\beta^2}}{2}} +
+i \frac{\beta}{|\beta|} \sqrt{\frac{-\alpha + \sqrt{\alpha^2 + \beta^2}}{2}}
+\right)
+$$
+</annotation></semantics></math>
 </section>
 
 <section>
-<h2>Proofs</h2>
+<h2>Complex Division Proof</h2>
+<math><semantics><mrow><mtext>Suppose</mtext><mspace></mspace><mfrac><mrow>
+<mi>&alpha;</mi><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo><mi>&beta;</mi>
+</mrow><mrow><mi>&gamma;</mi><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo>
+<mi>&delta;</mi></mrow></mfrac><mo>=</mo><mi>x</mi><mo>+</mo><mi>i</mi>
+<mo>&InvisibleTimes;</mo><mi>y</mi><mspace></mspace><mspace></mspace><mo>(</mo>
+<mi>&gamma;</mi><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi>
+<mo>&ne;</mo><mn>0</mn><mo>)</mo></mrow>
+<annotation encoding="application/x-tex">
+$$
+\mathrm{Suppose }
+\frac{\alpha + i \beta}{\gamma + i \delta}
+= x + i y~~~\left(\gamma + i \delta \ne 0\right)
+$$
+</annotation></semantics></math>
 
-<h3>Complex Division Proof</h3>
-<h3>Complex Square Root Proof</h3>
+<math><semantics><mrow><mi>&xrArr;</mi><mi>&alpha;</mi><mo>+</mo><mi>i</mi>
+<mo>&InvisibleTimes;</mo><mi>&beta;</mi><mo>=</mo><mo>(</mo><mi>x</mi>
+<mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo><mi>y</mi><mo>)</mo><mo>(</mo>
+<mi>&gamma;</mi><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi>
+<mo>)</mo></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies \alpha + i \beta = (x + iy)(\gamma + i\delta)
+$$
+</annotation></semantics></math>
 
+<math><semantics><mrow><mi>&alpha;</mi><mo>+</mo><mi>i</mi>
+<mo>&InvisibleTimes;</mo><mi>&beta;</mi><mo>=</mo><mo>(</mo><mi>&gamma;</mi>
+<mo>&InvisibleTimes;</mo><mi>x</mi><mo>-</mo><mi>&delta;</mi><mi>y</mi>
+<mo>)</mo><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo><mo>(</mo>
+<mi>&delta;</mi><mo>&InvisibleTimes;</mo><mi>x</mi><mo>+</mo><mi>&gamma;</mi>
+<mo>&InvisibleTimes;</mo><mi>y</mi><mo>)</mo></mrow>
+<annotation encoding="application/x-tex">
+$$
+\alpha + i \beta = (\gamma x - \delta y) + i(\delta x + \gamma y)
+$$
+</annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mo>{</mo><mtable><mtr><mtd>
+<mi>&alpha;</mi><mo>=</mo><mi>&gamma;</mi><mo>&InvisibleTimes;</mo><mi>x</mi>
+<mo>&minus;</mo><mi>&delta;</mi><mo>&InvisibleTimes;</mo><mi>y</mi></mtd></mtr>
+<mtr><mtd><mi>&beta;</mi><mo>=</mo><mi>&delta;</mi><mo>&InvisibleTimes;</mo>
+<mi>x</mi><mo>+</mo><mi>&gamma;</mi><mo>&InvisibleTimes;</mo><mi>y</mi></mtd>
+</mtr></mtable></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies \begin{cases} \alpha = \gamma x - \delta y \\
+\beta = \delta x + \gamma y \end{cases}
+$$
+</annotation></semantics></math>
+
+<div class="mcases">
+<div class="mcase">
+<math><semantics><mrow><mo>&xrArr;</mo><mi>&delta;</mi>
+<mo>&InvisibleTimes;</mo><mi>y</mi><mo>=</mo><mi>&gamma;</mi>
+<mo>&InvisibleTimes;</mo><mi>x</mi><mo>&minus;</mo><mi>&alpha;</mi></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies \delta y = \gamma x - \alpha
+$$
+</annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mi>&beta;</mi><mo>=</mo>
+<mi>&delta;</mi><mo>&InvisibleTimes;</mo><mi>x</mi><mo>+</mo><mi>&gamma;</mi>
+<mo>(</mo><mfrac><mrow><mi>&gamma;</mi><mo>&InvisibleTimes;</mo><mi>x</mi>
+<mo>&minus;</mo><mi>&alpha;</mi></mrow><mi>&delta;</mi></mfrac><mo>)</mo>
+</mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies \beta = \delta x + \gamma \left( \frac{\gamma x - a}{\delta} \right)
+$$
+</annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mi>&beta;</mi><mo>&InvisibleTimes;</mo>
+<mi>&delta;</mi><mo>=</mo><msup><mi>&delta;</mi><mn>2</mn></msup>
+<mo>&InvisibleTimes;</mo><mi>x</mi><mo>+</mo><mi>&gamma;</mi>
+<mo>&InvisibleTimes;</mo><mo>(</mo><mi>&gamma;</mi><mo>&InvisibleTimes;</mo>
+<mi>x</mi><mo>&minus;</mo><mi>&alpha;</mi><mo>)</mo></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies \beta \delta = \delta^2 x + \gamma (\gamma x - \alpha)
+$$
+</annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mi>&beta;</mi><mo>&InvisibleTimes;</mo>
+<mi>&delta;</mi><mo>=</mo><msup><mi>&delta;</mi><mn>2</mn></msup>
+<mo>&InvisibleTimes;</mo><mi>x</mi><mo>+</mo><msup><mi>&gamma;</mi><mn>2</mn>
+</msup><mo>&InvisibleTimes;</mo><mi>x</mi><mo>&minus;</mo><mi>&gamma;</mi>
+<mo>&InvisibleTimes;</mo><mi>&alpha;</mi></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies \beta \delta = \delta^2 x + \gamma^2 x - \gamma \alpha
+$$
+</annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mi>&beta;</mi><mo>&InvisibleTimes;</mo>
+<mi>&delta;</mi><mo>=</mo><mi>x</mi><mo>&InvisibleTimes;</mo><mo>(</mo><msup>
+<mi>&delta;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&gamma;</mi><mn>2</mn>
+</msup><mo>)</mo><mo>&minus;</mo><mi>&gamma;</mi><mo>&InvisibleTimes;</mo>
+<mi>&alpha;</mi></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies \beta \delta = x \left(\delta^2 + \gamma^2 \right) - \gamma \alpha
+$$
+</annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mi>x</mi><mo>&InvisibleTimes;</mo>
+<mo>(</mo><msup><mi>&delta;</mi><mn>2</mn></msup><mo>+</mo><msup>
+<mi>&gamma;</mi><mn>2</mn></msup><mo>)</mo><mo>&minus;</mo><mi>&gamma;</mi>
+<mo>&InvisibleTimes;</mo><mi>&alpha;</mi><mo>=</mo><mi>&beta;</mi>
+<mo>&InvisibleTimes;</mo><mi>&delta;</mi></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies x \left(\delta^2 + \gamma^2 \right) - \gamma \alpha = \beta \delta
+$$
+</annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mi>x</mi><mo>=</mo><mfrac><mrow>
+<mi>&beta;</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi><mo>+</mo>
+<mi>&gamma;</mi><mo>&InvisibleTimes;</mo><mi>&alpha;</mi></mrow><mrow><msup>
+<mi>&delta;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&gamma;</mi><mn>2</mn>
+</msup></mrow></mfrac></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies x = \frac{\beta \delta + \gamma \alpha}{\delta^2 + \gamma^2}
+$$
+</annotation></semantics></math>
+
+</div>
+
+<div class="mcase">
+<math><semantics><mrow><mo>&xrArr;</mo><mi>&gamma;</mi>
+<mo>&InvisibleTimes;</mo><mi>x</mi><mo>=</mo><mi>&alpha;</mi><mo>+</mo>
+<mi>&delta;</mi><mo>&InvisibleTimes;</mo><mi>y</mi></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies \gamma x = \alpha + \delta y
+$$
+</annotation></semantics></math>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Complex Square Root Proof</h2>
 <math><semantics><mrow><mtext>Suppose</mtext><mspace></mspace><msup><mrow>
 <mo>(</mo><mi>x</mi><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo><mi>y</mi>
 <mo>)</mo></mrow><mn>2</mn></msup><mo>=</mo><mi>&alpha;</mi><mo>+</mo>
 <mi>i</mi><mo>&InvisibleTimes;</mo><mi>&beta;</mi></mrow>
 <annotation encoding="application/x-tex">
-\mathrm{Suppose} (x + \iu y)^2 = \alpha + \iu \beta
+$$\mathrm{Suppose\ } \left(x + i y\right)^2 = \alpha + i \beta$$
 </annotation></semantics></math>
 
 <math><semantics><mrow><mtext>Find</mtext><mspace></mspace><mi>x</mi><mo>,</mo>
@@ -150,7 +333,7 @@ the cycle</p>
 <mtext>terms</mtext><mspace></mspace><mtext>of</mtext><mspace></mspace>
 <mi>&alpha;</mi><mo>,</mo><mi>&beta;</mi></mrow>
 <annotation encoding="application/x-tex">
-\mathrm{Find} x, y \mathrm{in\ terms\ of} \alpha, \beta
+$$\mathrm{Find\ } x, y \mathrm{\ in\ terms\ of\ } \alpha, \beta$$
 </annotation></semantics></math>
 
 <math><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&minus;</mo><msup>
@@ -159,7 +342,7 @@ the cycle</p>
 <mi>y</mi><mo>=</mo><mi>&alpha;</mi><mo>+</mo><mi>i</mi>
 <mo>&InvisibleTimes;</mo><mi>&beta;</mi></mrow>
 <annotation encoding="application/x-tex">
-x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
+$$x^2 - y^2 + 2 i x y = \alpha + i \beta$$
 </annotation></semantics></math>
 
 <math><semantics><mrow><mo>&xrArr;</mo><mo>{</mo><mtable><mtr><mtd><mrow><msup>
@@ -168,7 +351,9 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 <mo>&InvisibleTimes;</mo><mn>x</mn><mo>&InvisibleTimes;</mo><mi>y</mi>
 <mo>=</mo><mi>&beta;</mi></mrow></mtd></mtr></mtable></mrow>
 <annotation encoding="application/x-tex">
+$$
 \implies \begin{cases} x^2 - y^2 = \alpha \\ 2xy = \beta \end{cases}
+$$
 </annotation></semantics></math>
 
 <math><semantics><mrow><msup><mi>&alpha;</mi><mn>2</mn></msup><mo>+</mo><msup>
@@ -178,7 +363,7 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 <mo>&InvisibleTimes;</mo><mi>x</mi><mo>&InvisibleTimes;</mo><mi>y</mi>
 <mo>)</mo></mrow><mn>2</mn></msup></mrow>
 <annotation encoding="application/x-tex">
-\alpha^2 + \beta^2 = (x^2 - y^2) + (2xy)^2
+$$\alpha^2 + \beta^2 = \left(x^2 - y^2\right) + \left(2xy\right)^2$$
 </annotation></semantics></math>
 
 <math><semantics><mrow><mo>=</mo><msup><mi>x</mi><mn>4</mn></msup>
@@ -188,7 +373,7 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 <msup><mi>x</mi><mn>2</mn></msup><mo>&InvisibleTimes;</mo><msup><mi>y</mi>
 <mn>2</mn></msup></mrow>
 <annotation encoding="application/x-tex">
-= x^4 - 2x^{2}y^{2} + y^4 + 4x^{2}y^{2}
+$$= x^4 - 2x^{2}y^{2} + y^4 + 4x^{2}y^{2}$$
 </annotation></semantics></math>
 
 <math><semantics><mrow><mo>=</mo><msup><mi>x</mi><mn>4</mn></msup>
@@ -196,7 +381,7 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 <mo>&InvisibleTimes;</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup>
 <mi>y</mi><mn>4</mn></msup></mrow>
 <annotation encoding="application/x-tex">
-= x^4 + 2x^{2}y^{2} + y^4
+$$= x^4 + 2x^{2}y^{2} + y^4$$
 </annotation></semantics></math>
 
 <math><semantics><mrow><msup><mi>&alpha;</mi><mn>2</mn></msup><mo>+</mo>
@@ -204,7 +389,7 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 <mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup>
 <mo>)</mo></mrow><mn>2</mn></msup></mrow>
 <annotation encoding="application/x-tex">
-\alpha^{2} + \beta^{2} = (x^2 + y^2)^2
+$$\alpha^{2} + \beta^{2} = \left(x^2 + y^2\right)^2$$
 </annotation></semantics></math>
 
 <math><semantics><mrow><mo>&xrArr;</mo><msup><mi>x</mi><mn>2</mn></msup>
@@ -212,7 +397,7 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 <mi>&alpha;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&beta;</mi><mn>2</mn>
 </msup></mrow></msqrt></mrow>
 <annotation encoding="application/x-tex">
-\implies x^2 + y^2 = sqrt{\alpha^2 + \beta^2}
+$$\implies x^2 + y^2 = \sqrt{\alpha^2 + \beta^2}$$
 </annotation></semantics></math>
 
 <div class="mcases">
@@ -222,7 +407,7 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 <mi>&alpha;</mi><mo>)</mo><mo>=</mo><msqrt><msup><mi>&alpha;</mi><mn>2</mn>
 </msup><mo>+</mo><msup><mi>&beta;</mi><mn>2</mn></msup></msqrt></mrow>
 <annotation encoding="application/x-tex">
-\implies x^2 + (x^2 - \alpha) = sqrt{\alpha^2 + \beta^2}
+$$\implies x^2 + \left(x^2 - \alpha\right) = \sqrt{\alpha^2 + \beta^2}$$
 </annotation></semantics></math>
 
 <math><semantics><mrow><mo>&xrArr;</mo><mn>2</mn><mo>&InvisibleTimes;</mo>
@@ -230,7 +415,7 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 <msqrt><msup><mi>&alpha;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&beta;</mi>
 <mn>2</mn></msup></msqrt></mrow>
 <annotation encoding="application/x-tex">
-\implies 2x^2 - \alpha = sqrt{\alpha^2 + \beta^2}
+$$\implies 2x^2 - \alpha = \sqrt{\alpha^2 + \beta^2}$$
 </annotation></semantics></math>
 
 <math><semantics><mrow><mo>&xrArr;</mo><msup><mi>x</mi><mn>2</mn></msup>
@@ -238,7 +423,7 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 <mo>+</mo><msqrt><mrow><msup><mi>&alpha;</mi><mn>2</mn></msup><mo>+</mo><msup>
 <mi>&beta;</mi><mn>2</mn></msup></mrow></msqrt><mo>)</mo></mrow>
 <annotation encoding="application/x-tex">
-\implies x^2 = \frac{1}{2}(\alpha + sqrt{\alpha^2 + \beta^2})
+$$\implies x^2 = \frac{1}{2}(\alpha + \sqrt{\alpha^2 + \beta^2})$$
 </annotation></semantics></math>
 </div>
 
@@ -248,7 +433,7 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 </msup><mo>=</mo><msqrt><mrow><msup><mi>&alpha;</mi><mn>2</mn></msup><mo>+</mo>
 <msup><mi>&beta;</mi><mn>2</mn></msup></mrow></msqrt></mrow>
 <annotation encoding="application/x-tex">
-\implies (y^2 + \alpha) + y^2 = sqrt{\alpha^2 + \beta^2}
+$$\implies \left(y^2 + \alpha\right) + y^2 = \sqrt{\alpha^2 + \beta^2}$$
 </annotation></semantics></math>
 
 <math><semantics><mrow><mo>&xrArr;</mo><mn>2</mn><mo>&InvisibleTimes;</mo>
@@ -256,7 +441,7 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 <mrow><msup><mi>&alpha;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&beta;</mi>
 <mn>2</mn></msup></mrow></msqrt></mrow>
 <annotation encoding="application/x-tex">
-\implies 2y^2 + \alpha  = sqrt{\alpha^2 + \beta^2}
+$$\implies 2y^2 + \alpha  = \sqrt{\alpha^2 + \beta^2}$$
 </annotation></semantics></math>
 
 <math><semantics><mrow><mo>&xrArr;</mo><msup><mi>y</mi><mn>2</mn></msup>
@@ -265,7 +450,7 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 <mo>+</mo><msup><mi>&beta;</mi><mn>2</mn></msup></mrow></msqrt><mo>)</mo>
 </mrow>
 <annotation encoding="application/x-tex">
-\implies y^2 = \frac{1}{2}(-\alpha + \sqrt{\alpha^2 + \beta^2})
+$$\implies y^2 = \frac{1}{2}\left(-\alpha + \sqrt{\alpha^2 + \beta^2}\right)$$
 </annotation></semantics></math>
 </div>
 </div>
@@ -280,8 +465,9 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 <mi>&alpha;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&beta;</mi><mn>2</mn>
 </msup></msqrt></mrow></msqrt></mrow>
 <annotation encoding="application/x-tex">
-\implies \alpha + \iu \beta = \pm \sqrt{\frac{1}{2}(\alpha + \sqrt{\alpha^2 +
-\beta^2})} \pm \iu \sqrt{\frac{1}{2} (-\alpha + \sqrt{\alpha^2 + \beta^2})}
+$$\implies \sqrt{\alpha + i \beta} =
+\pm \sqrt{\frac{1}{2}\left(\alpha + \sqrt{\alpha^2 + \beta^2}\right)}
+\pm i \sqrt{\frac{1}{2} \left(-\alpha + \sqrt{\alpha^2 + \beta^2}\right)}$$
 </annotation></semantics></math>
 
 <math><semantics><mrow><mo>&xrArr;</mo><msqrt><mi>&alpha;</mi><mo>+</mo>
@@ -296,9 +482,11 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 </mrow><mn>2</mn></mfrac></msqrt><mo>)</mo><mspace></mspace><mo>&#8718;</mo>
 </mrow>
 <annotation encoding="application/x-tex">
-\implies \sqrt{\alpha + \iu \beta} = \pm (\sqrt{\frac{(\alpha +
-\sqrt{\alpha^2 + \beta^2})}{2}} \pm \iu \frac{\beta}{|\beta|}
-\sqrt{\frac{(-\alpha + \sqrt{\alpha^2 + \beta^2})}{2}})
+$$
+\implies \sqrt{\alpha + i \beta}
+= \pm \sqrt{\frac{\alpha + \sqrt{\alpha^2 + \beta^2}}{2}} \pm
+i \frac{\beta}{|\beta|} \sqrt{\frac{-\alpha + \sqrt{\alpha^2 + \beta^2})}{2}
+$$
 </annotation></semantics></math>
 
 <math><semantics><mrow><mtext>Note that</mtext><mspace></mspace><mfrac>
@@ -308,8 +496,11 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 <mo>&InvisibleTimes;</mo><mi>y</mi><mspace></mspace><mtext>from above.</mtext>
 </mrow>
 <annotation encoding="application/x-tex">
+$$
 \mathrm{Note\ that\ } \frac{\beta}{|\beta|}
-\mathrm{\ is\ a\ result\ of\ satisfying\ } \beta = 2xy \mathrm{\ from\ above}
+\mathrm{\ is\ a\ result\ of\ satisfying\ } \beta
+= 2xy \mathrm{\ from\ above}
+$$
 </annotation></semantics></math>
 </section>
 
@@ -331,5 +522,4 @@ x^2 - y^2 + 2 \iu x y = \alpha + \iu \beta
 <footer><hr>Copyright &copy;
 <time datetime="2023">2023</time>&ndash;<time datetime="2025">2025</time>
 <strong>Sid Su</strong></footer>
-</main>
-</body></html>
+</main></body></html>
