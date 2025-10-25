@@ -38,6 +38,9 @@
 <nav><ol>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#ref">Quick Reference</a></li>
+<li><a href="#division-proof">Complex Division Proof</a></li>
+<li><a href="#sqrt-proof">Complex Square Root Proof</a></li>
+<li><a href="#practice">Practice Problems</a></li>
 </ol></nav>
 </header>
 
@@ -173,7 +176,7 @@ $$
 </annotation></semantics></math>
 </section>
 
-<section>
+<section id="division-proof">
 <h2>Complex Division Proof</h2>
 <math><semantics><mrow><mtext>Suppose</mtext><mspace></mspace><mfrac><mrow>
 <mi>&alpha;</mi><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo><mi>&beta;</mi>
@@ -234,6 +237,16 @@ $$
 <annotation encoding="application/x-tex">
 $$
 \implies \delta y = \gamma x - \alpha
+$$
+</annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mi>y</mi><mo>=</mo><mfrac><mrow>
+<mi>&gamma;</mi><mo>&InvisibleTimes;</mo><mi>x</mi><mo>&minus;</mo>
+<mi>&alpha;</mi></mrow><mi>&delta;</mi></mfrac></mrow>
+</mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies y = \frac{\gamma x - \alpha}{\delta}
 $$
 </annotation></semantics></math>
 
@@ -302,7 +315,6 @@ $$
 \implies x = \frac{\beta \delta + \gamma \alpha}{\delta^2 + \gamma^2}
 $$
 </annotation></semantics></math>
-
 </div>
 
 <div class="mcase">
@@ -314,11 +326,113 @@ $$
 \implies \gamma x = \alpha + \delta y
 $$
 </annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mi>x</mi><mo>=</mo><mfrac><mrow>
+<mi>&alpha;</mi><mo>+</mo><mi>&delta;</mi><mo>&InvisibleTimes;</mo><mi>y</mi>
+</mrow><mi>&gamma;</mi></mfrac></mrow>
+</mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies x = \frac{\alpha + \delta y}{\gamma}
+$$
+</annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mi>&beta;</mi><mo>=</mo>
+<mi>&delta;</mi><mo>&InvisibleTimes;</mo><mo>(</mo><mfrac><mrow>
+<mi>&alpha;</mi><mo>+</mo><mi>&delta;</mi><mo>&InvisibleTimes;</mo><mi>y</mi>
+</mrow><mi>&gamma;</mi></mfrac><mo>)</mo><mo>+</mo><mi>&gamma;</mi>
+<mo>&InvisibleTimes;</mo><mi>y</mi></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies \beta = \delta \left(\frac{\alpha + \delta y}{\gamma}\right) +
+\gamma y
+$$
+</annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mi>&beta;</mi><mo>&InvisibleTimes;</mo>
+<mi>&gamma;</mi><mo>=</mo><mi>&delta;</mi><mo>&InvisibleTimes;</mo><mo>(</mo>
+<mi>&alpha;</mi><mo>+</mo><mi>&delta;</mi><mo>&InvisibleTimes;</mo><mi>y</mi>
+<mo>)</mo><mo>+</mo><msup><mi>&gamma;</mi><mn>2</mn></msup>
+<mo>&InvisibleTimes;</mo><mi>y</mi></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies \beta \gamma = \delta (\alpha + \delta y) + \gamma^2 y
+$$
+</annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mi>&beta;</mi><mo>&InvisibleTimes;</mo>
+<mi>&gamma;</mi><mo>=</mo><mi>&delta;</mi><mo>&InvisibleTimes;</mo>
+<mi>&alpha;</mi><mo>+</mo><msup><mi>&delta;</mi><mn>2</mn></msup>
+<mo>&InvisibleTimes;</mo><mi>y</mi><mo>+</mo><msup><mi>&gamma;</mi><mn>2</mn>
+</msup><mo>&InvisibleTimes;</mo><mi>y</mi></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies \beta \gamma = \delta \alpha + \delta^2 y + \gamma^2 y
+$$
+</annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mi>&beta;</mi><mo>&InvisibleTimes;</mo>
+<mi>&gamma;</mi><mo>=</mo><mi>&delta;</mi><mo>&InvisibleTimes;</mo>
+<mi>&alpha;</mi><mo>+</mo><mi>y</mi><mo>&InvisibleTimes;</mo><mo>(</mo><msup>
+<mi>&delta;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&gamma;</mi><mn>2</mn>
+</msup><mo>)</mo></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies \beta \gamma = \delta \alpha + y \left( \delta^2 + \gamma^2 \right)
+$$
+</annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mi>y</mi><mo>&InvisibleTimes;</mo>
+<mo>(</mo><msup><mi>&delta;</mi><mn>2</mn></msup><mo>+</mo><msup>
+<mi>&gamma;</mi><mn>2</mn></msup><mo>)</mo><mo>+</mo><mi>&delta;</mi>
+<mo>&InvisibleTimes;</mo><mi>&alpha;</mi><mo>=</mo><mi>&beta;</mi>
+<mo>&InvisibleTimes;</mo><mi>&gamma;</mi></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies y \left( \delta^2 + \gamma^2 \right) + \delta \alpha = \beta \gamma
+$$
+</annotation></semantics></math>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mi>y</mi><mo>=</mo><mfrac><mrow>
+<mi>&beta;</mi><mo>&InvisibleTimes;</mo><mi>&gamma;</mi><mo>&minus;</mo>
+<mi>&delta;</mi><mo>&InvisibleTimes;</mo><mi>&alpha;</mi></mrow><mrow>
+<msup><mi>&delta;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&gamma;</mi>
+<mn>2</mn></msup></mrow></mfrac></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies y = \frac{\beta \gamma - \delta \alpha}{\delta^2 + \gamma^2}
+$$
+</annotation></semantics></math>
 </div>
 </div>
+
+<math><semantics><mrow><mo>&xrArr;</mo><mfrac><mrow><mi>&alpha;</mi><mo>+</mo>
+<mi>i</mi><mo>&InvisibleTimes;</mo><mi>&beta;</mi></mrow><mrow><mi>&gamma;</mi>
+<mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi></mrow></mfrac>
+<mo>=</mo><mfrac><mrow><mi>&beta;</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi>
+<mo>+</mo><mi>&gamma;</mi><mo>&InvisibleTimes;</mo><mi>&alpha;</mi></mrow>
+<mrow><msup><mi>&delta;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&gamma;</mi>
+<mn>2</mn></msup></mrow></mfrac><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo>
+<mo>(</mo><mfrac><mrow><mi>&beta;</mi><mo>&InvisibleTimes;</mo><mi>&gamma;</mi>
+<mo>&minus;</mo><mi>&delta;</mi><mo>&InvisibleTimes;</mo><mi>&alpha;</mi>
+</mrow><mrow><msup><mi>&delta;</mi><mn>2</mn></msup><mo>+</mo><msup>
+<mi>&gamma;</mi><mn>2</mn></msup></mrow></mfrac><mo>)</mo><mspace></mspace>
+<mspace></mspace><mspace></mspace><mtable><mtr><mtd><mi>&gamma;</mi><mo>+</mo>
+<mi>i</mi><mo>&InvisibleTimes;</mo><mi>&delta;</mi><mo>&ne;</mo><mn>0</mn>
+<mo>,</mo></mtd></mtr><mtr><mtd><msup><mi>&delta;</mi><mn>2</mn></msup>
+<mo>+</mo><msup><mi>&gamma;</mi><mn>2</mn></msup><mo>&ne;</mo><mn>0</mn></mtd>
+</mtr></mtable><mspace></mspace><mo>&#8718;</mo></mrow>
+<annotation encoding="application/x-tex">
+$$
+\implies \frac{\alpha + i \beta}{\gamma + i \delta} =
+\frac{\beta \delta + \gamma \alpha}{\delta^2 + \gamma^2} +
+i \left( \frac{\beta \gamma - \delta \alpha}{\delta^2 + \gamma^2} \right)
+~~~\gamma + i \delta \ne 0,\ \delta^2 + \gamma^2 \ne 0
+$$
+</annotation></semantics></math>
 </section>
 
-<section>
+<section id="sqrt-proof">
 <h2>Complex Square Root Proof</h2>
 <math><semantics><mrow><mtext>Suppose</mtext><mspace></mspace><msup><mrow>
 <mo>(</mo><mi>x</mi><mo>+</mo><mi>i</mi><mo>&InvisibleTimes;</mo><mi>y</mi>
@@ -459,11 +573,11 @@ $$\implies y^2 = \frac{1}{2}\left(-\alpha + \sqrt{\alpha^2 + \beta^2}\right)$$
 <mi>i</mi><mo>&InvisibleTimes;</mo><mi>&beta;</mi></msqrt><mo>=</mo>
 <mo>&plusmn;</mo><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>(</mo>
 <mi>&alpha;</mi><mo>+</mo><msqrt><mrow><msup><mi>&alpha;</mi><mn>2</mn></msup>
-<mo>+</mo><msup><mi>&beta;</mi><mn>2</mn></msup></mrow></msqrt></mrow></msqrt>
-<mo>&plusmn</mo><mi>i</mi><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac>
-<mo>(</mo><mo>&minus;</mo><mi>&alpha;</mi><mo>+</mo><msqrt><msup>
-<mi>&alpha;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&beta;</mi><mn>2</mn>
-</msup></msqrt></mrow></msqrt></mrow>
+<mo>+</mo><msup><mi>&beta;</mi><mn>2</mn></msup></mrow></msqrt><mo>)</mo>
+</mrow></msqrt><mo>&plusmn</mo><mi>i</mi><msqrt><mrow><mfrac><mn>1</mn>
+<mn>2</mn></mfrac><mo>(</mo><mo>&minus;</mo><mi>&alpha;</mi><mo>+</mo><msqrt>
+<msup><mi>&alpha;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&beta;</mi>
+<mn>2</mn></msup></msqrt><mo>)</mo></mrow></msqrt></mrow>
 <annotation encoding="application/x-tex">
 $$\implies \sqrt{\alpha + i \beta} =
 \pm \sqrt{\frac{1}{2}\left(\alpha + \sqrt{\alpha^2 + \beta^2}\right)}
@@ -504,13 +618,8 @@ $$
 </annotation></semantics></math>
 </section>
 
-<section>
+<section id="practice">
 <h2>Practice Problems</h2>
-
-</section>
-
-<section>
-<h2>Practice Problem Solutions</h2>
 
 </section>
 
