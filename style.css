@@ -1,16 +1,51 @@
-/* using the LaTeX font, but if not available fallback to Times (available
-   everywhere) */
-@font-face {
-    font-family: 'Times New Roman';
-    font-style: normal;
-    font-weight: 400;
-    src: local('LMRoman10'), url('/media/lmroman10-regular.woff')
-    format('woff');
-    font-display: swap;
+/* Rules shared accross web pages */
+/* index.html's */
+html {font-size: 24px}
+body {color: #586e75; padding-top: 0px}
+main {max-width: 800px; margin: auto; background-color: #fdf6e3;
+    padding: 0% 5% 5% 5%}
+header {text-align: center}
+address a {text-decoration: none}
+p {line-height: 1.5}
+video {max-width: 100%}
+video:fullscreen {border: 0; border-radius: 0}
+main, img, video {border-radius: 2rem}
+a {color: #6c71c4}
+h1 {color: #6c71c4; margin-top: 0; font-size: 4rem; margin-bottom: 0}
+h2 {margin: 0; color: #dc322f}
+h3 {margin: 0; color: #cb4b16}
+details p {line-height: 1}
+summary h3 {display: inline-block}
+.big-s {font-size: 7rem}
+.headshot {float: left; width: 11rem; margin: 2rem; aspect-ratio: 1/1}
+@media screen and (max-width: 600px) {
+    h1 {font-size: 2rem}
+    .big-s {font-size: 3.5rem}
+    .headshot {width: 100%; margin: 0.5rem 0}
 }
 
-/* define theme colors, these follow solarized-light
-   https://en.wikipedia.org/wiki/Solarized */
+/* blog post */
+html {font: 24px serif; background: #fdf6e3; word-wrap: break-word}
+body {max-width: 800px; margin: auto; color: #002b36}
+h1 {font-size: 2rem; margin: 0}
+a {color: #d33682}
+figure {margin: auto; text-align: center}
+table {margin: auto; border: 1px solid}
+td, th {text-align: left}
+.num {text-align: right}
+.bib {padding-left: 2rem; text-indent: -2rem}
+
+/* math style */
+math {display: block; margin: 1rem auto; width: fit-content;
+    font-family: cmr10; text-align: center; overflow-x: clip}
+mspace {width: 0.3rem}
+.imath, .imath * {display: inline; font-family: cmr10;
+    text-transform: math-auto}
+.mcases {display: flex; flex-direction: row; justify-content: center}
+.mcase {display: block; padding: 0 2rem;}
+.mcase + .mcase {border-left: solid 1px}
+
+/* solarized light colors */
 :root {
     --background-color: white;
     --foreground-color: #fdf6e3;
@@ -31,315 +66,4 @@
     --solarized-blue:      #268bd2;
     --solarized-cyan:      #2aa198;
     --solarized-green:     #859900;
-}
-
-/* global font size set to 12, what all other fonts are based on (rem) */
-html {
-    background-color: white;
-    font-size: 12px;
-}
-
-header {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    font-family: Georgia, serif;
-    text-align: center;
-    font-size: 1rem;
-    color: var(--solarized-violet);
-}
-
-/* The part with Title, Author and Date */
-.title-page {
-    text-align: center;
-
-    h1, h3, h4, h5 {
-        margin: 0;
-        padding: 0;
-    }
-}
-
-/* For the fancy name at the top. Inspired by:
-   https://www.berkshirehathaway.com */
-.sidsu_small {
-    font-size: 1rem;
-}
-
-.sidsu_big {
-    font-size: 7rem;
-}
-
-.sidsu {
-    font-size: 4rem;
-}
-
-
-body { /* This applies to everything */
-    font-family: 'LMRoman10';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20pt;
-    line-height: normal;
-    //background-image: url("/media/skeleton_trumpet.gif");
-    margin: 0.5rem;
-    color: #586e75;
-}
-
-main { /* This applies to the "hi my name is sid su portion */
-    font-size: 2rem;
-    text-align: left;
-    margin: auto;
-
-    padding: 5%;
-    padding-top: 0px;
-    margin-top: 0;
-    max-width:80%;
-    margin-left:auto;
-    margin-right:auto;
-
-    /* background-color: #fdf6e3; solarized light */
-    background-color: var(--foreground-color);
-    opacity: 0.97;
-}
-
-/* Standard border radius for elements */
-img, video, main {
-    border-radius: 2rem;
-    opacity: 100%;
-}
-
-a {
-    color: var(--solarized-violet);
-    text-align: left;
-}
-
-p {
-    font-family: LMRoman10, serif;
-    text-align: justify;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: Georgia, serif;
-    font-weight: normal;
-}
-
-h1 {
-    font-size: 4rem;
-    color: var(--solarized-violet);
-}
-
-h2 {
-    font-size: 3rem;
-    color: var(--solarized-orange);
-}
-
-h3 {
-    font-size: 2.5rem;
-    color: var(--solarized-green);
-}
-
-footer {
-    font-size: small;
-}
-
-#e-mail {
-    all: unset;
-    cursor: pointer;
-    text-decoration: underline;
-    font-family: LMRoman10, serif;
-    color: var(--solarized-violet);
-}
-
-/* how should a table look? */
-table, td, th {
-    border: 1px solid var(--solarized-base1);
-    table-layout: fixed;
-    width: 100%
-}
-th {
-    position: sticky;
-}
-
-tr:nth-child(2n) {background-color: silver}
-
-label {
-    text-align: center;
-}
-
-input {
-    font-family: LMRoman10, serif;
-    font-size: 2rem;
-    text-align: left;
-    margin: auto;
-    padding: 1rem;
-    border-radius: 1rem;
-}
-
-button[type="button"] {
-    font-family: LMRoman10, serif;
-    font-size: 2rem;
-    text-align: left;
-    margin: auto;
-    padding: 1rem;
-    border-radius: 1rem;
-}
-
-video {
-    max-width: 100%;
-    text-align: center;
-    border: solid;
-}
-
-/* for the mobile response */
-@media screen and (max-width: 600px) {
-    body {
-        background-image: none;
-    }
-
-    main {
-        max-width: 95%;
-    }
-
-    img {
-   	    max-width: 100%;
-    }
-
-    .article-body {
-        column-count: 1;
-    }
-}
-
-/* Snippet right after Title, Name, Date */
-.introduction {
-    column-count: 1;
-
-    p {
-        line-height: 1.5;
-        text-align: justify;
-        margin: 2rem;
-    }
-
-    .headshot { /* for the picture */
-        float: left;
-        width: 11rem;
-
-        margin: 2rem;
-        border: solid;
-    }
-
-    @media screen and (max-width: 600px) {
-        column-count: 1;
-
-        .headshot {
-            max-width: 100%;
-            width: 100%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .headshot_container {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 100%;
-        }
-    }
-}
-
-/**
-   Live Music specific CSS
- */
-
-/* <details> formatting */
-details {
-    margin-top: 0.25rem;
-
-    summary h3 {
-        display: inline-block;
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
-
-    /* inside of summary, time is a block element */
-    summary time {
-        display: block;
-        margin-bottom: 0.25rem;
-        padding-top: 0;
-        margin-top: 0;
-    }
-}
-
-.concert {
-    display: flex;
-    flex-direction: row;
-
-    section {
-        padding: 0.5rem;
-    }
-
-    section p {
-        margin: 0;
-        line-height: 1;
-        text-indent: 4rem;
-    }
-
-    .content {
-        max-width: 35%;
-    }
-
-    /* how should things look in articles */
-    .article-body {
-        column-count: 2;
-        p {
-            text-indent: 4rem;
-        }
-    }
-
-    @media screen and (max-width: 600px) {
-        flex-direction: column;
-        max-width: 100%;
-
-        .content {
-            max-width: 100%;
-        }
-
-    }
-}
-
-/* a nice image gallery */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 0.25rem;
-    max-width: 65%;
-
-    .gallery-col {
-        flex: 30%;
-        max-width: 100%;
-        padding: 0 4px
-    }
-
-    /* these are usually within .gallery-col */
-    img, video {
-        margin-top: 0.25rem;
-        vertical-align: middle;
-        width: 100%;
-        border-style: solid;
-        border-width: medium;
-    }
-
-    figure {
-        padding: 0.25rem;
-        margin: 0;
-    }
-
-    figcaption {
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    @media screen and (max-width: 600px) {
-        max-width: 100%;
-    }
 }
