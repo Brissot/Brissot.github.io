@@ -10,28 +10,32 @@
 <link rel="icon" type="image/x-icon" href="/media/favicon-small.ico">
 <title>Sid Su</title>
 <style>
- html {font: 24px serif}
- main {display: block; color: #586e75; max-width: 800px; margin: auto;
-     background: #fdf6e3; padding: 0 5% 5% 5%}
- header {text-align: center}
- address a {text-decoration: none}
- p {line-height: 1.5}
- video {max-width: 100%}
- video:fullscreen {border: 0; border-radius: 0}
- main, img, video {border-radius: 2rem}
- a {color: #6c71c4}
- h1 {color: #6c71c4; margin-top: 0; font-size: 3rem; margin-bottom: 0}
- h2 {margin: 0; color: #dc322f}
- h3 {margin: 0; color: #cb4b16}
- details p {line-height: 1}
- summary h3 {display: inline-block}
- .big-s {font-size: 5.25rem}
- .headshot {float: left; width: 11rem; margin: 2rem; aspect-ratio: 1/1}
- @media screen and (max-width: 600px) {
-     h1 {font-size: 2rem}
-     .big-s {font-size: 3.25rem}
-     .headshot {width: 100%; margin: 0.5rem 0}
- }
+:root {color-scheme: light dark}
+html {font: 24px serif; light-dark(white, black)}
+main {display: block; color: light-dark(#586e75, #839496); max-width: 800px; margin: auto;
+    background: light-dark(#fdf6e3, #002b36); padding: 0 5% 5% 5%}
+header {text-align: center}
+address a {text-decoration: none}
+p {line-height: 1.5}
+video {max-width: 100%}
+video:fullscreen {border: 0; border-radius: 0}
+main, img, video {border-radius: 2rem}
+a {color: light-dark(#6c71c4, #268bd2)}
+h1 {color: light-dark(#6c71c4, #268bd2); margin-top: 0; font-size: 3rem; margin-bottom: 0}
+h2 {margin: 0; color: light-dark(#dc322f, #b58900)}
+h3 {margin: 0; color: #cb4b16}
+details p {line-height: 1}
+summary h3 {display: inline-block}
+.big-s {font-size: 5.25rem}
+.headshot {float: left; width: 11rem; margin: 2rem; aspect-ratio: 1/1}
+@media screen and (max-width: 600px) {
+    h1 {font-size: 2rem}
+    .big-s {font-size: 3.25rem}
+    .headshot {width: 100%; margin: 0.5rem 0}
+}
+#theme-joke {display: inline-block; transition: transform 2s ease;}
+@media (prefers-color-scheme: dark) {#theme-joke {transform: rotateY(180deg)}}
+hr {border: 1px solid light-dark(#586e75, #839496)}
 </style>
 </head>
 
@@ -42,8 +46,10 @@
 <h1><span class="big-s">S</span>id
 <span class="big-s">S</span>u<span class="big-s">&#10084;</span></h1>
 
-<dfn title="meaning light theme is better than dark theme">light theme &gt;
-dark theme</dfn><br>
+<dfn title="is light theme or dark theme better?">
+light theme <span id="theme-joke">&gt;</span> dark theme
+</dfn><br>
+
 <address><a href="https://github.com/Brissot">GitHub:&nbsp;Brissot</a> |
 <a href="https://www.instagram.com/sidsu_">Instagram:&nbsp;@sidsu_</a> |
 <a href="https://www.linkedin.com/in/sid-su">LinkedIn:&nbsp;sid-su</a> |
@@ -51,8 +57,8 @@ dark theme</dfn><br>
 </address>
 </header>
 
-<img srcset="/media/headshot%20mk2.avif" src="/media/headshot%20mk2.jpeg"
-     alt="me.png" class="headshot" fetchpriority="high">
+<img srcset="./media/headshot%20mk2.avif" src="./media/headshot%20mk2.jpeg"
+     alt="A headshot of me" class="headshot" fetchpriority="high">
 
 <p>Hi! My name is Sid Su. I work for IBM. I was previously a Mathematics and
 Computer Science double major at the University of Maryland. I&rsquo;m now an
