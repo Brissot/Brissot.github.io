@@ -46,10 +46,10 @@ label {
 html:has(#dark:checked) {
     color-scheme: dark
 }
-html:has(#dark:checked) html {color: black;}
+html:has(#dark:checked) html {background: black;}
 html:has(#dark:checked) main {color: #839496; background: #002b36;}
 html:has(#dark:checked) a,  html:has(#dark:checked) h1,
-  html:has(#dark:checked) label {color: #268bd2;}
+    html:has(#dark:checked) label {color: #268bd2;}
 html:has(#dark:checked) h2 {color: #b58900;}
 html:has(#dark:checked) #theme-joke {transform: rotateY(180deg);
     transition: transform 2s ease;}
@@ -60,7 +60,7 @@ html:has(#light:checked) #theme-joke {display: inline-block;
     transition: transform 2s ease;}
 
 @media (prefers-color-scheme: dark) {
-    html {color: black;}
+    html {background: black;}
     main {color: #839496; background: #002b36;}
     a {color: #268bd2;}
     h1 {color: #268bd2;}
