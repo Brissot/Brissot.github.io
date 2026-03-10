@@ -11,18 +11,18 @@
 <title>Sid Su</title>
 <style>
 :root {color-scheme: light dark}
-html {font: 24px serif; light-dark(white, black)}
-main {display: block; color: light-dark(#586e75, #839496); max-width: 800px; margin: auto;
-    background: light-dark(#fdf6e3, #002b36); padding: 0 5% 5% 5%}
+html {font: 24px serif}
+main {display: block; color: #586e75; max-width: 800px; margin: auto;
+    background: #fdf6e3; padding: 0 5% 5% 5%}
 header {text-align: center}
 address a {text-decoration: none}
 p {line-height: 1.5}
 video {max-width: 100%}
 video:fullscreen {border: 0; border-radius: 0}
 main, img, video {border-radius: 2rem}
-a {color: light-dark(#6c71c4, #268bd2)}
-h1 {color: light-dark(#6c71c4, #268bd2); margin-top: 0; font-size: 3rem; margin-bottom: 0}
-h2 {margin: 0; color: light-dark(#dc322f, #b58900)}
+a {color: #6c71c4}
+h1 {color: #6c71c4; margin-top: 0; font-size: 3rem; margin-bottom: 0}
+h2 {margin: 0; color: #dc322f}
 h3 {margin: 0; color: #cb4b16}
 details p {line-height: 1}
 summary h3 {display: inline-block}
@@ -40,18 +40,40 @@ input {display: none}
 label {
     text-decoration: underline;
     cursor: pointer;
-    color: light-dark(#6c71c4, #268bd2)
+    color: #6c71c4;
 }
-html:has(#dark:checked) {color-scheme: dark}
-html:has(#light:checked) {color-scheme: light}
+
+html:has(#dark:checked) {
+    color-scheme: dark
+}
+html:has(#dark:checked) html {color: black;}
+html:has(#dark:checked) main {color: #839496; background: #002b36;}
+html:has(#dark:checked) a,  html:has(#dark:checked) h1,
+  html:has(#dark:checked) label {color: #268bd2;}
+html:has(#dark:checked) h2 {color: #b58900;}
+html:has(#dark:checked) #theme-joke {transform: rotateY(180deg);
+    transition: transform 2s ease;}
+html:has(#dark:checked) hr {border-color: #839496;}
+
+html:has(#light:checked) {color-scheme: light;}
+html:has(#light:checked) #theme-joke {display: inline-block;
+    transition: transform 2s ease;}
+
 @media (prefers-color-scheme: dark) {
+    html {color: black;}
+    main {color: #839496; background: #002b36;}
+    a {color: #268bd2;}
+    h1 {color: #268bd2;}
+    h2 {color: #b58900;}
     #theme-joke {
         transform: rotateY(180deg);
         transition: background-color 5s ease;
     }
+
+    label {color: #268bd2;}
+    hr {border-color: #839496;}
 }
-@media (prefers-color-scheme: light) {transition: background-color 5s ease}
-hr {border: 1px solid light-dark(#586e75, #839496)}
+hr {border: 1px solid; border-color: #586e75;}
 </style>
 </head>
 
@@ -64,7 +86,8 @@ hr {border: 1px solid light-dark(#586e75, #839496)}
 
 <dfn title="is light theme or dark theme better?">
 <input type="radio" name="theme" id="light">
-<label for="light">light theme</label> <span id="theme-joke">&gt;</span> <input type="radio" name="theme" id="dark"><label for="dark">dark theme</label>
+<label for="light">light theme</label> <span id="theme-joke">&gt;</span>
+<input type="radio" name="theme" id="dark"><label for="dark">dark theme</label>
 </dfn><br>
 
 <address><a href="https://github.com/Brissot">GitHub:&nbsp;Brissot</a> |
