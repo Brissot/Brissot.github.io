@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A simple trainer for practicing scales">
+<link rel="icon" type="image/x-icon" href="./media/favicon-small.ico">
+
+<title>&#127929; Scale Trainer</title>
+<style>
+html {font: 24px serif}
+#page-content {color: dimgray; max-width: 800px; margin: auto;
+    background: beige; padding: 1rem 5%; border-radius: 2rem;}
+main {display: flex; flex-direction: column;
+    place-content: start space-between}
+#inner-app {display: flex; flex-direction: row;
+    place-content: start space-between}
+ul {margin: 0; padding: 0; margin: auto 0}
+li {list-style: none}
+li:has(input:checked) {background: khaki}
+#result {font: 9rem Consolas; text-align: center; margin: 0; padding: 0rem;
+    line-height: 2}
+input[type="range"] {writing-mode: vertical-lr; max-height: 50%;
+    direction: rtl; height: 17rem}
+progress {width: 50%; margin: auto}
+button {padding: 1rem; font: 1rem Consolas; margin: auto; background: deeppink;
+    color: lavenderblush}
+
+@media screen and (max-width: 600px) {
+    h1 {font-size: 2rem}
+    main {flex-direction: column}
+    li {display: inline-block}
+    input[type="range"] {writing-mode: horizontal-tb; direction: ltr;
+        margin: 0; padding: 0; max-height: 2rem}
+}
+</style>
+</head>
+
+<body>
+<div id="page-content">
+<h1>Scale Trainer &#127929;</h1>
+
+<p>A simple trainer to practice scales. Serves a random scale on click.
+</p>
+
+<main>
+<div id="inner-app">
+<ul id="scales">
+<li><input type="checkbox" id="C" checked><label for="C">C</label></li>
+<li><input type="checkbox" id="D-flat"><label for="D-flat">D&flat;</label></li>
+<li><input type="checkbox" id="D" checked><label for="D">D</label></li>
+<li><input type="checkbox" id="E-flat" checked>
+    <label for="E-flat">E&flat;</label></li>
+<li><input type="checkbox" id="E" checked><label for="E">E</label></li>
+<li><input type="checkbox" id="F" checked><label for="F">F</label></li>
+<li><input type="checkbox" id="F-sharp">
+    <label for="F-sharp">F&sharp;</label></li>
+<li><input type="checkbox" id="G" checked><label for="G">G</label></li>
+<li><input type="checkbox" id="A-flat" checked>
+    <label for="A-flat">A&flat;</label></li>
+<li><input type="checkbox" id="A" checked><label for="A">A</label></li>
+<li><input type="checkbox" id="B-flat" checked>
+    <label for="B-flat">B&flat;</label></li>
+<li><input type="checkbox" id="B"><label for="B">B</label></li>
+</ul>
+
+<output for="scales" id="result">C</output>
+
+<input type="range">
+</div>
+
+<progress max="100" value="100"></progress>
+<button onclick="setRandomScale()">&#9205; New Scale!</button>
+</main>
+
+<footer><hr>Copyright &copy;
+<time datetime="2023">2023</time>&ndash;<time datetime="2026">2026</time>
+<strong>Sid Su</strong></footer>
+</div>
+
+<script>
+function setRandomScale() {
+    // get the necessary elements
+    const ul= document.getElementById("scales");
+    const listElems= ul.getElementsByTagName("li");
+    const resultParagraph= document.getElementById("result");
+
+    // filter to get only checked scales
+    const checkedScales= Array.from(listElems).filter((a) =>
+        a.getElementsByTagName("input")[0].checked);
+
+    // choose a random one
+    if (checkedScales.length === 0) {
+        resultParagraph.innerText= "C";
+        return;
+    }
+
+    // set result to a random number
+    const randomIndex= Math.floor(Math.random() * checkedScales.length);
+    resultParagraph.innerText= checkedScales[randomIndex].innerText;
+}
+</script>
+</body>
+</html>
