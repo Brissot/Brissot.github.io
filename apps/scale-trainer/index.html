@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../media/favicon-small.ico">
 <meta name="description" content="A simple trainer for practicing scales">
 <link rel="icon" type="image/x-icon" href="./media/favicon-small.ico">
 
@@ -11,6 +12,8 @@
 html {font: 24px serif}
 #page-content {color: dimgray; max-width: 800px; margin: auto;
     background: beige; padding: 1rem 5%; border-radius: 2rem;}
+h1 {margin: 0}
+a {color: deeppink}
 main {display: flex; flex-direction: column;
     place-content: start space-between}
 #inner-app {display: flex; flex-direction: row;
@@ -28,7 +31,7 @@ button {padding: 1rem; font: 1rem Consolas; margin: auto; background: deeppink;
 
 @media screen and (max-width: 600px) {
     h1 {font-size: 2rem}
-    main {flex-direction: column}
+    #inner-app {flex-direction: column}
     li {display: inline-block}
     input[type="range"] {writing-mode: horizontal-tb; direction: ltr;
         margin: 0; padding: 0; max-height: 2rem}
@@ -38,7 +41,12 @@ button {padding: 1rem; font: 1rem Consolas; margin: auto; background: deeppink;
 
 <body>
 <div id="page-content">
+<header>
+<nav><h3><a href="../../">Home</a> &gt;
+<a href="../../#apps">Apps</a></h3></nav>
 <h1>Scale Trainer &#127929;</h1>
+<address>Sid Su | <time datetime="2026-03-18">Mar. 18, 2026</time></address>
+</header>
 
 <p>A simple trainer to practice scales. Serves a random scale on click.
 </p>
