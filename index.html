@@ -43,17 +43,25 @@ label {
     color: #6c71c4;
 }
 
-html:has(#dark:checked) {
-    color-scheme: dark
-}
-html:has(#dark:checked) html {background: black;}
+<!-- -->
+html:has(#dark:checked) {color-scheme: dark;}
+html:has(#dark:checked) body {background-color: black;}
 html:has(#dark:checked) main {color: #839496; background: #002b36;}
 html:has(#dark:checked) a,  html:has(#dark:checked) h1,
-    html:has(#dark:checked) label {color: #268bd2;}
+html:has(#dark:checked) label {color: #268bd2;}
 html:has(#dark:checked) h2 {color: #b58900;}
 html:has(#dark:checked) #theme-joke {transform: rotateY(180deg);
     transition: transform 2s ease;}
 html:has(#dark:checked) hr {border-color: #839496;}
+
+html:has(#light:checked) body {background-color: white;}
+html:has(#light:checked) main {color:  #586e75; background: #fdf6e3;}
+html:has(#light:checked) a,  html:has(#dark:checked) h1,
+html:has(#light:checked) label {color: #6c71c4;}
+html:has(#light:checked) h2 {color: #dc322f;}
+html:has(#light:checked) #theme-joke {transform: rotateY(0deg);
+    transition: transform 2s ease;}
+html:has(#light:checked) hr {border-color: #586e75;}
 
 html:has(#light:checked) {color-scheme: light;}
 html:has(#light:checked) #theme-joke {display: inline-block;
@@ -205,5 +213,7 @@ a <a href="https://youtu.be/g3C4-9i42v4">rendition</a> of it I really like:</p>
 <time datetime="2023">2023</time>&ndash;<time datetime="2026">2026</time>
 <strong>Sid Su</strong></footer>
 </main>
+<script>
+</script>
 </body>
 </html>
